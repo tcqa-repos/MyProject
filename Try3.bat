@@ -1,6 +1,6 @@
 @echo off
 @setlocal enabledelayedexpansion
-@FOR /D %%F in ("*") DO (
+@FOR /D /r %%F in ("*") DO (
     @pushd %CD% & cd %%F
     @FOR %%X in (*.*) DO (
         @set current_file=%%F\%%X
