@@ -1,4 +1,4 @@
-echo on
+@echo on
 
 REM signature verification
 FOR /D /r %%F in ("*") DO (
