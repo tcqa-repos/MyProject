@@ -2,7 +2,7 @@
 @setlocal enabledelayedexpansion
 @FOR /D /r %%F in ("*") DO (
     @pushd %CD% & cd %%F
-    @FOR %%X in (*.*) DO (
+    @FOR %%X in (*.exe *.dll) DO (
         @set current_file=%%F\%%X
         @IF NOT [!current_file!]==[] (
             @echo ##teamcity[testStarted name='!current_file!']
