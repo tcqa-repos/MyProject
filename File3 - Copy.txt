@@ -4,10 +4,10 @@ line
 line
 line
 line
+changed line
+line
+line
 new line
-line
-line
-line
 line
 line
 line
