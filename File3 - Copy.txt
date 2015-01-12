@@ -7,7 +7,7 @@ line
 line
 line
 line
-new line
+changed line
 line
 line
 line
