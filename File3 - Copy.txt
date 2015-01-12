@@ -4,11 +4,11 @@ line
 line
 line
 changed line
-new line
+changed line
 line
 line
 new line
-line
+new line
 line
 line
 line
