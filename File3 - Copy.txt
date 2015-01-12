@@ -1,14 +1,13 @@
 new line
 
-line
+changed line
 line
 line
 changed line
 changed line
+new line 
 line
 line
-new line
-new line
 line
 line
 line
