@@ -1,5 +1,5 @@
 <teamcity>
 <build>29993</build>
-<version>"10.0 &lt;script&gt;alert(1);&lt;/script&gt;"</version>
+<version>10.0</version>
 <releaseDate>2014-07-24</releaseDate>
 </teamcity>
