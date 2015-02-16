@@ -1,5 +1,8 @@
-<teamcity>
-<build>32400</build>
-<version>8.1.9</version>
-<releaseDate>2014-12-24</releaseDate>
-</teamcity>
+<products>
+  <product name="TeamCity">
+    <code>TC</code>
+    <channel status="release">
+      <build version="10.0 &lt;script&gt;alert(1);&lt;/script&gt;" number="40050" effectiveReleaseDate="20151210T200000GMT" />
+    </channel>
+  </product>
+</products>
