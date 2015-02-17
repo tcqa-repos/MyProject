@@ -1,8 +1,8 @@
 <products>
   <product name="TeamCity">
     <code>TC</code>
-    <channel name="RELEASE" id="&lt;TC_RELEASE" status="release">
-      <build version="10.2" number="40050" effectiveReleaseDate="20151210T200000GMT" />
+    <channel name="RELEASE" id="TC_RELEASE" status="release">
+      <build version="10.2&gt;" number="40050" effectiveReleaseDate="20151210T200000GMT" />
     </channel>
   </product>
 </products>
