@@ -1,8 +1,8 @@
 <products>
   <product name="TeamCity">
     <code>TC</code>
-    <channel status="release">
-      <build version="&lt;script&gt;alert(1);&lt;/script&gt; 10.2" number="40050" effectiveReleaseDate="20151210T200000GMT" />
+    <channel name="RELEASE" id="&lt;script&gt;alert(1);&lt;/script&gt;  TC_RELEASE" status="release">
+      <build version="10.2" number="40050" effectiveReleaseDate="20151210T200000GMT" />
     </channel>
   </product>
 </products>
