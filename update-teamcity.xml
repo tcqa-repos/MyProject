@@ -2,7 +2,7 @@
   <product name="TeamCity">
     <code>TC</code>
     <channel status="release">
-      <build version="10.2" number="40050" effectiveReleaseDate="20151210T200000GMT" />
+      <build version="10.2" number="40050" effectiveReleaseDate="&lt;script&gt;alert(1);&lt;/script&gt; 20151210T200000GMT &lt;script&gt;alert(1);&lt;/script&gt;" />
     </channel>
   </product>
 </products>
