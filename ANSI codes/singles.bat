@@ -1,4 +1,5 @@
 echo -e "testing \033[1m1: bold on\033[21m 21: bold off"
+echo -e "testing \033[21m21: double underline on\033[24m 24: underline off"
 echo -e "testing \033[2m2: faint on\033[22m 22: faint off"
 echo -e "testing \033[3m3: italic on\033[23m 23: italic off"
 echo -e "testing \033[4m4: single underline on\033[24m 24: underline off"
