@@ -1,0 +1,105 @@
+@Grab(group = 'com.vmware', module = 'vijava', version = '5.1')
+import com.vmware.vim25.*
+import com.vmware.vim25.mo.*
+
+// Define variables
+def	insecure = true
+def linkedClone = true
+def powerOn = true
+
+// Get variable values from Ant properties:
+
+// vSphere Username and Password
+def user = properties.'vsphere.user'
+if (!user) throw new Exception("Please set vsphere.user parameter")
+def password = properties.'vsphere.password'
+if (!password) throw new Exception("Please set vsphere.password parameter")
+
+// vSphere connection properties
+def server = properties.'server' ?: 'vcenter-srv'
+def org = properties.'org' ?: 'SPB'
+def folder = properties.'folder' ?: 'TeamCity'
+def host = properties.'host' ?: 'app18.spb.labs.intellij.net'
+def pool = properties.'pool' ?: 'vm-qa-TeamCity'
+println "Using following vCenter parameters:"
+println " server: ${server}"
+println " org: ${org}"
+println " folder: ${folder}"
+println " host: ${host}"
+println " pool: ${pool}"
+
+// Source and target vm names
+def source = "TC ${properties.'source'}"
+def targetVM = properties.'target' ?: 'TC Cloned VM'
+
+
+// Create new vSphere connection, get source vm object
+def vsphere = vsphere.newInstance()
+def connection = vsphere.getConnection(server, user, password, insecure)
+def sourceVM = vsphere.getVM(connection, "${source}")
+
+// And clone to server/org/folder in predefined pool
+println "Cloning '${source}' to '${targetVM}'"
+vsphere.clone(connection, sourceVM, targetVM, org, folder, host, pool, linkedClone, powerOn)
+println "##teamcity[buildStatus text='{build.status.text}: virtual machine \"${targetVM}\" is ready']"
+
+// Retrieve cloned VM IP address
+def clonedVM = vsphere.getVM(connection, "${targetVM}")
+def ip = vsphere.getIP(clonedVM)
+println "##teamcity[setParameter name='vm.ip' value='${ip}']"
+
+
+class vsphere {
+
+	// Returns insecure ServiceInstance for user@server
+	def getConnection(server, user, password, insecure) {
+		def url = new URL("https://${server}/sdk")
+		def connection = new ServiceInstance(url, user, password, insecure)
+		if (!connection) throw new Exception("Failed to open connection to ${server} for user ${user}")
+		else println "Opened connection to ${server} for user ${user}"
+		return connection
+	}
+	
+	// Searches for VirtualMachine by name, returns VirtualMachine object
+	def getVM(connection, machine) {
+		def vm = new InventoryNavigator(connection.getRootFolder()).searchManagedEntity("VirtualMachine", machine)
+		if (!vm) throw new Exception("Cannot find VM '${machine}'")
+		else println "Found source VM for '${machine}'"
+		return vm
+	}	
+	
+	//  Core clone method
+	def clone(connection, sourceVM, targetVM, org, folder, host, pool, linkedClone, powerOn = false, template = false) {
+		def folderPath = connection.searchIndex.findByInventoryPath("${org}/vm/${folder}")
+		def spec = new VirtualMachineCloneSpec()
+		spec.location = new VirtualMachineRelocateSpec()
+		spec.location.diskMoveType = linkedClone ? 'createNewChildDiskBacking' : 'moveAllDiskBackingsAndDisallowSharing'
+		spec.location.pool = connection.searchIndex.findByInventoryPath("${org}/host/${host}/Resources/${pool}").MOR
+		spec.snapshot = sourceVM.snapshot.currentSnapshot
+		println "Using current snapshot"
+		spec.powerOn = powerOn
+		spec.template = template
+		println "Starting clone task..."
+		def task = sourceVM.cloneVM_Task(folderPath, targetVM, spec)
+		def status = task.waitForTask()
+		if ("${status}" != "success") throw new Exception("Clone task finished with error: \"${task.getTaskInfo().getError().getLocalizedMessage()}\"")
+	}
+	
+	def getIP(vm) {
+		for (int i=0; i<600; i++) {
+			def ip = vm.getGuest().getIpAddress()
+			if (!ip) {
+				sleep(1000)
+				println "${ip}"
+			}
+			else return ip
+		}	
+		return "1"
+	}
+	// Some unused code below
+	def takeSnapshot(vm, snapshot) {
+		println "Creating a snapshot '${machine}:${snapshot}'"
+		vm.createSnapshot_Task(snapshot, '', false, true).waitForTask()
+	}
+	
+}
