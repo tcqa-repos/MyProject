@@ -90,6 +90,12 @@
           <param name="vcsRootId" value="DirtyConfigurations_Changes_MyProject" />
         </parameters>
       </extension>
+      <extension id="BUILD_EXT_46" type="xml-report-plugin">
+        <parameters>
+          <param name="xmlReportParsing.reportDirs" value="**" />
+          <param name="xmlReportParsing.reportType" value="findBugs" />
+        </parameters>
+      </extension>
     </build-extensions>
     <artifact-dependencies>
       <dependency id="ARTIFACT_DEPENDENCY_57" sourceBuildTypeId="BuildFeatures_FileContentReplacer_Build" cleanDestination="false">
