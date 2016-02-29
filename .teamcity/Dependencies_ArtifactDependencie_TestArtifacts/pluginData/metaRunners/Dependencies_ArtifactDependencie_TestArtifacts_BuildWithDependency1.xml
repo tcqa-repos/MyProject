@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta-runner name="Build with dependency (1)">
+  <description>Meta-runner with disabled settings</description>
+  <settings>
+    <parameters />
+    <build-runners />
+    <requirements>
+      <exists id="RQ_130" name="env.COMPUTERNAME" />
+    </requirements>
+  </settings>
+</meta-runner>
+
