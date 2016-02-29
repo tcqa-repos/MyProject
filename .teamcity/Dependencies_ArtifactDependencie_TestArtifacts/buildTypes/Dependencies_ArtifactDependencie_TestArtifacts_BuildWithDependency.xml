@@ -8,7 +8,6 @@
       <setting-ref ref="ARTIFACT_DEPENDENCY_51" />
       <setting-ref ref="ARTIFACT_DEPENDENCY_55" />
       <setting-ref ref="ARTIFACT_DEPENDENCY_58" />
-      <setting-ref ref="BUILD_EXT_44" />
       <setting-ref ref="RQ_132" />
       <setting-ref ref="RUNNER_170" />
       <setting-ref ref="RUNNER_175" />
