@@ -10,6 +10,7 @@
       <setting-ref ref="RUNNER_170" />
       <setting-ref ref="RUNNER_175" />
       <setting-ref ref="RUNNER_176" />
+      <setting-ref ref="retryBuildTrigger" />
       <setting-ref ref="vcsTrigger" />
     </disabled-settings>
     <parameters />
