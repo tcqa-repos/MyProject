@@ -5,7 +5,9 @@
   <settings>
     <parameters />
     <build-runners />
-    <vcs-settings />
+    <vcs-settings>
+      <vcs-entry-ref root-id="DirtyConfigurations_Changes_MyProject" />
+    </vcs-settings>
     <requirements />
     <build-triggers />
     <cleanup />
