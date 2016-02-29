@@ -39,7 +39,9 @@
     <vcs-settings>
       <vcs-entry-ref root-id="DirtyConfigurations_Changes_MyProject" />
     </vcs-settings>
-    <requirements />
+    <requirements>
+      <exists id="RQ_130" name="env.COMPUTERNAME" />
+    </requirements>
     <build-triggers>
       <build-trigger id="vcsTrigger" type="vcsTrigger">
         <parameters>
