@@ -3,6 +3,9 @@
   <name>First</name>
   <description />
   <settings>
+    <options>
+      <option name="artifactRules" value="**/* =&gt; artifacts.zip&#xA;**/* =&gt; artifacts2.zip" />
+    </options>
     <parameters />
     <build-runners />
     <vcs-settings>
