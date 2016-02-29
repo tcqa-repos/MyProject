@@ -6,6 +6,7 @@
       <option name="artifactRules" value="**/* =&gt;" />
     </options>
     <disabled-settings>
+      <setting-ref ref="ARTIFACT_DEPENDENCY_42" />
       <setting-ref ref="vcsTrigger" />
     </disabled-settings>
     <parameters />
