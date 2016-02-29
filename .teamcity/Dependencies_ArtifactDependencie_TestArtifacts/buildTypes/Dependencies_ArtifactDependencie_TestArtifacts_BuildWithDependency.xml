@@ -23,6 +23,13 @@
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
+      <runner id="RUNNER_176" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo 1" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
     </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="DirtyConfigurations_Changes_MyProject" />
