@@ -19,7 +19,6 @@
       <setting-ref ref="jetbrains.agent.free.space" />
       <setting-ref ref="retryBuildTrigger" />
       <setting-ref ref="swabra" />
-      <setting-ref ref="vcsTrigger" />
     </disabled-settings>
     <parameters />
     <build-runners>
