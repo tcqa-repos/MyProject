@@ -17,7 +17,6 @@
       <setting-ref ref="RUNNER_175" />
       <setting-ref ref="RUNNER_176" />
       <setting-ref ref="jetbrains.agent.free.space" />
-      <setting-ref ref="retryBuildTrigger" />
       <setting-ref ref="swabra" />
     </disabled-settings>
     <parameters />
