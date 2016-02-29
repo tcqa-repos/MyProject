@@ -2,21 +2,15 @@
 <build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="aca325e1-9704-402a-a305-91a1b372dcdf" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
   <name>Build with dependency</name>
   <description />
-  <settings>
+  <settings ref="Dependencies_ArtifactDependencie_TestArtifacts_TemplatedWithDependency">
     <disabled-settings>
-      <setting-ref ref="ARTIFACT_DEPENDENCY_29" />
+      <setting-ref ref="ARTIFACT_DEPENDENCY_51" />
     </disabled-settings>
     <parameters />
-    <build-runners />
+    <build-runners order="" />
     <vcs-settings />
     <requirements />
     <build-triggers />
-    <artifact-dependencies>
-      <dependency id="ARTIFACT_DEPENDENCY_29" sourceBuildTypeId="Dependencies_ArtifactDependencie_TestArtifacts_First" cleanDestination="true">
-        <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
-        <artifact sourcePath="artifacts.zip" />
-      </dependency>
-    </artifact-dependencies>
     <cleanup />
   </settings>
 </build-type>

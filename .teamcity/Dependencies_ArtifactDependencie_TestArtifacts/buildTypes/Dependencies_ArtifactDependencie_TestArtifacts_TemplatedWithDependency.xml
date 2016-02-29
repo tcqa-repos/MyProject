@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="69ead842-3c29-4df7-865a-5a2286e32b09" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+  <name>Templated with dependency</name>
+  <settings>
+    <disabled-settings>
+      <setting-ref ref="ARTIFACT_DEPENDENCY_29" />
+      <setting-ref ref="ARTIFACT_DEPENDENCY_50" />
+    </disabled-settings>
+    <parameters />
+    <build-runners />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <artifact-dependencies>
+      <dependency id="ARTIFACT_DEPENDENCY_50" sourceBuildTypeId="Dependencies_ArtifactDependencie_TestArtifacts_First" cleanDestination="true">
+        <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
+        <artifact sourcePath="artifacts.zip" />
+      </dependency>
+    </artifact-dependencies>
+    <cleanup />
+  </settings>
+</template>
+
