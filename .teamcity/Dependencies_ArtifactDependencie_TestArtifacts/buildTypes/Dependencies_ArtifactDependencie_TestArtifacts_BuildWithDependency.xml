@@ -2,7 +2,7 @@
 <build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="c0064e4d-a70b-4969-967f-ab591d7b7b63" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
   <name>Build with dependency (1)</name>
   <description />
-  <settings ref="Dependencies_ArtifactDependencie_TestArtifacts_TmplWithDisabledActions">
+  <settings>
     <disabled-settings>
       <setting-ref ref="ARTIFACT_DEPENDENCY_50" />
       <setting-ref ref="ARTIFACT_DEPENDENCY_51" />
@@ -11,7 +11,7 @@
       <setting-ref ref="vcsTrigger" />
     </disabled-settings>
     <parameters />
-    <build-runners order="" />
+    <build-runners />
     <vcs-settings />
     <requirements />
     <build-triggers>
