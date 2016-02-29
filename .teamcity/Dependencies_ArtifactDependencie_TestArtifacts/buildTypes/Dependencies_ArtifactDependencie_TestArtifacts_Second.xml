@@ -8,6 +8,12 @@
     <vcs-settings />
     <requirements />
     <build-triggers />
+    <artifact-dependencies>
+      <dependency id="ARTIFACT_DEPENDENCY_29" sourceBuildTypeId="Dependencies_ArtifactDependencie_TestArtifacts_First" cleanDestination="false">
+        <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
+        <artifact sourcePath="artifacts.zip" />
+      </dependency>
+    </artifact-dependencies>
     <cleanup />
   </settings>
 </build-type>
