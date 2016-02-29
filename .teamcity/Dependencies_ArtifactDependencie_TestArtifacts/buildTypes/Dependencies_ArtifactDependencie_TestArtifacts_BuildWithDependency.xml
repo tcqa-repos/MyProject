@@ -2,14 +2,14 @@
 <build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="c0064e4d-a70b-4969-967f-ab591d7b7b63" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
   <name>Build with dependency (1)</name>
   <description />
-  <settings>
+  <settings ref="Dependencies_ArtifactDependencie_TestArtifacts_TemplateWithDisabled">
     <disabled-settings>
       <setting-ref ref="ARTIFACT_DEPENDENCY_50" />
       <setting-ref ref="ARTIFACT_DEPENDENCY_51" />
       <setting-ref ref="ARTIFACT_DEPENDENCY_55" />
-      <setting-ref ref="ARTIFACT_DEPENDENCY_56" />
-      <setting-ref ref="BUILD_EXT_43" />
-      <setting-ref ref="RQ_130" />
+      <setting-ref ref="ARTIFACT_DEPENDENCY_58" />
+      <setting-ref ref="BUILD_EXT_44" />
+      <setting-ref ref="RQ_132" />
       <setting-ref ref="RUNNER_170" />
       <setting-ref ref="RUNNER_175" />
       <setting-ref ref="RUNNER_176" />
@@ -18,31 +18,9 @@
       <setting-ref ref="vcsTrigger" />
     </disabled-settings>
     <parameters />
-    <build-runners>
-      <runner id="RUNNER_175" name="" type="Ant">
-        <parameters>
-          <param name="build-file-path" value="build.xml" />
-          <param name="teamcity.coverage.emma.include.source" value="true" />
-          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
-          <param name="teamcity.coverage.idea.includePatterns" value="*" />
-          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
-          <param name="teamcity.step.mode" value="default" />
-        </parameters>
-      </runner>
-      <runner id="RUNNER_176" name="" type="simpleRunner">
-        <parameters>
-          <param name="script.content" value="echo 1" />
-          <param name="teamcity.step.mode" value="default" />
-          <param name="use.custom.script" value="true" />
-        </parameters>
-      </runner>
-    </build-runners>
-    <vcs-settings>
-      <vcs-entry-ref root-id="DirtyConfigurations_Changes_MyProject" />
-    </vcs-settings>
-    <requirements>
-      <exists id="RQ_130" name="env.COMPUTERNAME" />
-    </requirements>
+    <build-runners order="" />
+    <vcs-settings />
+    <requirements />
     <build-triggers>
       <build-trigger id="vcsTrigger" type="vcsTrigger">
         <parameters>
@@ -57,7 +35,7 @@
       </build-trigger>
     </build-triggers>
     <build-extensions>
-      <extension id="BUILD_EXT_43" type="BuildFailureOnMetric">
+      <extension id="BUILD_EXT_44" type="BuildFailureOnMetric">
         <parameters>
           <param name="anchorBuild" value="lastSuccessful" />
           <param name="metricKey" value="VisibleArtifactsSize" />
@@ -73,12 +51,6 @@
         </parameters>
       </extension>
     </build-extensions>
-    <artifact-dependencies>
-      <dependency id="ARTIFACT_DEPENDENCY_56" sourceBuildTypeId="BuildFeatures_FileContentReplacer_Build" cleanDestination="false">
-        <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
-        <artifact sourcePath="artifact" />
-      </dependency>
-    </artifact-dependencies>
     <cleanup />
   </settings>
 </build-type>
