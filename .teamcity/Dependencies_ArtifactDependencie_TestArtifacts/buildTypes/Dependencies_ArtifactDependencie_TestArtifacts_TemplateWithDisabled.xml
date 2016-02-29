@@ -18,6 +18,7 @@
       <setting-ref ref="RUNNER_176" />
       <setting-ref ref="jetbrains.agent.free.space" />
       <setting-ref ref="swabra" />
+      <setting-ref ref="vcsTrigger" />
     </disabled-settings>
     <parameters />
     <build-runners>
