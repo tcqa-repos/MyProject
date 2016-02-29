@@ -79,6 +79,16 @@
           <param name="free-space-work" value="3gb" />
         </parameters>
       </extension>
+      <extension id="BUILD_EXT_45" type="commit-status-publisher">
+        <parameters>
+          <param name="github_authentication_type" value="password" />
+          <param name="github_host" value="https://api.github.com" />
+          <param name="github_password" value="123" />
+          <param name="github_username" value="123" />
+          <param name="publisherId" value="githubStatusPublisher" />
+          <param name="vcsRootId" value="DirtyConfigurations_Changes_MyProject" />
+        </parameters>
+      </extension>
     </build-extensions>
     <artifact-dependencies>
       <dependency id="ARTIFACT_DEPENDENCY_57" sourceBuildTypeId="BuildFeatures_FileContentReplacer_Build" cleanDestination="false">
