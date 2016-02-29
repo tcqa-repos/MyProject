@@ -3,6 +3,9 @@
   <name>Build with dependency</name>
   <description />
   <settings>
+    <disabled-settings>
+      <setting-ref ref="ARTIFACT_DEPENDENCY_29" />
+    </disabled-settings>
     <parameters />
     <build-runners />
     <vcs-settings />
