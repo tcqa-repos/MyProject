@@ -12,13 +12,13 @@
     <requirements />
     <build-triggers />
     <artifact-dependencies>
-      <dependency id="ARTIFACT_DEPENDENCY_30" sourceBuildTypeId="Dependencies_ArtifactDependencie_FirstBuild" cleanDestination="false">
-        <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
-        <artifact sourcePath="artifacts2.zip" />
-      </dependency>
       <dependency id="ARTIFACT_DEPENDENCY_29" sourceBuildTypeId="Dependencies_ArtifactDependencie_TestArtifacts_First" cleanDestination="false">
         <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
         <artifact sourcePath="artifacts.zip" />
+      </dependency>
+      <dependency id="ARTIFACT_DEPENDENCY_30" sourceBuildTypeId="Dependencies_ArtifactDependencie_TestArtifacts_Second_2" cleanDestination="false">
+        <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
+        <artifact sourcePath="artifacts2.zip" />
       </dependency>
     </artifact-dependencies>
     <cleanup />
