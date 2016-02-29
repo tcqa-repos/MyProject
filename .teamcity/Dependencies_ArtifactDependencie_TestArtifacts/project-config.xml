@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="Dependencies_ArtifactDependencie" uuid="fc90ac9f-0b0c-495e-8b62-974609273425" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+  <name>Test artifacts</name>
+  <parameters />
+  <cleanup />
+</project>
+
