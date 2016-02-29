@@ -73,6 +73,11 @@
           <param name="swabra.enabled" value="swabra.before.build" />
         </parameters>
       </extension>
+      <extension id="jetbrains.agent.free.space" type="jetbrains.agent.free.space">
+        <parameters>
+          <param name="free-space-work" value="3gb" />
+        </parameters>
+      </extension>
     </build-extensions>
     <artifact-dependencies>
       <dependency id="ARTIFACT_DEPENDENCY_57" sourceBuildTypeId="BuildFeatures_FileContentReplacer_Build" cleanDestination="false">
