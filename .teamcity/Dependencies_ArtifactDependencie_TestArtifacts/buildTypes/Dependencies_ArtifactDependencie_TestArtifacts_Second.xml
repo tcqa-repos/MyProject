@@ -4,6 +4,7 @@
   <description />
   <settings ref="Dependencies_ArtifactDependencie_TestArtifacts_TemplatedWithDependency">
     <disabled-settings>
+      <setting-ref ref="ARTIFACT_DEPENDENCY_50" />
       <setting-ref ref="ARTIFACT_DEPENDENCY_51" />
     </disabled-settings>
     <parameters />
