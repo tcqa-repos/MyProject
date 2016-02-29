@@ -12,7 +12,13 @@
     <build-runners />
     <vcs-settings />
     <requirements />
-    <build-triggers />
+    <build-triggers>
+      <build-trigger id="vcsTrigger" type="vcsTrigger">
+        <parameters>
+          <param name="quietPeriodMode" value="DO_NOT_USE" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
     <artifact-dependencies>
       <dependency id="ARTIFACT_DEPENDENCY_53" sourceBuildTypeId="Dependencies_ArtifactDependencie_TestArtifacts_First" cleanDestination="true">
         <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
