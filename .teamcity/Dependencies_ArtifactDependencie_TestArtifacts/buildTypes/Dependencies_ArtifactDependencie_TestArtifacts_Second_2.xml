@@ -4,7 +4,7 @@
   <description />
   <settings>
     <options>
-      <option name="artifactRules" value="**/* =&gt; artifacts.zip&#xA;**/* =&gt; artifacts2.zip" />
+      <option name="artifactRules" value="**/* =&gt; artifacts2.zip" />
     </options>
     <parameters />
     <build-runners />
