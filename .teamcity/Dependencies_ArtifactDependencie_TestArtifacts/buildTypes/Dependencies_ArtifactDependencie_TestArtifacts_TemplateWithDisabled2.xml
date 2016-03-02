@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="d9458415-e631-4c68-a7d6-20a1f5bccdf7" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+  <name>template with disabled 2</name>
+  <settings>
+    <disabled-settings>
+      <setting-ref ref="ARTIFACT_DEPENDENCY_50" />
+      <setting-ref ref="ARTIFACT_DEPENDENCY_51" />
+      <setting-ref ref="ARTIFACT_DEPENDENCY_54" />
+      <setting-ref ref="ARTIFACT_DEPENDENCY_55" />
+      <setting-ref ref="ARTIFACT_DEPENDENCY_56" />
+      <setting-ref ref="BUILD_EXT_47" />
+      <setting-ref ref="BUILD_EXT_48" />
+      <setting-ref ref="BUILD_EXT_49" />
+      <setting-ref ref="RQ_130" />
+      <setting-ref ref="RQ_134" />
+      <setting-ref ref="RUNNER_170" />
+      <setting-ref ref="RUNNER_716" />
+      <setting-ref ref="RUNNER_717" />
+      <setting-ref ref="jetbrains.agent.free.space" />
+      <setting-ref ref="retryBuildTrigger" />
+      <setting-ref ref="swabra" />
+      <setting-ref ref="vcsTrigger" />
+    </disabled-settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_716" name="" type="Ant">
+        <parameters>
+          <param name="build-file-path" value="build.xml" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_717" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo 1" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="DirtyConfigurations_Changes_MyProject" />
+    </vcs-settings>
+    <requirements>
+      <exists id="RQ_134" name="env.COMPUTERNAME" />
+    </requirements>
+    <build-triggers>
+      <build-trigger id="vcsTrigger" type="vcsTrigger">
+        <parameters>
+          <param name="quietPeriodMode" value="DO_NOT_USE" />
+        </parameters>
+      </build-trigger>
+      <build-trigger id="retryBuildTrigger" type="retryBuildTrigger">
+        <parameters>
+          <param name="enqueueTimeout" value="0" />
+          <param name="retryAttempts" value="3" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
+    <build-extensions>
+      <extension id="BUILD_EXT_47" type="BuildFailureOnMetric">
+        <parameters>
+          <param name="anchorBuild" value="lastSuccessful" />
+          <param name="metricKey" value="VisibleArtifactsSize" />
+          <param name="metricThreshold" value="1" />
+          <param name="metricUnits" value="metricUnitsDefault" />
+          <param name="moreOrLess" value="more" />
+          <param name="withBuildAnchor" value="false" />
+        </parameters>
+      </extension>
+      <extension id="swabra" type="swabra">
+        <parameters>
+          <param name="swabra.enabled" value="swabra.before.build" />
+        </parameters>
+      </extension>
+      <extension id="jetbrains.agent.free.space" type="jetbrains.agent.free.space">
+        <parameters>
+          <param name="free-space-work" value="3gb" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_48" type="commit-status-publisher">
+        <parameters>
+          <param name="github_authentication_type" value="password" />
+          <param name="github_host" value="https://api.github.com" />
+          <param name="github_password" value="123" />
+          <param name="github_username" value="123" />
+          <param name="publisherId" value="githubStatusPublisher" />
+          <param name="vcsRootId" value="DirtyConfigurations_Changes_MyProject" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_49" type="xml-report-plugin">
+        <parameters>
+          <param name="xmlReportParsing.reportDirs" value="**" />
+          <param name="xmlReportParsing.reportType" value="findBugs" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <artifact-dependencies>
+      <dependency id="ARTIFACT_DEPENDENCY_54" sourceBuildTypeId="BuildFeatures_FileContentReplacer_Build" cleanDestination="false">
+        <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
+        <artifact sourcePath="artifact" />
+      </dependency>
+    </artifact-dependencies>
+    <cleanup />
+  </settings>
+</template>
+
