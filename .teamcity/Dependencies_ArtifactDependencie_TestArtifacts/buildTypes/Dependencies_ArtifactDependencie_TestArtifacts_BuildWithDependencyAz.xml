@@ -24,7 +24,7 @@
     <artifact-dependencies>
       <dependency id="ARTIFACT_DEPENDENCY_59" sourceBuildTypeId="Dependencies_ArtifactDependencie_TestArtifacts_Second_2" cleanDestination="true">
         <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
-        <artifact sourcePath="artifacts2.zip" />
+        <artifact sourcePath="artifacts2.zip&#xD;&#xA;somefile.txt" />
       </dependency>
     </artifact-dependencies>
     <cleanup />
