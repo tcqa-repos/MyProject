@@ -7,7 +7,15 @@
       <option name="artifactRules" value="**/* =&gt; artifacts2.zip" />
     </options>
     <parameters />
-    <build-runners />
+    <build-runners>
+      <runner id="RUNNER_718" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo Test &gt; somefile.txt" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="DirtyConfigurations_Changes_MyProject" />
     </vcs-settings>
