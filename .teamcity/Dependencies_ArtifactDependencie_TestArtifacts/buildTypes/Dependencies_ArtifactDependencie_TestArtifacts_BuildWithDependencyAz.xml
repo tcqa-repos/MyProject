@@ -6,6 +6,7 @@
     <disabled-settings>
       <setting-ref ref="ARTIFACT_DEPENDENCY_50" />
       <setting-ref ref="ARTIFACT_DEPENDENCY_51" />
+      <setting-ref ref="ARTIFACT_DEPENDENCY_59" />
     </disabled-settings>
     <parameters />
     <build-runners>
