@@ -4,7 +4,6 @@
   <description />
   <settings>
     <disabled-settings>
-      <setting-ref ref="ARTIFACT_DEPENDENCY_39" />
       <setting-ref ref="ARTIFACT_DEPENDENCY_50" />
       <setting-ref ref="ARTIFACT_DEPENDENCY_51" />
     </disabled-settings>
@@ -21,12 +20,6 @@
     <vcs-settings />
     <requirements />
     <build-triggers />
-    <artifact-dependencies>
-      <dependency id="ARTIFACT_DEPENDENCY_39" sourceBuildTypeId="Dependencies_ArtifactDependencie_TestArtifacts_First" cleanDestination="true">
-        <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
-        <artifact sourcePath="artifacts.zip&#xD;&#xA;artifacts2.zip" />
-      </dependency>
-    </artifact-dependencies>
     <cleanup />
   </settings>
 </build-type>
