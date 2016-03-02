@@ -19,19 +19,7 @@
     <build-runners order="" />
     <vcs-settings />
     <requirements />
-    <build-triggers>
-      <build-trigger id="vcsTrigger" type="vcsTrigger">
-        <parameters>
-          <param name="quietPeriodMode" value="DO_NOT_USE" />
-        </parameters>
-      </build-trigger>
-      <build-trigger id="retryBuildTrigger" type="retryBuildTrigger">
-        <parameters>
-          <param name="enqueueTimeout" value="0" />
-          <param name="retryAttempts" value="3" />
-        </parameters>
-      </build-trigger>
-    </build-triggers>
+    <build-triggers />
     <build-extensions>
       <extension id="BUILD_EXT_44" type="BuildFailureOnMetric">
         <parameters>
@@ -41,11 +29,6 @@
           <param name="metricUnits" value="metricUnitsDefault" />
           <param name="moreOrLess" value="more" />
           <param name="withBuildAnchor" value="false" />
-        </parameters>
-      </extension>
-      <extension id="swabra" type="swabra">
-        <parameters>
-          <param name="swabra.enabled" value="swabra.before.build" />
         </parameters>
       </extension>
     </build-extensions>

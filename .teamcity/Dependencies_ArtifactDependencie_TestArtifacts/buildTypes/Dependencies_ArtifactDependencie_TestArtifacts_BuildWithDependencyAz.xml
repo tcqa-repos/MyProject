@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="c5baa207-129b-496e-8f80-bf3b84ec60b7" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+  <name>Build with dependency - AZ</name>
+  <description />
+  <settings>
+    <disabled-settings>
+      <setting-ref ref="ARTIFACT_DEPENDENCY_39" />
+      <setting-ref ref="ARTIFACT_DEPENDENCY_50" />
+      <setting-ref ref="ARTIFACT_DEPENDENCY_51" />
+    </disabled-settings>
+    <parameters />
+    <build-runners />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <artifact-dependencies>
+      <dependency id="ARTIFACT_DEPENDENCY_39" sourceBuildTypeId="Dependencies_ArtifactDependencie_TestArtifacts_First" cleanDestination="true">
+        <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
+        <artifact sourcePath="artifacts.zip&#xD;&#xA;artifacts2.zip" />
+      </dependency>
+    </artifact-dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+
