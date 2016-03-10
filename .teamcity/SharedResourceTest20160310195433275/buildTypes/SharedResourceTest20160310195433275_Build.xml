@@ -8,6 +8,13 @@
     <vcs-settings />
     <requirements />
     <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_169" type="JetBrains.SharedResources">
+        <parameters>
+          <param name="locks-param" value="Resource1457654319284 readLock" />
+        </parameters>
+      </extension>
+    </build-extensions>
     <cleanup />
   </settings>
 </build-type>
