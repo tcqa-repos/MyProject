@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="297c27c0-320d-45f2-a9eb-324b4ca420b8" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="8bb4a370-9fd6-4b21-abf0-1d743252b0eb" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
   <name>&lt;Root project&gt;</name>
   <description>Contains all other projects</description>
-  <parameters>
-    <param name="test.failed" value="undefined" />
-  </parameters>
+  <parameters />
   <cleanup>
     <options>
       <option name="preventDependenciesArtifactsFromCleanup" value="false" />
