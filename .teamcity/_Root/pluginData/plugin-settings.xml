@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <settings>
   <versionedSettings rootId="HttpsGithubComTcqaReposMyProject" enabled="true" showChanges="false" buildSettings="PREFER_VCS" />
+  <JetBrains.SharedResources>
+    <resource>
+      <name>TestResource</name>
+      <values type="quota">
+        <quota>infinite</quota>
+      </values>
+    </resource>
+  </JetBrains.SharedResources>
 </settings>
 
