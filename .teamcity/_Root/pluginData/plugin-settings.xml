@@ -14,5 +14,13 @@
     </trackerConnection>
   </issueTrackers>
   <versionedSettings rootId="VersionSettings" enabled="true" showChanges="false" buildSettings="ALWAYS_USE_CURRENT" />
+  <JetBrains.SharedResources>
+    <resource>
+      <name>TestResource</name>
+      <values type="quota">
+        <quota>infinite</quota>
+      </values>
+    </resource>
+  </JetBrains.SharedResources>
 </settings>
 
