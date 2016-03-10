@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="840e95aa-9069-4706-8db3-2d5f879e1435" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Build</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_686" name="" type="Maven2">
+        <parameters>
+          <param name="goals" value="clean test" />
+          <param name="mavenSelection" value="mavenSelection:default" />
+          <param name="pomLocation" value="ch-simple/pom.xml" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="userSettingsSelection" value="userSettingsSelection:default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="SimpleMavenSample1_HttpsGithubComJuliaReshSimpleMavenSampleRefsHeadsMaster" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="e9a04815-754e-47a8-943a-4dde929ed3e9" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>New Build</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_433" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo Hi!
+exit 0]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="FileContentReplacer" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_59" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="autodetect" />
+          <param name="teamcity.file.content.replacer.pattern" value="aa" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.replacement" value="ss" />
+          <param name="teamcity.file.content.replacer.wildcards" value="**/*.*" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_63" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="autodetect" />
+          <param name="teamcity.file.content.replacer.file.encoding.custom" value="autodetect" />
+          <param name="teamcity.file.content.replacer.pattern" value="(^\s*\[\s*assembly\s*:\s*((System\s*::)?\s*Reflection\s*::)?\s*AssemblyFileVersion(Attribute)?\s*\(\s*\&quot;)(([0-9\*])+.?)+(\&quot;\s*\)\s*\])" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.replacement" value="$1\%build.number%$7" />
+          <param name="teamcity.file.content.replacer.wildcards" value="**/AssemblyInfo.cpp" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_156" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="UTF-16LE" />
+          <param name="teamcity.file.content.replacer.file.encoding.custom" value="UTF-16LE" />
+          <param name="teamcity.file.content.replacer.pattern" value="(^\s*\[\s*assembly\s*:\s*((System\s*\.)?\s*Reflection\s*\.)?\s*AssemblyInformationalVersion(Attribute)?\s*\(\s*@?\&quot;)([^\&quot;]*)(\&quot;\s*\)\s*\])" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.replacement" value="$1\%build.number%$6" />
+          <param name="teamcity.file.content.replacer.wildcards" value="**/Properties/AssemblyInfo.cs" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

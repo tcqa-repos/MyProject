@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="f730eed5-5b07-4376-9a7e-0209eb646cf5" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Search in files retrieved via artifact dependency</name>
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_556" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="exit 0" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements>
+      <starts-with name="teamcity.agent.jvm.os.name" value="Windows" />
+    </requirements>
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_151" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="autodetect" />
+          <param name="teamcity.file.content.replacer.pattern" value="ccc" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.replacement" value="ddd" />
+          <param name="teamcity.file.content.replacer.wildcards" value="**/*.*" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <artifact-dependencies>
+      <dependency sourceBuildTypeId="BuildFeatures_FileContentReplacer_UserDefinedReplacer_FilesFromArtifactDepende_2" cleanDestination="false">
+        <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
+        <artifact sourcePath="artifacts.zip!* =&gt;" />
+      </dependency>
+    </artifact-dependencies>
+    <cleanup />
+  </settings>
+</template>
+

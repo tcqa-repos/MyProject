@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="b3d2e9b3-64f5-40e9-ab95-0e3cdce119d4" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Windows</name>
+  <description />
+  <settings ref="BuildFeatures_FileContentReplacer_UserDefinedReplacer_CustomCheckOutDirectory_Cu">
+    <parameters />
+    <build-runners order="RUNNER_489" />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="41abd1ab-6389-4b05-9433-27c07ba05dab" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Build</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/* =&gt;" />
+    </options>
+    <disabled-settings>
+      <setting-ref ref="BUILD_EXT_166" />
+    </disabled-settings>
+    <parameters>
+      <param name="replacement" value="aaa\" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_662" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo foo" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="FileContentReplacer" />
+      <vcs-entry-ref root-id="DirtyConfigurations_Tw25265_HttpsGithubComJuliaReshMyLibraryGit">
+        <checkout-rule rule="+:. =&gt; .SLN" />
+      </vcs-entry-ref>
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_166" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="autodetect" />
+          <param name="teamcity.file.content.replacer.file.encoding.custom" value="autodetect" />
+          <param name="teamcity.file.content.replacer.pattern" value="aaa" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.replacement" value="%replacement%" />
+          <param name="teamcity.file.content.replacer.wildcards" value="**/*" />
+        </parameters>
+      </extension>
+      <extension id="JetBrains.AssemblyInfo" type="JetBrains.AssemblyInfo">
+        <parameters>
+          <param name="assembly-format" value="%system.build.number%$9" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

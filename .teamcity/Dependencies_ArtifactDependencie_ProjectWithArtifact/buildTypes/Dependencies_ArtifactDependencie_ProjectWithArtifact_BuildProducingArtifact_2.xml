@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="7cd7d81d-612e-4d57-9551-1338aaf89103" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Build producing artifact (1)</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="**\* =&gt; artifact.zip" />
+    </options>
+    <parameters />
+    <build-runners />
+    <vcs-settings>
+      <vcs-entry-ref root-id="Dependencies_ArtifactDependencie_HttpsGithubComJuliaReshMyProject" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup>
+      <policy type="builds" cleanup-level="HISTORY_ENTRY">
+        <parameters>
+          <param name="keepBuilds.count" value="1" />
+        </parameters>
+      </policy>
+      <policy type="builds" cleanup-level="ARTIFACTS">
+        <parameters>
+          <param name="keepBuilds.count" value="1" />
+        </parameters>
+      </policy>
+    </cleanup>
+  </settings>
+</build-type>
+

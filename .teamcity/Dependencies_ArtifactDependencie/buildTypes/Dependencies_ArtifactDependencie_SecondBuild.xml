@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="8b7586d8-9ddd-401e-a357-6c1b86fbbbec" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="8b7586d8-9ddd-401e-a357-6c1b86fbbbec" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
   <name>Second Build</name>
   <description />
   <settings>
@@ -26,7 +26,7 @@ exit 0]]></param>
       <vcs-entry-ref root-id="Dependencies_ArtifactDependencie_HttpsGithubComJuliaReshMyProject_2" />
     </vcs-settings>
     <requirements>
-      <equals id="RQ_36" name="system.agent.name" value="UNIT-539" />
+      <equals name="system.agent.name" value="UNIT-539" />
     </requirements>
     <build-triggers>
       <build-trigger id="TRIGGER_20" type="schedulingTrigger">
@@ -53,7 +53,7 @@ exit 0]]></param>
       </build-trigger>
     </build-triggers>
     <artifact-dependencies>
-      <dependency id="ARTIFACT_DEPENDENCY_4" sourceBuildTypeId="Dependencies_ArtifactDependencie_FirstBuild" cleanDestination="true">
+      <dependency sourceBuildTypeId="Dependencies_ArtifactDependencie_FirstBuild" cleanDestination="true">
         <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
         <artifact sourcePath="**\* =&gt; art_from_%dep.Dependencies_ArtifactDependencie_FirstBuild.build.number%.zip" />
       </dependency>

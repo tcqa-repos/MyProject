@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="Issues" uuid="06550a5e-31ba-4067-8c82-b690145e9782" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>TW-40805</name>
+  <description>Full build configuration path is used in snapshot dependency failure description</description>
+  <parameters />
+  <cleanup />
+</project>
+

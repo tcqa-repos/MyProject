@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="22445e1a-c97a-4c30-a42e-dd906f4548f1" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>VCS Triggers</name>
+  <parameters />
+  <cleanup />
+</project>
+

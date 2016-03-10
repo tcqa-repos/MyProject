@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="3883587d-8805-439c-8a7a-b36ad04d58fe" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Upload SSH key</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/* =&gt;" />
+      <option name="checkoutMode" value="ON_AGENT" />
+      <option name="cleanBuild" value="true" />
+    </options>
+    <disabled-settings>
+      <setting-ref ref="RUNNER_631" />
+      <setting-ref ref="RUNNER_632" />
+    </disabled-settings>
+    <parameters>
+      <param name="port" value="22" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_631" name="Private Key" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+DEK-Info: AES-128-CBC,277582D119015F9784309292BF859568
+
+G/xqB+0RoVsLaS8g/4qTQ06Q0VtU86AB2ToGNxZZ9Pxh0OyFqmYA0Qaokibz3wu/
+cSSeP7udCIDd4PqECElUF4+2GybE96bYTgOXCKvXeRzpmjPUSHkjC55PJHbd27o9
+n9YQEEuMkaAhN9y8kfXu0IC0Plgm4B1z1pcMUmMXWn/57hwuV9xaCkegtxmhC8ty
+py29D09/vq6Nm5fLq6n13+AHiZgHGpvgYAz4mKd5XGXF3XagdFtIPyjmyYF4tTSo
+aOeB1cTwOtNZEKTL87P9igzl9BiT6PtfZuV15lb1Uv/vDy8Asyqug6lf/WY1YJm7
+pPxhz0fVRI3M8u5S6OWha3ycwWvbiIE0ifCQjIIxIDRbr8hZUL1/KpnR15hN9r0Y
+YvbEaqh2J6nBiOf29/5CU8xJkciJFfUZ3iG3TB+y0AeI7YcfCxsDd8R74BQG/BkZ
+ULvRVMpuUxk6428PgviTah3a8cdoilfLgn8Q/vIEq2LlPxWvbxZLyo1jcV2cXnEh
+I9mjcw0ebVADZa/stWXbcUdtCKdx2o+xT4TL8kCoAIYGPbxRaDzfmdrX/O15fWpt
+Oh8lbqKzWrUqaTj3VwWzj69AqxN/vr3cGUkPer7gkHpNeem/O6Zt/JRm3l22hVog
+iX/xxavN25EBx1ZQBaK+fmUiF6ltHQH9UGV1xo+hUwOArD3OlSmZpZYdONqQGP+G
+iaaAekYlDxgG+iKOShtRVinbE2r2fRaJlaZGahzL/l4q59MMvEwcAkzd6jH4DmIr
+AuHzV11Bj5wZBeSjt3GjSc2UEgDaHtZtVcy98iP8jn0nTJANAU4YGXVNYBH0jmcL
+zF03VAAdhr/GR92P5h2tK5Mh3gUl7UrWzt8gYecSr0y0mm8fdJfHjim3AxS1Krd6
+hEFWI8105gJZGMbL7k+Ukb9qzMtybiOhc6DSCGXWBG1YB08ahLs6T7J/LmCwdfQf
+ANYGDYIgmN1Wn1zFlx/ezU7D4uouiSBtZb7K/fAsLm3KAAW5cPRLZl/eL4hzWFCc
+dZeU8d09osvD3Mn+PEM6Az/DDc26B7cajxdxlPrFZhrQfd6mHe1lrPyRG3VRWXg7
+Z2Y6/hbYrujPiMH6TI3rgqElycSctO8Q8Fr0lOFF62jXb2g9NkIMEuRkzZWd1Kci
+kPYKI4wp23Y1S04Z6RNMvoQdQDTB6hnpZ01cXH9EQDPUGWEztsM/q7uhdCTlsuzN
+InnFU99qusuJavj0VD32h0m7WxHT7TX6dPiLFt9p5vm+19L7726HwcH+gjZRffv6
+pO+Ba8Cmqyubx5Bnqft5ouEe+n1D7B/w7nTeWWPfA1jVhkx9wORtV/GNyixpPiIB
+HwrHKww4ZR02j6R6257ste75GYM27cWtaCLDx2u92VUaNEOvikD/LZB7m5pjKxiv
+nncoA/CPazSwbQWCIEuej3igDivjJiCBqpCxc/KkrEfP05CirOJe8pX8bGAR6f5w
+/Mgb98pYkTQzeFjwvASwyPM7DiU11HZ/sZJRtUPm/FzTIRCoFY8F+VAJfo/FWtbX
+HQGijLZFyq16b6pK2b1VSBrrGfM5GaeI79U9MJsTdLyWpN+FOmmkZSLF6s1PRsyX
+-----END RSA PRIVATE KEY-----]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_632" name="Public Key" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[---- BEGIN SSH2 PUBLIC KEY ----
+Comment: "rsa-key-20150701"
+AAAAB3NzaC1yc2EAAAABJQAAAQEArH+/cG9626PbsBULDIFuna8/cHAtI6kAjLfA
+F98Z9IJ0VUqxx+ZF/NIZrH0p3hEB7mrOdo9aonUnFOwLhjDBtHHDpUUFIhjNcts3
+T38xUubeaSKUg0vIfbzYaEb8Lzxpgvbz0UhuAbFILly1U0el9G++xtqre2JRwnNE
+uZAqdBNNqgtSQWt/ZUty/Q4N22pJRmwIpqEPOO8dJdkWgg7J+9oEmWIxlVbfKJdY
+sycF94raCWP5zXZ9YSL6MlBZM3Y6ff4MTc5Ny/1c1G8SvfhR7kIGeJFMwErmYWxS
+gXSvxCOkj6eplnouPhb2s5/dSuCWlT3AEznKfhXWAJbmDUGrKw==
+---- END SSH2 PUBLIC KEY ----]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="VersionControlSystems_SubVersion_Test1" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers>
+      <build-trigger id="vcsTrigger" type="vcsTrigger">
+        <parameters>
+          <param name="perCheckinTriggering" value="true" />
+          <param name="quietPeriodMode" value="DO_NOT_USE" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
+    <cleanup />
+  </settings>
+</build-type>
+

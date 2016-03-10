@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="bb0cba1d-0cec-442a-8561-051ee052fa59" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Build</name>
+  <description />
+  <settings ref="DotNet_VSTestNew_VSTest">
+    <parameters>
+      <param name="add.cmd.parameters" value="" />
+      <param name="runconfig.file" value="" />
+      <param name="test.names" value="" />
+      <param name="testfiles.exclude.list" value="" />
+    </parameters>
+    <build-runners order="RUNNER_434, RUNNER_435, RUNNER_633" />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

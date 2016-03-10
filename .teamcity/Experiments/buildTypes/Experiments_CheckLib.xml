@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="df56e8cc-9985-4183-bcba-d8b789aac4c5" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Check lib</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="server-logs =&gt; server-logs.zip&#xA;agent-logs =&gt; agent-logs.zip" />
+    </options>
+    <parameters>
+      <param name="system.dist.build.number" value="11111" />
+      <param name="system.source" value="TCQA CentOS 7" spec="select data_2='TCQA CentOS 7 Trunk' data_1='TCQA WinSrv2012R2 Trunk' display='normal'" />
+      <param name="system.ssh.password" value="jetbrains" />
+      <param name="system.ssh.username" value="jetbrains" />
+      <param name="system.target" value="TCAUTO Server %teamcity.build.triggeredBy.username% %system.tc.release.number%" />
+      <param name="system.tc.release.number" value="" spec="select data_10='8.1' data_02='9.1' data_01='9.1.1' display='prompt' data_08='9.0' data_07='9.0.1' data_09='8.1.5' data_04='9.0.4' data_03='9.0.5' data_06='9.0.2' data_05='9.0.3'" />
+      <param name="system.vm.ip" value="" />
+      <param name="system.vsphere.password" value="zxxafe5eaec6fb54a04775d03cbe80d301b" spec="password display='normal'" />
+      <param name="system.vsphere.user" value="Julia.Reshetnikova@LABS" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_26" name="" type="Ant">
+        <parameters>
+          <param name="build-file-path" value="build.xml" />
+          <param name="runnerArgs" value="-lib %teamcity.tool.ant-net-tasks%" />
+          <param name="target" value="config-ssh" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Experiments_HttpGitHostingLabsIntellijNetTeamcityQaToolsGit">
+        <checkout-rule rule="+:clone-vm =&gt; ." />
+      </vcs-entry-ref>
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

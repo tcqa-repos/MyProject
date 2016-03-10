@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="be48d59b-f2db-48a9-bacb-72b86d9529e6" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Artifact size build failure condition message should be readable</name>
+  <description>TW-19918</description>
+  <settings>
+    <options>
+      <option name="artifactRules" value="Calculator =&gt; Calculator&#xA;KnightOS=&gt; KnightOS" />
+    </options>
+    <parameters />
+    <build-runners />
+    <vcs-settings>
+      <vcs-entry-ref root-id="DirtyConfigurations_FeatureBranches_HttpsGithubComJuliaReshCalculator">
+        <checkout-rule rule="+: =&gt; Calculator" />
+      </vcs-entry-ref>
+      <vcs-entry-ref root-id="DirtyConfigurations_Tw34842_HttpsGithubComKnightOSKnightOS">
+        <checkout-rule rule="+: =&gt; KnightOS" />
+      </vcs-entry-ref>
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_167" type="BuildFailureOnMetric">
+        <parameters>
+          <param name="anchorBuild" value="buildNumber" />
+          <param name="buildNumberPattern" value="1" />
+          <param name="metricKey" value="VisibleArtifactsSize" />
+          <param name="metricThreshold" value="1440000000" />
+          <param name="metricUnits" value="metricUnitsDefault" />
+          <param name="moreOrLess" value="less" />
+          <param name="withBuildAnchor" value="false" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

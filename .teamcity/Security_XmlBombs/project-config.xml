@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="Security" uuid="da703af1-7231-46e9-8fab-c342553362a9" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>XML Bombs</name>
+  <parameters />
+  <cleanup />
+</project>
+

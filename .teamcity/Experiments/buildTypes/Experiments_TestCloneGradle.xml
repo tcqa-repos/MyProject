@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="01309202-4082-44f1-a918-62264737e0c9" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Test clone gradle</name>
+  <description />
+  <settings>
+    <parameters>
+      <param name="system.tc.release.number" value="9.1.1" />
+      <param name="system.vm.folder" value="Julia.Reshetnikova" />
+      <param name="system.vm.password" value="jetbrains" />
+      <param name="system.vm.source" value="TCQA CentOS 7" />
+      <param name="system.vm.target" value="TC clone test" />
+      <param name="system.vm.username" value="jetbrains" />
+      <param name="system.vsphere.password" value="zxx00c49a190712b5de775d03cbe80d301b" spec="password display='normal'" />
+      <param name="system.vsphere.user" value="LABS\Julia.Reshetnikova" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_650" name="" type="gradle-runner">
+        <parameters>
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="ui.gradleRUnner.gradle.build.file" value="build.gradle" />
+          <param name="ui.gradleRunner.gradle.tasks.names" value="recreateVM installReleasedTeamCity" />
+          <param name="ui.gradleRunner.gradle.wrapper.useWrapper" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Experiments_HttpGitHostingLabsIntellijNetTeamcityQaToolsGit">
+        <checkout-rule rule="+:teamcity-setup =&gt; ." />
+      </vcs-entry-ref>
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

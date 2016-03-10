@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="2a661827-74ec-4825-b55b-9a5e040b0387" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>GitHub</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/* =&gt;" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_630" name="Key" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[command="svnserve -t -r /var/www/svn/repo --tunnel-user=jetbrains",no-port-forwarding,no-ag
+ent-forwarding,no-X11-forwarding,no-pty ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArH+/cG9626PbsBULDIFuna8/cHAtI6kAjLfAF98Z9IJ0VUqxx+ZF/NIZrH0p3hEB7mrOdo9aonUnFOwLhjDBtHHDpUUFIhjNcts3T38xUubeaSKUg0vIfbzYaEb8Lzxpgvbz0UhuAbFILly1U0el9G++xtqre2JRwnNEuZAqdBNNqgtSQWt/ZUty/Q4N22pJRmwIpqEPOO8dJdkWgg7J+9oEmWIxlVbfKJdYsycF94raCWP5zXZ9YSL6MlBZM3Y6ff4MTc5Ny/1c1G8SvfhR7kIGeJFMwErmYWxSgXSvxCOkj6eplnouPhb2s5/dSuCWlT3AEznKfhXWAJbmDUGrKw== rsa-key-20150701"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="VersionControlSystems_Name" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

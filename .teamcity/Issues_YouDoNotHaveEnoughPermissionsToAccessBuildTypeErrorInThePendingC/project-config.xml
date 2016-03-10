@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="Issues" uuid="7c8dd37d-0285-48e0-9bec-8ef346a813b8" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>TW-42371 "You do not have enough permissions to access build type" error</name>
+  <description>TW-42371</description>
+  <parameters />
+  <cleanup />
+</project>
+

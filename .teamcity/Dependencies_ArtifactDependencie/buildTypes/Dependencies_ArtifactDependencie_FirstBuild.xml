@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="e0795079-5fd6-4f05-8952-c46db8da347d" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="e0795079-5fd6-4f05-8952-c46db8da347d" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
   <name>First Build</name>
   <description />
   <settings>
     <options>
-      <option name="artifactRules" value="**\* =&gt; artifacts.zip&#xA;**\* =&gt; artifacts2.zip" />
+      <option name="artifactRules" value="**\* =&gt; %build.number%" />
       <option name="buildNumberPattern" value="mytext.%build.counter%" />
-      <option name="checkoutMode" value="ON_SERVER" />
     </options>
     <parameters />
     <build-runners />

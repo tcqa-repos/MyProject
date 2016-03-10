@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="650fd1d8-30c5-4cd5-8826-0efe8b0dff76" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Build Windows</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/* =&gt;" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_626" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo -e "testing \033[1;32;41mCOLOR1\033[1;34;42mCOLOR2\033[m"
+echo -e "testing \033[1;37mCOLO\033[0mR1\033[1;35mCOLOR2\033[m"
+echo -e "testing \e[35m;e support"
+echo -e "testing ^[5mblink\e[25m"
+echo -e "testing \x1b[35m;x1b support"
+echo "testing \27[1;32;41mCOLOR1\033[1;34;42mCOLOR2\033[m"
+echo "testing \0x1b[1;37mCOLO\033[0mR1\033[1;35mCOLOR2\033[m"
+echo "testing ^[35m;e support"
+echo "testing ^[5mblink\e[25m"
+echo "testing \x1b[35m;x1b support"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Dependencies_SnapshotDependencies_HttpsGithubComJuliaReshMyProjectGit_2" />
+    </vcs-settings>
+    <requirements>
+      <contains name="teamcity.agent.jvm.os.name" value="Windows" />
+    </requirements>
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+
