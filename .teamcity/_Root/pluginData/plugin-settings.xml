@@ -3,7 +3,13 @@
   <versionedSettings rootId="HttpsGithubComTcqaReposMyProject" enabled="true" showChanges="false" buildSettings="PREFER_VCS" />
   <JetBrains.SharedResources>
     <resource>
-      <name>Resource1457642982101</name>
+      <name>NewResource</name>
+      <values type="quota">
+        <quota>infinite</quota>
+      </values>
+    </resource>
+    <resource>
+      <name>Resource1457654462268</name>
       <values type="quota">
         <quota>infinite</quota>
       </values>
