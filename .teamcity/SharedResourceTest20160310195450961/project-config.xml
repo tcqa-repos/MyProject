@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="4d07e9f6-7683-403f-a289-b67709f00041" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="4d07e9f6-7683-403f-a289-b67709f00041" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
   <name>Shared Resource Test 2016-03-10 19:54:50.961</name>
   <parameters />
   <cleanup />

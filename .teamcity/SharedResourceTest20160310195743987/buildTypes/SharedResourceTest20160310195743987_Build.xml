@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="84c9b040-ab60-4e14-b950-243f14d126de" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="84c9b040-ab60-4e14-b950-243f14d126de" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
   <name>Build</name>
   <description />
   <settings>
+    <options>
+      <option name="checkoutMode" value="ON_SERVER" />
+    </options>
     <parameters />
     <build-runners />
     <vcs-settings />
