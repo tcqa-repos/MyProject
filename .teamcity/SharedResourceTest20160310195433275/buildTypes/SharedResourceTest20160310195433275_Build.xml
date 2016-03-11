@@ -16,7 +16,7 @@
       </extension>
       <extension id="BUILD_EXT_170" type="JetBrains.SharedResources">
         <parameters>
-          <param name="locks-param" value="NewResource writeLock" />
+          <param name="locks-param" value="Resource1457654555566 writeLock " />
         </parameters>
       </extension>
     </build-extensions>
