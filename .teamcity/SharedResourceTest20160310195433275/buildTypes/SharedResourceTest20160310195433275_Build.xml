@@ -12,16 +12,6 @@
     <requirements />
     <build-triggers />
     <build-extensions>
-      <extension id="BUILD_EXT_169" type="JetBrains.SharedResources">
-        <parameters>
-          <param name="locks-param" value="Resource1457654602729 readLock " />
-        </parameters>
-      </extension>
-      <extension id="BUILD_EXT_170" type="JetBrains.SharedResources">
-        <parameters>
-          <param name="locks-param" value="Resource1457654597132 writeLock " />
-        </parameters>
-      </extension>
       <extension id="BUILD_EXT_171" type="JetBrains.SharedResources">
         <parameters>
           <param name="locks-param" value="NewResource123 writeLock " />
