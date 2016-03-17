@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="ae539769-1f23-46c1-baf2-70ee8d193ad0" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Build</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_142" name="" type="Ant">
+        <parameters>
+          <param name="build-file"><![CDATA[<project name="Sleep" default="sleep">
+ <target name="sleep">
+  <sleep seconds="300"/>
+ </target>
+</project>]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use-custom-build-file" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_35" type="JetBrains.SharedResources">
+        <parameters>
+          <param name="locks-param" value="SharedResource readLock" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

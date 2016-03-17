@@ -1,19 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <settings>
-  <versionedSettings rootId="HttpsGithubComTcqaReposMyProject" enabled="true" showChanges="false" buildSettings="PREFER_VCS" />
   <JetBrains.SharedResources>
     <resource>
-      <name>NewResource12345</name>
-      <values type="quota">
-        <quota>infinite</quota>
-      </values>
-    </resource>
-    <resource>
-      <name>Resource1457654462268</name>
-      <values type="quota">
-        <quota>infinite</quota>
+      <name>SharedResource</name>
+      <values type="custom">
+        <value>test1</value>
+        <value>test2</value>
+        <value>test3</value>
+        <value>test4</value>
+        <value>test5</value>
+        <value>test6</value>
+        <value>test7</value>
+        <value>test8</value>
+        <value>test9</value>
+        <value>test10</value>
+        <value>test11</value>
+        <value>test12</value>
+        <value>test13</value>
+        <value>test14</value>
+        <value>test15</value>
+        <value>test16</value>
+        <value>test17</value>
+        <value>test18</value>
+        <value>test19</value>
+        <value>test20</value>
+        <value>test21</value>
+        <value>test22</value>
+        <value>test23</value>
+        <value>test24</value>
+        <value>test25</value>
+        <value>test26</value>
+        <value>test27</value>
+        <value>test28</value>
+        <value>test29</value>
+        <value>test30</value>
+        <value>test31</value>
+        <value>test32</value>
+        <value>test33</value>
+        <value>test34</value>
+        <value>test35</value>
+        <value>test36</value>
+        <value>test37</value>
+        <value>test38</value>
+        <value>test39</value>
+        <value>test40</value>
+        <value>test41</value>
+        <value>test42</value>
+        <value>test43</value>
+        <value>test44</value>
+        <value>test45</value>
+        <value>test46</value>
+        <value>test47</value>
+        <value>test48</value>
+        <value>test49</value>
+        <value>test50</value>
+        <value>test51</value>
+        <value>test52</value>
+        <value>test53</value>
+        <value>test54</value>
+        <value>test55</value>
+        <value>test56</value>
+        <value>test57</value>
+        <value>test58</value>
+        <value>test59</value>
+        <value>test60</value>
+        <value>test61</value>
+        <value>test62</value>
+        <value>test63</value>
+        <value>test64</value>
+        <value>test65</value>
+        <value>test66</value>
+        <value>test67</value>
+        <value>test68</value>
+        <value>test69</value>
+        <value>test70</value>
+        <value>test71</value>
+        <value>test72</value>
+        <value>test73</value>
+        <value>test74</value>
+        <value>test75</value>
+        <value>test76</value>
+        <value>test77</value>
+        <value>test78</value>
+        <value>test79</value>
+        <value>test80</value>
+        <value>test81</value>
+        <value>test82</value>
+        <value>test83</value>
+        <value>test84</value>
+        <value>test85</value>
+        <value>test86</value>
+        <value>test87</value>
+        <value>test88</value>
+        <value>test89</value>
+        <value>test90</value>
+        <value>test91</value>
+        <value>test92</value>
+        <value>test93</value>
+        <value>test94</value>
+        <value>test95</value>
+        <value>test96</value>
+        <value>test97</value>
+        <value>test98</value>
+        <value>test99</value>
+        <value>test100</value>
+        <value>test101</value>
+        <value>test102</value>
+        <value>test103</value>
+        <value>test104</value>
       </values>
     </resource>
   </JetBrains.SharedResources>
+  <versionedSettings rootId="HttpsGithubComTcqaReposMyProject" enabled="true" showChanges="false" buildSettings="PREFER_VCS" />
 </settings>
 
