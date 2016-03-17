@@ -111,6 +111,6 @@
       </values>
     </resource>
   </JetBrains.SharedResources>
-  <versionedSettings rootId="HttpsGithubComTcqaReposMyProject" enabled="true" showChanges="false" buildSettings="PREFER_VCS" />
+  <versionedSettings rootId="HttpsGithubComTcqaReposVersionedSettings" enabled="true" showChanges="false" buildSettings="PREFER_VCS" />
 </settings>
 
