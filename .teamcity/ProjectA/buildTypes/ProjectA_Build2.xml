@@ -3,6 +3,9 @@
   <name>Build2</name>
   <description />
   <settings>
+    <options>
+      <option name="showDependenciesChanges" value="true" />
+    </options>
     <parameters />
     <build-runners />
     <vcs-settings />
