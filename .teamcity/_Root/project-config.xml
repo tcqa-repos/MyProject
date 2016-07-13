@@ -23,7 +23,7 @@
         <param name="buildSettings" value="PREFER_VCS" />
         <param name="enabled" value="true" />
         <param name="rootId" value="HttpsGithubComTcqaReposMyProject" />
-        <param name="showChanges" value="false" />
+        <param name="showChanges" value="true" />
       </parameters>
     </extension>
   </project-extensions>
