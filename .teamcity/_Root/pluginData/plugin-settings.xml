@@ -1,26 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<settings>
-  <report-tabs>
-    <build-report-tab title="Code Coverage" startPage="coverage.zip!index.html" />
-    <build-report-tab title="JavaDoc" startPage="javadoc.zip!index.html" />
-  </report-tabs>
-  <issueTrackers>
-    <trackerConnection key="youtrack1" type="youtrack">
-      <param name="secure:password" value="zxxafe5eaec6fb54a04775d03cbe80d301b" />
-      <param name="host" value="http://youtrack.jetbrains.com" />
-      <param name="name" value="JB YouTrack" />
-      <param name="idPrefix" value="TW" />
-      <param name="username" value="Julia.Reshetnikova" />
-    </trackerConnection>
-  </issueTrackers>
-  <versionedSettings rootId="VersionSettings" enabled="true" showChanges="false" buildSettings="ALWAYS_USE_CURRENT" />
-  <JetBrains.SharedResources>
-    <resource>
-      <name>TestResource2</name>
-      <values type="quota">
-        <quota>infinite</quota>
-      </values>
-    </resource>
-  </JetBrains.SharedResources>
-</settings>
+<settings />
 
