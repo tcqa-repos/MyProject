@@ -1,3 +1,3 @@
 :start
-echo "hello" >> path/to/perfmon.csv
+echo "hello" >> ../../system/perfmon/temp/perfmon.csv
 goto start
