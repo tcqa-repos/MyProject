@@ -1,13 +1,6 @@
 <products>
   <product name="TeamCity">
     <code>TC</code>
-    <channel name="RELEASE" id="TC_RELEASE" status="release">
-      <build version="2017.2" number="49235" effectiveReleaseDate="20170620T000000GMT">
-        <message>TeamCity 2017.2 release! release</message>
-        <link rel="whatsnew" href="https://www.jetbrains.com/teamcity/whatsnew/" />
-        <distribution type="tar.gz" url="http://localhost:8080/TeamCity-49235.tar.gz" sha256="3ec75c387884f107729e04fc1b7a0a7323c05cb477d6df06f443af93280b9bc5" autoUpdateMinBuildNumber="40000"/>
-      </build>
-    </channel>
     <channel name="2017.2 EAP" id="2017.2 EAP" status="eap">
       <build version="2017.2 EAP" number="46654" effectiveReleaseDate="20170410T000000GMT">
         <message>TeamCity 2017.2 EAP fresh build</message>
@@ -15,9 +8,16 @@
         <distribution type="tar.gz" url="http://localhost:8080/TeamCity-46654.tar.gz" sha256="1bcb1551f8696071d7ad8876fcd01866efeb2c405a998e112b9d9262317ae6b7" autoUpdateMinBuildNumber="40000"/>
       </build>
     </channel>
-    <channel name="2017.2 RELEASE" id="2017.2" status="release">
+        <channel name="2017.2 RELEASE" id="2017.2" status="release">
       <build version="2017.2" number="49235" effectiveReleaseDate="20170620T000000GMT">
         <message>TeamCity 2017.2 release!</message>
+        <link rel="whatsnew" href="https://www.jetbrains.com/teamcity/whatsnew/" />
+        <distribution type="tar.gz" url="http://localhost:8080/TeamCity-49235.tar.gz" sha256="3ec75c387884f107729e04fc1b7a0a7323c05cb477d6df06f443af93280b9bc5" autoUpdateMinBuildNumber="40000"/>
+      </build>
+    </channel>
+        <channel name="RELEASE" id="TC_RELEASE" status="release">
+      <build version="2017.2" number="49235" effectiveReleaseDate="20170620T000000GMT">
+        <message>TeamCity 2017.2 release! release</message>
         <link rel="whatsnew" href="https://www.jetbrains.com/teamcity/whatsnew/" />
         <distribution type="tar.gz" url="http://localhost:8080/TeamCity-49235.tar.gz" sha256="3ec75c387884f107729e04fc1b7a0a7323c05cb477d6df06f443af93280b9bc5" autoUpdateMinBuildNumber="40000"/>
       </build>
