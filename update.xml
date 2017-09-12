@@ -1,17 +1,26 @@
 <products>
- <product name="TeamCity">
-   <code>TC</code>
+  <product name="TeamCity">
+    <code>TC</code>
     <channel name="2017.2 EAP" id="2017.2 EAP" status="eap">
-     <build version="2017.2 EAP" number="49871" effectiveReleaseDate="20170912T000000GMT">
-     <message>TeamCity 2017.2 EAP fresh build</message>
-     <distribution type="tar.gz" url="http://buildserver/guestAuth/repository/download/TC_Trunk_BuildDistTarGzWar/21731574:id/TeamCity-49871.tar.gz" sha256="adba6d5b21f787c3c1c639b8af3c3306ef9f90d78f613eb896d5e68d02e009cf" autoUpdateMinBuildNumber="40000"/>
-    </build>
-   </channel>
-   <channel name="2017.2" id="2017.2" status="release">
-     <build version="2017.2" number="49871" effectiveReleaseDate="20170912T000000GMT">
-     <message>TeamCity 2017.2 new release build</message>
-     <distribution type="tar.gz" url="http://buildserver/guestAuth/repository/download/TC_Trunk_BuildDistTarGzWar/21731574:id/TeamCity-49871.tar.gz" sha256="adba6d5b21f787c3c1c639b8af3c3306ef9f90d78f613eb896d5e68d02e009cf" autoUpdateMinBuildNumber="40000"/>
-    </build>
-   </channel>
+      <build version="2017.2 EAP" number="46654" effectiveReleaseDate="20170410T000000GMT">
+        <message>TeamCity 2017.2 EAP fresh build</message>
+        <link rel=“whatsnew” href=“https://www.jetbrains.com/teamcity/whatsnew/” />
+        <distribution type="tar.gz" url="http://localhost:8080/TeamCity-46654.tar.gz" sha256="1bcb1551f8696071d7ad8876fcd01866efeb2c405a998e112b9d9262317ae6b7" autoUpdateMinBuildNumber="40000"/>
+      </build>
+    </channel>
+    <channel name="2017.2 RELEASE" id="2017.2" status="release">
+      <build version="2017.2" number="49235" effectiveReleaseDate="20170620T000000GMT">
+        <message>TeamCity 2017.2 release!</message>
+        <link rel=“whatsnew” href=“https://www.jetbrains.com/teamcity/whatsnew/” />
+        <distribution type="tar.gz" url="http://localhost:8080/TeamCity-49235.tar.gz" sha256="3ec75c387884f107729e04fc1b7a0a7323c05cb477d6df06f443af93280b9bc5" autoUpdateMinBuildNumber="40000"/>
+      </build>
+    </channel>
+    <channel name="2017.1 RELEASE" id="2017.1" status="release">
+      <build version="2017.1.2" number="46812" effectiveReleaseDate="20170520T000000GMT">
+        <message>Several critical issues were fixed</message>
+        <link rel=“whatsnew” href=“https://www.jetbrains.com/teamcity/whatsnew/” />
+        <distribution type="tar.gz" url="http://localhost:8080/TeamCity-46812.tar.gz" sha256="12444f417cee122135310929414d5ff51f048eba251eb0b7eee330a5757e32d9" autoUpdateMinBuildNumber="40000"/>
+      </build>
+    </channel>
   </product>
 </products>
