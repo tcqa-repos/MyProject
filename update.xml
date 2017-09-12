@@ -1,0 +1,17 @@
+<products>
+ <product name="TeamCity">
+   <code>TC</code>
+    <channel name="2017.2 EAP" id="2017.2 EAP" status="eap">
+     <build version="2017.2 EAP" number="49871" effectiveReleaseDate="20170912T000000GMT">
+     <message>TeamCity 2017.2 EAP fresh build</message>
+     <distribution type="tar.gz" url="http://buildserver/guestAuth/repository/download/TC_Trunk_BuildDistTarGzWar/21731574:id/TeamCity-49871.tar.gz" sha256="adba6d5b21f787c3c1c639b8af3c3306ef9f90d78f613eb896d5e68d02e009cf" autoUpdateMinBuildNumber="40000"/>
+    </build>
+   </channel>
+   <channel name="2017.2" id="2017.2" status="release">
+     <build version="2017.2" number="49871" effectiveReleaseDate="20170912T000000GMT">
+     <message>TeamCity 2017.2 new release build</message>
+     <distribution type="tar.gz" url="http://buildserver/guestAuth/repository/download/TC_Trunk_BuildDistTarGzWar/21731574:id/TeamCity-49871.tar.gz" sha256="adba6d5b21f787c3c1c639b8af3c3306ef9f90d78f613eb896d5e68d02e009cf" autoUpdateMinBuildNumber="40000"/>
+    </build>
+   </channel>
+  </product>
+</products>
