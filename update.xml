@@ -1,7 +1,7 @@
 <products>
   <product name="TeamCity">
     <code>TC</code>
-    <channel name="2017.2 EAP" id="2017.2 EAP" status="eap">
+    <channel name="2017.2 EAP" id="2017.2 EAP" status="release">
       <build version="2017.2 EAP" number="46654" effectiveReleaseDate="20170410T000000GMT">
         <message>TeamCity 2017.2 EAP fresh build</message>
         <link rel="whatsnew" href="https://www.jetbrains.com/teamcity/whatsnew/" />
