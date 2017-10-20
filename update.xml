@@ -3,7 +3,7 @@
     <code>TC</code>
     <channel name="2017.3 EAP" id="2017.3 EAP" status="release">
       <build version="2017.3 EAP" number="46654" effectiveReleaseDate="20171212T000000GMT">
-        <message>TeamCity 2017.2 EAP fresh build </message>
+        <message>TeamCity 2017.2 EAP fresh  build </message>
         <link rel="whatsnew" href="https://www.jetbrains.com/teamcity/whatsnew/" />
         <distribution type="tar.gz" url="http://localhost:8080/TeamCity-46654.tar.gz" sha256="1bcb1551f8696071d7ad8876fcd01866efeb2c405a998e112b9d9262317ae6b7" autoUpdateMinBuildNumber="40000"/>
       </build>
