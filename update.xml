@@ -2,12 +2,12 @@
  <product>
   <code>TC</code>
    <channel id="2017.2 EAP" name="2017.2 EAP" status="EAP">
-    <build effectiveReleaseDate="20171116T000000GMT" number="50444" version="2017.2 RC">
+    <build effectiveReleaseDate="20171116T150000GMT" number="50444" version="2017.2 RC">
      <distribution sha256="a5954cc74fbd7918eb23b9d349cf7625708e4e2342a28cd08945bdd214c49b94" type="tar.gz" url="https://download.jetbrains.com/teamcity/eap/TeamCity-50444.tar.gz"/>
     </build>
    </channel>
     <channel id="2017.2" name="2017.2" status="release">
-    <build effectiveReleaseDate="20171127T000000GMT" number="50574" version="2017.2">
+    <build effectiveReleaseDate="20171127T150000GMT" number="50574" version="2017.2">
      <distribution sha256="a5954cc74fbd7918eb23b9d349cf7625708e4e2342a28cd08945bdd214c49b94" type="tar.gz" url="https://download.jetbrains.com/teamcity/eap/TeamCity-50444.tar.gz"/>
     </build>
    </channel>
