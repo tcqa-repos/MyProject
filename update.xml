@@ -7,8 +7,8 @@
     </build>
    </channel>
     <channel id="2017.2" name="2017.2" status="release">
-    <build effectiveReleaseDate="20171127T150000GMT" number="50574" version="2017.2">
-     <distribution sha256="a5954cc74fbd7918eb23b9d349cf7625708e4e2342a28cd08945bdd214c49b94" type="tar.gz" url="https://download.jetbrains.com/teamcity/eap/TeamCity-50444.tar.gz"/>
+    <build effectiveReleaseDate="20180127T150000GMT" number="50999" version="2017.2.3">
+     <distribution sha256="a5954cc74fbd7918eb23b9d349cf7625708e4e2342a28cd08945bdd214c49b94" type="tar.gz" url="https://download.jetbrains.com/teamcity/TeamCity-2017.2.2.tar.gz"/>
     </build>
    </channel>
    <channel id="2017.1" name="2017.1 Release" status="release">
