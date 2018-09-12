@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="66ed84a3-93c0-4af3-91be-b466c5c24cd7" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>PowerShell 4.0 under .Net 5.0</name>
+  <description />
+  <settings>
+    <options>
+      <option name="shouldFailBuildOnAnyErrorMessage" value="true" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_196" name="Source Code &amp; &quot;-Command-&quot; with brackets" type="jetbrains_powershell">
+        <parameters>
+          <param name="jetbrains_powershell_bitness" value="x86" />
+          <param name="jetbrains_powershell_execution" value="STDIN" />
+          <param name="jetbrains_powershell_minVersion" value="4.0" />
+          <param name="jetbrains_powershell_script_code"><![CDATA[if ($true) {
+    Write-Output "Write-Output out from brackets"
+}]]></param>
+          <param name="jetbrains_powershell_script_mode" value="CODE" />
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_3" name="Source Code &amp; &quot;-File&quot; with tab" type="jetbrains_powershell">
+        <parameters>
+          <param name="jetbrains_powershell_bitness" value="x86" />
+          <param name="jetbrains_powershell_execution" value="PS1" />
+          <param name="jetbrains_powershell_minVersion" value="4.0" />
+          <param name="jetbrains_powershell_script_code"><![CDATA[if ($true) {
+	Write-Output "Output File with tab"
+}]]></param>
+          <param name="jetbrains_powershell_script_mode" value="CODE" />
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_35" name="TW-36815 from external file" type="jetbrains_powershell">
+        <parameters>
+          <param name="jetbrains_powershell_bitness" value="x86" />
+          <param name="jetbrains_powershell_execution" value="PS1" />
+          <param name="jetbrains_powershell_minVersion" value="4.0" />
+          <param name="jetbrains_powershell_script_code"><![CDATA[$test= "C:\temp\test"
+if(-not (Test-Path $test)){ 
+    md $test
+}
+if ($error -or $LASTEXITCODE) { exit 1 }]]></param>
+          <param name="jetbrains_powershell_script_mode" value="CODE" />
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Powershell_PowerShell" />
+    </vcs-settings>
+    <requirements>
+      <equals name="powershell_x86" value="5.0" />
+    </requirements>
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

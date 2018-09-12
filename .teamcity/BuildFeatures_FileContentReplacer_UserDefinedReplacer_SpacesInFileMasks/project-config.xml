@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="BuildFeatures_FileContentReplacer_UserDefinedReplacer" uuid="4f027ec1-f913-48cd-a709-4c592f17e93d" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Spaces in File Masks</name>
+  <parameters />
+  <cleanup />
+</project>
+

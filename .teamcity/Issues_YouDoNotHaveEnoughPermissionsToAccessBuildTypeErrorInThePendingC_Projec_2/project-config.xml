@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="Issues_YouDoNotHaveEnoughPermissionsToAccessBuildTypeErrorInThePendingC_Project1" uuid="c218bbac-9b38-4983-81a2-cf874dd52c2e" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>New sub</name>
+  <parameters />
+  <cleanup />
+</project>
+

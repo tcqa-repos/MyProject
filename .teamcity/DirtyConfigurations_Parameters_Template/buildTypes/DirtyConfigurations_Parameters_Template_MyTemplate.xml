@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="f21919f2-9e9a-49cc-8b25-d524a6270ca8" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>MyTemplate</name>
+  <settings>
+    <parameters>
+      <param name="param" value="123 123 " />
+      <param name="password" value="zxxd8c96f7c5d6b4b6a809915f7a5853afb" />
+      <param name="param.referencing.other.param" value="Other parameter value is %param%" />
+      <param name="print.password" value="echo %password%" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_519" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo %param.referencing.other.param%
+%print.password%]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</template>
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="c0064e4d-a70b-4969-967f-ab591d7b7b63" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+  <name>Build with dependency (1)</name>
+  <description />
+  <settings ref="Dependencies_ArtifactDependencie_TestArtifacts_TemplateWithDisabled">
+    <disabled-settings>
+      <setting-ref ref="ARTIFACT_DEPENDENCY_50" />
+      <setting-ref ref="ARTIFACT_DEPENDENCY_51" />
+      <setting-ref ref="ARTIFACT_DEPENDENCY_55" />
+      <setting-ref ref="ARTIFACT_DEPENDENCY_58" />
+      <setting-ref ref="RQ_132" />
+      <setting-ref ref="RUNNER_170" />
+      <setting-ref ref="RUNNER_175" />
+      <setting-ref ref="RUNNER_176" />
+      <setting-ref ref="retryBuildTrigger" />
+      <setting-ref ref="swabra" />
+    </disabled-settings>
+    <parameters />
+    <build-runners order="" />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_44" type="BuildFailureOnMetric">
+        <parameters>
+          <param name="anchorBuild" value="lastSuccessful" />
+          <param name="metricKey" value="VisibleArtifactsSize" />
+          <param name="metricThreshold" value="1" />
+          <param name="metricUnits" value="metricUnitsDefault" />
+          <param name="moreOrLess" value="more" />
+          <param name="withBuildAnchor" value="false" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

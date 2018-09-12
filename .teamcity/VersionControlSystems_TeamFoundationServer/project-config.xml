@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="VersionControlSystems" uuid="ee7f2d31-e7f0-44df-89c7-09b5ae090fbc" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Team Foundation Server</name>
+  <parameters />
+  <cleanup />
+</project>
+

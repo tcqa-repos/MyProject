@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="e008c282-392f-40ea-9390-fc1ada8bed93" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Lock Value3 1</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_640" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[ping 1.1.1.1
+ping 1.1.1.1
+ping 1.1.1.1
+ping 1.1.1.1
+ping 1.1.1.1
+ping 1.1.1.1]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_162" type="JetBrains.SharedResources">
+        <parameters>
+          <param name="locks-param" value="Resource_with_values readLock Value3" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

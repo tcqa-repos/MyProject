@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="1cb91722-3f38-48cd-bb61-3e30f4823884" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Build with '\'</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="test\pack =&gt; artifacts.zip" />
+    </options>
+    <parameters />
+    <build-runners />
+    <vcs-settings>
+      <vcs-entry-ref root-id="DirtyConfigurations_FeatureBranches_HttpsGithubComJuliaReshCalculator" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

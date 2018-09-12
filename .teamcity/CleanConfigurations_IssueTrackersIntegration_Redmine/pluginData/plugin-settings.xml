@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+  <issueTrackers>
+    <trackerConnection key="githubissues1" type="GithubIssues">
+      <param name="secure:password" value="zxx775d03cbe80d301b" />
+      <param name="pattern" value="#(\d+)" />
+      <param name="name" value="GitHub" />
+      <param name="repository" value="JuliaResh/IssueTrackersIntegration" />
+      <param name="username" value="" />
+    </trackerConnection>
+    <trackerConnection key="redmine1" type="redmine">
+      <param name="apiToken" value="" />
+      <param name="name" value="123" />
+      <param name="host" value="http://" />
+      <param name="pattern" value="#(\d+)" />
+    </trackerConnection>
+  </issueTrackers>
+</settings>
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="a877ac31-142b-4617-838f-7ff5db401cdd" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Framework 4.6</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_637" name="" type="dotnet-tools-inspectcode">
+        <parameters>
+          <param name="TargetDotNetFramework_4.5" value="true" />
+          <param name="TargetDotNetFramework_4.5.1" value="true" />
+          <param name="dotnet-tools-inspectcode.debug" value="true" />
+          <param name="dotnet-tools-inspectcode.solution" value="VisualStudio2015Solution.sln" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="DotNet_VisualStudioSolution_SolutionsOnGitHub">
+        <checkout-rule rule="+:VisualStudio2015Solution =&gt; ." />
+      </vcs-entry-ref>
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

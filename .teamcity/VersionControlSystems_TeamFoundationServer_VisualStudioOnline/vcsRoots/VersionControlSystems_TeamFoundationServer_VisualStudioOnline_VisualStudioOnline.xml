@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="5bdc94b4-8140-4b52-aa14-9d4ced99178c" type="tfs" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Visual Studio Online</name>
+  <param name="secure:tfs-password" value="zxx2c43c1910f08715eebd45408349302a574faccd1a036c8671ebcb8f14ae54e3a108f133c515b080e763f0881e0f4585fc15e94318f0d9a67" />
+  <param name="tfs-root" value="$/My First Project" />
+  <param name="tfs-url" value="https://tcqa.visualstudio.com/DefaultCollection" />
+  <param name="tfs-username" value="##LIVE##\teamcity.qa.server@gmail.com" />
+</vcs-root>
+

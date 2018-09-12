@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="675498bb-8e92-44a4-8755-06b11026b549" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Build with meta-runner</name>
+  <description />
+  <settings>
+    <parameters>
+      <param name="B" value="1" />
+      <param name="C" value="123" />
+      <param name="D" value="%C%" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_693" name="" type="MetaRunners_Build">
+        <parameters>
+          <param name="A" value="%B%" />
+          <param name="B" value="%D%" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="test.failed" value="undefined" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_694" name="" type="MetaRunners_Build">
+        <parameters>
+          <param name="A" value="%D%" />
+          <param name="B" value="X" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="test.failed" value="undefined" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

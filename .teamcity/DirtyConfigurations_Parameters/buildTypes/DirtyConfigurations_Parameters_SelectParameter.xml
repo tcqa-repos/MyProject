@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="e8280aeb-c40f-419b-af61-d11e6bdb389b" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Select parameter</name>
+  <description />
+  <settings>
+    <parameters>
+      <param name="none" value="" />
+      <param name="Parameter" value="" spec="select label_1='A' description='The parameter' data_5='c' data_1='a' display='normal' label='Parameter' data_3='b' label_3='B' multiple='true' label_5='C'" />
+    </parameters>
+    <build-runners />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

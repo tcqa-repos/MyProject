@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="d05256ea-a53a-497d-9ea6-2cd1fe101a92" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Patch Info.plist</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/* =&gt;" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_437" name="" type="Xcode">
+        <parameters>
+          <param name="arch" value="default" />
+          <param name="buildActions" value="clean build" />
+          <param name="customBuildOutputDir" value="build" />
+          <param name="platform" value="default" />
+          <param name="project" value="SimpleBindingsAdoption.xcworkspace" />
+          <param name="scheme" value="MyScheme" />
+          <param name="sdk" value="default" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="useCustomBuildOutputDir" value="true" />
+          <param name="xcode" value="4" />
+          <param name="xcodePath" value="/Applications/Xcode_6_0_1.app/Contents/Developer" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="DirtyConfigurations_XCode_HttpsJuliaReshBitbucketOrgJuliaReshSimplebindingsadopt" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_64" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="UTF-8" />
+          <param name="teamcity.file.content.replacer.file.encoding.custom" value="UTF-8" />
+          <param name="teamcity.file.content.replacer.pattern" value="(\&lt;key\&gt;CFBundleVersion\&lt;\/key\&gt;\s*\&lt;string\&gt;)(\d+\.)*\d+(\&lt;\/string\&gt;)" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.replacement" value="$1\1.\%build.number%$3" />
+          <param name="teamcity.file.content.replacer.wildcards" value="**/Info.plist" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_65" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="UTF-8" />
+          <param name="teamcity.file.content.replacer.file.encoding.custom" value="UTF-8" />
+          <param name="teamcity.file.content.replacer.pattern" value="(\&lt;key\&gt;CFBundleShortVersionString\&lt;\/key\&gt;\s*\&lt;string\&gt;)(\d+\.)*\d+(\&lt;\/string\&gt;)" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.replacement" value="$1\%build.number%$3" />
+          <param name="teamcity.file.content.replacer.wildcards" value="**/Info.plist" />
+        </parameters>
+      </extension>
+      <extension id="swabra" type="swabra">
+        <parameters>
+          <param name="swabra.enabled" value="swabra.before.build" />
+          <param name="swabra.strict" value="true" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

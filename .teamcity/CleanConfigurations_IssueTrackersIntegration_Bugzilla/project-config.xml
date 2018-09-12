@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="CleanConfigurations_IssueTrackersIntegration" uuid="b26300ef-f306-487a-adc3-4ae6a2dac2bb" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Bugzilla</name>
+  <parameters />
+  <cleanup />
+</project>
+

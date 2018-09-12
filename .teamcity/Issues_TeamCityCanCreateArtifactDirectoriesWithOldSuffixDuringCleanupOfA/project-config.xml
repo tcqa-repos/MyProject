@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="Issues" archived="true" uuid="829ec779-b719-4021-af7e-370a55febcb3" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>TeamCity can create artifact directories with "_old" suffix during cleanup of a</name>
+  <description>TW-43873</description>
+  <parameters />
+  <cleanup>
+    <policy type="builds" cleanup-level="EVERYTHING">
+      <parameters>
+        <param name="keepBuilds.count" value="1" />
+      </parameters>
+    </policy>
+  </cleanup>
+</project>
+

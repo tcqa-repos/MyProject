@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="1f4ec857-4317-474a-84d7-99767e786cf4" paused="true" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Build with artifacts</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/* =&gt;" />
+    </options>
+    <parameters />
+    <build-runners />
+    <vcs-settings>
+      <vcs-entry-ref root-id="DirtyConfigurations_FeatureBranches_HttpsGithubComJuliaReshCalculator" />
+      <vcs-entry-ref root-id="DirtyConfigurations_Tw34842_HttpsGithubComKnightOSKnightOS">
+        <checkout-rule rule="+:. =&gt; knightOS" />
+      </vcs-entry-ref>
+      <vcs-entry-ref root-id="DirtyConfigurations_HttpsGithubComJuliaReshMavenHW">
+        <checkout-rule rule="+:. =&gt; Maven" />
+      </vcs-entry-ref>
+    </vcs-settings>
+    <requirements />
+    <build-triggers>
+      <build-trigger id="TRIGGER_86" type="schedulingTrigger">
+        <parameters>
+          <param name="branchFilter" value="+:&lt;default&gt;" />
+          <param name="cronExpression_dm" value="*" />
+          <param name="cronExpression_dw" value="?" />
+          <param name="cronExpression_hour" value="*" />
+          <param name="cronExpression_min" value="*" />
+          <param name="cronExpression_month" value="*" />
+          <param name="cronExpression_sec" value="0/3" />
+          <param name="cronExpression_year" value="*" />
+          <param name="dayOfWeek" value="Sunday" />
+          <param name="hour" value="12" />
+          <param name="minute" value="0" />
+          <param name="promoteWatchedBuild" value="true" />
+          <param name="revisionRule" value="lastFinished" />
+          <param name="revisionRuleBuildBranch" value="&lt;default&gt;" />
+          <param name="schedulingPolicy" value="cron" />
+          <param name="timezone" value="SERVER" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
+    <cleanup />
+  </settings>
+</build-type>
+

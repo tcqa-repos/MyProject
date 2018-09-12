@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="36a387eb-896d-487f-aaf9-5cda64288f10" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>TW-42996</name>
+  <description>Powershell build step executed from "Script file" does not return ex</description>
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_639" name="" type="jetbrains_powershell">
+        <parameters>
+          <param name="jetbrains_powershell_bitness" value="x86" />
+          <param name="jetbrains_powershell_execution" value="PS1" />
+          <param name="jetbrains_powershell_scriptArguments" value="-rootDirName aaa" />
+          <param name="jetbrains_powershell_script_code"><![CDATA[Param(
+ [Parameter(Mandatory=$True, Position=1)] [string]$rootDirName
+)
+
+$a = 5
+Write-Host "exit code is" $a
+[Environment]::Exit($a)]]></param>
+          <param name="jetbrains_powershell_script_file" value="exit1.ps1" />
+          <param name="jetbrains_powershell_script_mode" value="CODE" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_649" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="powershell -ExecutionPolicy ByPass -File exit1.ps1 aaa" />
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Powershell_PowerShell" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

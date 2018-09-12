@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="19145a94-162c-4e40-bfde-62639b389789" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Lock file in build</name>
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_565" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[start notepad UTF_with_BOM.txt
+exit 0]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="FileContentReplacer" />
+    </vcs-settings>
+    <requirements>
+      <starts-with name="teamcity.agent.jvm.os.name" value="Windows" />
+    </requirements>
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_152" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="autodetect" />
+          <param name="teamcity.file.content.replacer.pattern" value="aaa" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.replacement" value="ccc" />
+          <param name="teamcity.file.content.replacer.wildcards" value="*.txt" />
+        </parameters>
+      </extension>
+      <extension id="swabra" type="swabra">
+        <parameters>
+          <param name="swabra.enabled" value="swabra.before.build" />
+          <param name="swabra.processes" value="kill" />
+          <param name="swabra.verbose" value="true" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</template>
+

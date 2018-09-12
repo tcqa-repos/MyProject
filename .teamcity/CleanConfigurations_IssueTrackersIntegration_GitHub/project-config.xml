@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="CleanConfigurations_IssueTrackersIntegration" uuid="87c80a8d-eab6-44c2-a87b-81bf2a3d8ead" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>GitHub</name>
+  <parameters />
+  <cleanup />
+</project>
+

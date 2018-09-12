@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="Dependencies_SnapshotDependencies_TreeStructure_ProjectA_ProjectAB" uuid="e2fa26ef-2c11-43c0-8f26-68edb3d1040f" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>ProjectBBB</name>
+  <parameters />
+  <cleanup />
+</project>
+

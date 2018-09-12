@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+  <issueTrackers>
+    <trackerConnection key="bugzilla1" type="bugzilla">
+      <param name="secure:password" value="zxx0feb335798e7f083" />
+      <param name="name" value="Bugzilla 3.4 (creds)" />
+      <param name="host" value="http://tcqa-issue-trackers:80/" />
+      <param name="pattern" value="#(\d+)" />
+      <param name="username" value="admin" />
+    </trackerConnection>
+  </issueTrackers>
+</settings>
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+  <project-graphs>
+    <graph title="Chart title 1111111" defaultFilters="" hideFilters="" id="customGraph1" seriesTitle="Serie">
+      <valueType key="BuildDuration" title="Build Duration (all stages)" sourceBuildTypeId="CleanConfigurations_CustomCharts_SubProjectA_SubProjectAA_BuildAA" />
+    </graph>
+  </project-graphs>
+</settings>
+

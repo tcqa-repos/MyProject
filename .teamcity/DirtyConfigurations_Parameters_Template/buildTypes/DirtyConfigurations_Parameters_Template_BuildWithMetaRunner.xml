@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="23364bca-281c-4318-b609-c4a3625e4079" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Build with Meta-Runner</name>
+  <description />
+  <settings>
+    <parameters>
+      <param name="password" value="zxxb239d22851e412af" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_520" name="" type="DirtyConfigurations_Parameters_Template_MetaRunnerFromMyTemplate">
+        <parameters>
+          <param name="param" value="123 123" />
+          <param name="param.referencing.other.param" value="Other parameter value is %param%" />
+          <param name="password" value="zxx52467cdee324aa9768b065e3e10cc85e2cca34bb02a162e9a58b70e9ae7dfafe11c72f75472145c5" />
+          <param name="print.password" value="echo %password%" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_521" name="" type="DirtyConfigurations_Parameters_Template_MetaRunnerFromTemplate">
+        <parameters>
+          <param name="param" value="123 123" />
+          <param name="param.referencing.other.param" value="Other parameter value is %param%" />
+          <param name="password" value="zxx52467cdee324aa9768b065e3e10cc85e2cca34bb02a162e9a58b70e9ae7dfafe11c72f75472145c5" />
+          <param name="print.password" value="echo %password%" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_522" name="" type="DirtyConfigurations_Parameters_Template_BuildFromTemplate">
+        <parameters>
+          <param name="param" value="234  234" />
+          <param name="param.referencing.other.param" value="Other parameter value is %param%" />
+          <param name="password" value="zxx52467cdee324aa9768b065e3e10cc85e2cca34bb02a162e9a58b70e9ae7dfafe11c72f75472145c5" />
+          <param name="print.password" value="echo %password%" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

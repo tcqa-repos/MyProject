@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="DirtyConfigurations_Parameters" uuid="147e6d82-53c6-47d1-9de6-67ea64dcc7f5" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Template</name>
+  <parameters>
+    <param name="param" value="234  234 " />
+    <param name="password" value="zxx775d03cbe80d301b" spec="password display='normal'" />
+  </parameters>
+  <cleanup />
+</project>
+

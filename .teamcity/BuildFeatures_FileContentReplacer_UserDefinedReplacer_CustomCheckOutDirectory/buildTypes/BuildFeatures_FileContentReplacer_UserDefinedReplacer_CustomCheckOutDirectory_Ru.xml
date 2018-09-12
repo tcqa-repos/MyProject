@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="c25a2efb-2c47-405a-bc6a-32f4e82a6f41" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>_Run All_</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <dependencies>
+      <depend-on sourceBuildTypeId="BuildFeatures_FileContentReplacer_UserDefinedReplacer_CustomCheckOutDirectory_Li">
+        <options>
+          <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
+        </options>
+      </depend-on>
+      <depend-on sourceBuildTypeId="BuildFeatures_FileContentReplacer_UserDefinedReplacer_CustomCheckOutDirectory_Ma">
+        <options>
+          <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
+        </options>
+      </depend-on>
+      <depend-on sourceBuildTypeId="BuildFeatures_FileContentReplacer_UserDefinedReplacer_CustomCheckOutDirectory_Wi">
+        <options>
+          <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
+        </options>
+      </depend-on>
+    </dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+

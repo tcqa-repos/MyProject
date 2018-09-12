@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="d59b1410-3be2-4b3e-98d9-f21f470cbdc2" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Ant</name>
+  <description />
+  <settings>
+    <disabled-settings>
+      <setting-ref ref="RUNNER_645" />
+    </disabled-settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_645" name="" type="Ant">
+        <parameters>
+          <param name="build-file-path" value="XXE files/build.xml" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_646" name="" type="Ant">
+        <parameters>
+          <param name="build-file"><![CDATA[<project name="test" default="test">
+<target name="test">
+<mkdir dir="mydir"/>
+<copydir src="." dest="mydir"/>
+</target>
+</project>]]></param>
+          <param name="build-file-path" value="build.xml" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use-custom-build-file" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Security_HttpsGithubComJuliaReshSecurityRefsHeadsMaster" />
+    </vcs-settings>
+    <requirements>
+      <equals name="system.agent.name" value="UNIT-539" />
+    </requirements>
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_165" type="xml-report-plugin">
+        <parameters>
+          <param name="xmlReportParsing.reportDirs" value="+:**/*.trx" />
+          <param name="xmlReportParsing.reportType" value="trx" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

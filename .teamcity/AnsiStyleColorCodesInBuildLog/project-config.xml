@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="b5161a09-532e-4390-96f1-4cfbb830dfa6" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>ANSI-style color codes in Build Log</name>
+  <parameters />
+  <cleanup>
+    <policy type="builds" cleanup-level="HISTORY_ENTRY">
+      <parameters>
+        <param name="keepBuilds.count" value="1" />
+      </parameters>
+    </policy>
+    <policy type="builds" cleanup-level="ARTIFACTS">
+      <parameters>
+        <param name="keepBuilds.count" value="1" />
+      </parameters>
+    </policy>
+  </cleanup>
+</project>
+

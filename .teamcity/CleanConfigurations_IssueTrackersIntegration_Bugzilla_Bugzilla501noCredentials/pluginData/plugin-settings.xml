@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+  <issueTrackers>
+    <trackerConnection key="bugzilla1" type="bugzilla">
+      <param name="secure:password" value="zxx775d03cbe80d301b" />
+      <param name="name" value="Bugzilla 5.0.1 (no creds)" />
+      <param name="host" value="http://tcqa-bugzilla-50:80/" />
+      <param name="pattern" value="#(\d+)" />
+      <param name="username" value="" />
+    </trackerConnection>
+  </issueTrackers>
+</settings>
+

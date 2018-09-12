@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="BuildFeatures" uuid="4867bec4-870f-4c99-a953-f8b74e42ac7a" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>AssemblyInfo Patcher</name>
+  <parameters />
+  <cleanup />
+</project>
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="544a5fd5-3e3a-41c9-940b-d1f99531ac3d" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Build</name>
+  <description />
+  <settings>
+    <parameters>
+      <param name="Select" value="" spec="select label_1='None' label_7='C' data_1='' display='normal' label='Parameter' data_3='a' label_3='A' label_5='B' data_7='c' description='The parameter' data_5='b' multiple='true'" />
+      <param name="test2" value="foo" spec="select data_2='test4' data_1='test3' display='prompt'" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_515" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo Select value is %Select%
+exit 0]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

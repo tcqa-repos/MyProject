@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="40364c44-0f62-44b2-b8b6-cc738f49b69d" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Run gradle</name>
+  <description />
+  <settings>
+    <parameters>
+      <param name="system.tc.agent.log.dir" value="D:\TeamCity\91\91\buildAgent\logs" />
+      <param name="system.tc.log.dir" value="D:\TeamCity\91\91\logs" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_689" name="" type="gradle-runner">
+        <parameters>
+          <param name="teamcity.build.workingDir" value="D:\TCPerforce\Julia.Reshetnikova_Trunk\system-tests" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="ui.gradleRUnner.gradle.build.file" value="build.gradle" />
+          <param name="ui.gradleRunner.gradle.tasks.names" value="checkLogsFactory" />
+          <param name="ui.gradleRunner.gradle.wrapper.useWrapper" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements>
+      <contains name="system.agent.name" value="UNIT-539" />
+    </requirements>
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

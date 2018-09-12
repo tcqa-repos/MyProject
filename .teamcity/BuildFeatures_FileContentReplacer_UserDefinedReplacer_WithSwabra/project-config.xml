@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="BuildFeatures_FileContentReplacer_UserDefinedReplacer" uuid="668c9219-f2c7-40c0-8b93-b1544c62cce5" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>With Swabra</name>
+  <parameters />
+  <cleanup />
+</project>
+
