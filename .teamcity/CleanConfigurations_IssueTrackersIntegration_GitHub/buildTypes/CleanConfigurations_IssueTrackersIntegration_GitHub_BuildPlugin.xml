@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="005e3430-813f-4af6-a084-0f2b68fd6b3f" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Build plugin</name>
+  <description>https://github.com/milgner/TeamCityGithub/</description>
+  <settings>
+    <options>
+      <option name="artifactRules" value="target\githubissues.zip" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_585" name="" type="Maven2">
+        <parameters>
+          <param name="goals" value="clean test package" />
+          <param name="maven.home" value="" />
+          <param name="mavenSelection" value="mavenSelection:default" />
+          <param name="pomLocation" value="pom.xml" />
+          <param name="target.jdk.home" value="%env.JDK_17%" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="userSettingsPath" value="" />
+          <param name="userSettingsSelection" value="userSettingsSelection:default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="CleanConfigurations_IssueTrackersIntegration_GitHub_HttpsGithubComMilgnerTeamCit" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

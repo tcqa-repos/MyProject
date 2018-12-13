@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="0cee1305-7576-44df-8dc3-0c3ebc17eae6" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Build using artifacts (9)</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <artifact-dependencies>
+      <dependency sourceBuildTypeId="Dependencies_ArtifactDependencie_ProjectWithArtifact_BuildProducingArtifact" cleanDestination="false">
+        <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
+        <artifact sourcePath="artifact.zip" />
+      </dependency>
+    </artifact-dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+

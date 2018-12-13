@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="5b3fcd25-7f2f-48b4-8482-e9ca2cb00fae" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Mac OS</name>
+  <description />
+  <settings ref="BuildFeatures_FileContentReplacer_UserDefinedReplacer_SimpleReplacement_SimpleRe">
+    <parameters />
+    <build-runners order="RUNNER_611" />
+    <vcs-settings />
+    <requirements>
+      <starts-with name="teamcity.agent.jvm.os.name" value="Mac" />
+    </requirements>
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

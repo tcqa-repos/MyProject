@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+  <issueTrackers>
+    <trackerConnection key="jira1" type="jira">
+      <param name="secure:password" value="zxx0feb335798e7f083" />
+      <param name="host" value="http://tcqa-issue-trackers:8080/" />
+      <param name="name" value="p_TestJira" />
+      <param name="idPrefix" value="JTCI" />
+      <param name="username" value="admin" />
+    </trackerConnection>
+    <trackerConnection key="youtrack1" type="youtrack">
+      <param name="secure:password" value="zxx0feb335798e7f083" />
+      <param name="host" value="http://unit-539:9000/" />
+      <param name="name" value="p_Julia YT" />
+      <param name="idPrefix" value="TCI" />
+      <param name="username" value="root" />
+    </trackerConnection>
+  </issueTrackers>
+  <project-graphs>
+    <graph title="New chart title" defaultFilters="" hideFilters="" id="customGraph1" seriesTitle="Serie" format="integer">
+      <valueType key="BuildDuration" title="Build Duration (all stages)" sourceBuildTypeId="Powershell_RunAll" />
+    </graph>
+    <graph title="Some chart" defaultFilters="" hideFilters="" id="customGraph2" seriesTitle="Serie" format="integer">
+      <valueType key="BuildDuration" title="Build Duration (all stages)" sourceBuildTypeId="PowerShell_FileWithPowershellUseFile_PowerShell30" />
+    </graph>
+  </project-graphs>
+</settings>
+

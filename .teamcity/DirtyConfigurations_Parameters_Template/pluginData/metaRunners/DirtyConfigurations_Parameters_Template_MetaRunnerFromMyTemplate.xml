@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta-runner name="Meta-Runner_From_MyTemplate">
+  <description>Meta-Runner_From_MyTemplate</description>
+  <settings>
+    <parameters>
+      <param name="param" value="123 123 " />
+      <param name="password" value="zxx775d03cbe80d301b" spec="password display='normal'" />
+      <param name="param.referencing.other.param" value="Other parameter value is %param%" />
+      <param name="print.password" value="echo %password%" />
+    </parameters>
+    <build-runners>
+      <runner name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo %param.referencing.other.param%
+%print.password%]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <requirements />
+  </settings>
+</meta-runner>
+

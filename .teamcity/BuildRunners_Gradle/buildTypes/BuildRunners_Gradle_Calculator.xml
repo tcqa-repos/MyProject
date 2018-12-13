@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="ba845348-b0d2-41bb-b737-923cd91886ab" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Calculator</name>
+  <description />
+  <settings>
+    <parameters>
+      <param name="system.test1" value="123" />
+      <param name="system.test2" value="123 456 !@#$%^&amp;*()_+:&quot;|{}&lt;&gt;? http://github.com" />
+      <param name="system.test3" value="7 8945 6" />
+      <param name="test3" value="" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_674" name="" type="gradle-runner">
+        <parameters>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="ui.gradleRUnner.gradle.build.file" value="Calculator/build.gradle" />
+          <param name="ui.gradleRunner.gradle.tasks.names" value="testProperties" />
+          <param name="ui.gradleRunner.gradle.wrapper.path" value="Calculator" />
+          <param name="ui.gradleRunner.gradle.wrapper.useWrapper" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="BuildRunners_Gradle_CalculatorGradle" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

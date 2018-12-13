@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="BuildFeatures_FileContentReplacer_UserDefinedReplacer" uuid="3aae1383-0bab-4341-8a09-d0d4ba64ce79" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Files From Artifact Dependency</name>
+  <parameters />
+  <cleanup />
+</project>
+

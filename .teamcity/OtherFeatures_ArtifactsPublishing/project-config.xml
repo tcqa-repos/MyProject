@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="OtherFeatures" uuid="6bf25234-0d4b-43c0-85ed-f0139ac76a9e" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Artifacts Publishing</name>
+  <parameters />
+  <cleanup />
+</project>
+

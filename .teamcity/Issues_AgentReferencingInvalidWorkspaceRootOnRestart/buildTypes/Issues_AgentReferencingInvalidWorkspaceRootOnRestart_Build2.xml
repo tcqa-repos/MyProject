@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="1dfe51f1-5bbe-49d6-977e-cfb069ae8c34" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Build2</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="**\* =&gt;" />
+      <option name="checkoutDirectory" value="%teamcity.agent.work.dir%\aaa\bbb\ccc" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_658" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo %teamcity.agent.work.dir%" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Dependencies_ArtifactDependencie_HttpsGithubComJuliaReshMyProject" />
+    </vcs-settings>
+    <requirements>
+      <equals name="system.agent.name" value="tcqa-debian" />
+    </requirements>
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

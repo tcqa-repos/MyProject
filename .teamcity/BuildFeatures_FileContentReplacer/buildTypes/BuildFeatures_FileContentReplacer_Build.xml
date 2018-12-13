@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="7eb706c1-829c-4502-9a2c-a3b39c67e03e" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Build</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners />
+    <vcs-settings>
+      <vcs-entry-ref root-id="FileContentReplacer" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_108" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="autodetect" />
+          <param name="teamcity.file.content.replacer.file.encoding.custom" value="autodetect" />
+          <param name="teamcity.file.content.replacer.pattern" value="^ccc" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.replacement" value="aa" />
+          <param name="teamcity.file.content.replacer.wildcards" value="**/*.*" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

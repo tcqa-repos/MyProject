@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="6b6a3a86-2e5a-42fd-b788-c7be82775bec" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+  <name>&lt;Root project&gt;</name>
+  <description>Contains all other projects</description>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_1" type="ReportTab">
+      <parameters>
+        <param name="startPage" value="coverage.zip!index.html" />
+        <param name="title" value="Code Coverage" />
+        <param name="type" value="BuildReportTab" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_2" type="ReportTab">
+      <parameters>
+        <param name="startPage" value="javadoc.zip!index.html" />
+        <param name="title" value="JavaDoc" />
+        <param name="type" value="BuildReportTab" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_3" type="versionedSettings">
+      <parameters>
+        <param name="buildSettings" value="PREFER_VCS" />
+        <param name="enabled" value="true" />
+        <param name="rootId" value="HttpsGithubComTcqaReposMyProject" />
+        <param name="showChanges" value="true" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup>
+    <options>
+      <option name="preventDependenciesArtifactsFromCleanup" value="false" />
+    </options>
+  </cleanup>
+</project>
+

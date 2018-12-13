@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="739c23a1-c67c-46e8-b248-1e36cca9f4e9" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Several replacements in the same file</name>
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_476" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="exit 0" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="FileContentReplacer" />
+    </vcs-settings>
+    <requirements>
+      <contains name="teamcity.agent.jvm.os.name" value="Windows" />
+    </requirements>
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_147" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="autodetect" />
+          <param name="teamcity.file.content.replacer.pattern" value="a" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.replacement" value="aa" />
+          <param name="teamcity.file.content.replacer.wildcards" value="UTF_with_BOM.txt" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_148" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="autodetect" />
+          <param name="teamcity.file.content.replacer.pattern" value="aa" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.replacement" value="dad" />
+          <param name="teamcity.file.content.replacer.wildcards" value="UTF_with_BOM.txt" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</template>
+

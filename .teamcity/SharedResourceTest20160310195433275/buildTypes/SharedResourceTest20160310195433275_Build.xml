@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="db724df6-99c2-4736-8ad0-367600f787f5" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+  <name>Build</name>
+  <description />
+  <settings>
+    <options>
+      <option name="checkoutMode" value="ON_SERVER" />
+    </options>
+    <parameters />
+    <build-runners />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_171" type="JetBrains.SharedResources">
+        <parameters>
+          <param name="locks-param" value="NewResource12345 writeLock " />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_172" type="JetBrains.SharedResources">
+        <parameters>
+          <param name="locks-param" value="Resource1457654462268 readLock" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="61d89453-c2c3-468f-864a-9ec081228f72" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Simple Calculator</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/* =&gt;" />
+      <option name="checkoutMode" value="ON_AGENT" />
+    </options>
+    <parameters />
+    <build-runners />
+    <vcs-settings>
+      <vcs-entry-ref root-id="VersionControlSystems_TeamFoundationServer_Tfs2015_Tfs2015">
+        <checkout-rule rule="+:Simple Calculator/Simple Calculator1 =&gt; ." />
+      </vcs-entry-ref>
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

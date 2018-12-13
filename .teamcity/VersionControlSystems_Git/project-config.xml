@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="VersionControlSystems" uuid="7743dc04-7e64-4a6a-89fe-7077cf8e478c" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Git</name>
+  <parameters />
+  <cleanup />
+</project>
+

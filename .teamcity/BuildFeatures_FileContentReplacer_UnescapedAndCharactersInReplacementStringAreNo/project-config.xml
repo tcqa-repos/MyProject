@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="BuildFeatures_FileContentReplacer" uuid="8fefe13b-45e0-45da-98f7-ce2964ef735e" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Unescaped '\' and '$' characters in replacement string are not handled</name>
+  <description>TW-43050</description>
+  <parameters />
+  <cleanup />
+</project>
+

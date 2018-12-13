@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="fc1a7af2-d8c1-45bf-89d6-d61d4c366af8" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Template with Swabra</name>
+  <settings>
+    <options>
+      <option name="checkoutMode" value="ON_AGENT" />
+    </options>
+    <disabled-settings>
+      <setting-ref ref="BUILD_EXT_160" />
+      <setting-ref ref="BUILD_EXT_161" />
+      <setting-ref ref="JetBrains.AssemblyInfo" />
+    </disabled-settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_634" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo &quot;some text&quot; &gt;&gt; file.txt" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_635" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[ping 1.1.1.1
+ping 1.1.1.1
+ping 1.1.1.1
+exit 0]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="VersionControlSystems_SubVersion_Test1" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="swabra" type="swabra">
+        <parameters>
+          <param name="swabra.enabled" value="swabra.before.build" />
+          <param name="swabra.strict" value="true" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_160" type="JetBrains.SharedResources">
+        <parameters />
+      </extension>
+      <extension id="JetBrains.AssemblyInfo" type="JetBrains.AssemblyInfo">
+        <parameters>
+          <param name="assembly-format" value="%system.build.number%" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_161" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="autodetect" />
+          <param name="teamcity.file.content.replacer.file.encoding.custom" value="autodetect" />
+          <param name="teamcity.file.content.replacer.pattern" value="(^\s*\[\s*assembly\s*:\s*((System\s*\.)?\s*Reflection\s*\.)?\s*AssemblyFileVersion(Attribute)?\s*\(\s*@?\&quot;)(([0-9\*])+\.?)+(\&quot;\s*\)\s*\])" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.replacement" value="$1\%build.number%$7" />
+          <param name="teamcity.file.content.replacer.wildcards" value="**/Properties/AssemblyInfo.cs" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</template>
+

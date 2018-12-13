@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="b945ba74-f35f-4cdb-abc1-9c662fcab913" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+  <name>Second</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/* =&gt; artifacts2.zip&#xA;somefile.txt" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_718" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo Test &gt; somefile.txt" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="DirtyConfigurations_Changes_MyProject" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

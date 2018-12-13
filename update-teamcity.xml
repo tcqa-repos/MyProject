@@ -1,0 +1,9 @@
+<products>
+  <product name="TeamCity">
+    <code>TC</code>
+    <channel name="RELEASE" id="TC_RELEASE" status="release">
+      <build version="11.&lt;b&gt;10&lt;/b&gt;.2" number="&lt;script&gt;alert(1);&lt;/script&gt;40050" effectiveReleaseDate="20151210T200000GMT" />
+    </channel>
+  </product>
+</products>
+>>>>>>> origin/master

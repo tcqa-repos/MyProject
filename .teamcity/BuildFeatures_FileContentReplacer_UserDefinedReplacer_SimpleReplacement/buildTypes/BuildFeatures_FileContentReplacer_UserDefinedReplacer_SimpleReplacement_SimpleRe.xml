@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="63f98b94-76ce-4110-b85d-fcbd5e6bfa83" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Simple replacement</name>
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/* =&gt;" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_611" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo "inside build step"
+cat file.txt
+exit 0]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="FileContentReplacer" />
+    </vcs-settings>
+    <requirements>
+      <starts-with name="teamcity.agent.jvm.os.name" value="Windows" />
+    </requirements>
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_153" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="autodetect" />
+          <param name="teamcity.file.content.replacer.pattern" value="first" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="false" />
+          <param name="teamcity.file.content.replacer.replacement" value="replaced first" />
+          <param name="teamcity.file.content.replacer.wildcards" value="**/file.txt" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_155" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="autodetect" />
+          <param name="teamcity.file.content.replacer.pattern" value="(\s)\d{5,6}" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.replacement" value="$1\654321" />
+          <param name="teamcity.file.content.replacer.wildcards" value="file.txt" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</template>
+

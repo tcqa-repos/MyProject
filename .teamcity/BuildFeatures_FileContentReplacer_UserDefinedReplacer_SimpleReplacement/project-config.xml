@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="BuildFeatures_FileContentReplacer_UserDefinedReplacer" uuid="fab78dd5-e66a-42f9-be86-7d3c06a2983d" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Simple Replacement</name>
+  <parameters />
+  <cleanup />
+</project>
+

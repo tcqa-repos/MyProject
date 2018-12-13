@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="eafa4365-4783-4ff7-a111-8c1cc7872b1e" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+  <name>Using artifacts from Artifacts Publishing project</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/* =&gt;" />
+      <option name="checkoutMode" value="ON_SERVER" />
+    </options>
+    <disabled-settings>
+      <setting-ref ref="ARTIFACT_DEPENDENCY_2" />
+    </disabled-settings>
+    <parameters />
+    <build-runners />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <artifact-dependencies>
+      <dependency id="ARTIFACT_DEPENDENCY_2" sourceBuildTypeId="OtherFeatures_ArtifactsPublishing_With_2" cleanDestination="false">
+        <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" branch="&lt;default&gt;" />
+        <artifact sourcePath="src.zip" />
+      </dependency>
+    </artifact-dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+

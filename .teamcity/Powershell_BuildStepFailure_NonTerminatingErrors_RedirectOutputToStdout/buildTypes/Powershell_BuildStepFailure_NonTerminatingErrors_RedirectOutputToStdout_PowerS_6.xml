@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="435e3cce-121f-43fe-bb80-47971191a589" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>PowerShell 4.0 under .Net 5.0</name>
+  <description />
+  <settings>
+    <options>
+      <option name="shouldFailBuildIfTestsFailed" value="false" />
+      <option name="shouldFailBuildOnAnyErrorMessage" value="true" />
+      <option name="shouldFailBuildOnBadExitCode" value="false" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_46" name="Cmdlet not found" type="jetbrains_powershell">
+        <parameters>
+          <param name="jetbrains_powershell_bitness" value="x86" />
+          <param name="jetbrains_powershell_execution" value="PS1" />
+          <param name="jetbrains_powershell_minVersion" value="4.0" />
+          <param name="jetbrains_powershell_script_code"><![CDATA[Write-Output "Foo"
+Not-Found "With parameter"
+Write-Output "After"]]></param>
+          <param name="jetbrains_powershell_script_mode" value="CODE" />
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_48" name="File with Write-Error" type="jetbrains_powershell">
+        <parameters>
+          <param name="jetbrains_powershell_bitness" value="x86" />
+          <param name="jetbrains_powershell_execution" value="PS1" />
+          <param name="jetbrains_powershell_minVersion" value="4.0" />
+          <param name="jetbrains_powershell_script_file" value="write-error.ps1" />
+          <param name="jetbrains_powershell_script_mode" value="FILE" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Powershell_PowerShell" />
+    </vcs-settings>
+    <requirements>
+      <equals name="powershell_x86" value="5.0" />
+    </requirements>
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

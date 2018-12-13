@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="276b4ac2-9831-40ff-84d1-ac51945fd771" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>dependent on test gradle</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners />
+    <vcs-settings>
+      <vcs-entry-ref root-id="Experiments_HttpGitHostingLabsIntellijNetTeamcityQaToolsGit" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <dependencies>
+      <depend-on sourceBuildTypeId="Experiments_TestCloneGradle_2">
+        <options>
+          <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
+        </options>
+      </depend-on>
+    </dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+

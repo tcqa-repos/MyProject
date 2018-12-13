@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="57be6dc1-dc14-488c-afd3-74fee9ace182" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Different day</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners />
+    <vcs-settings />
+    <requirements />
+    <build-triggers>
+      <build-trigger id="TRIGGER_87" type="schedulingTrigger">
+        <parameters>
+          <param name="cronExpression_dm" value="*" />
+          <param name="cronExpression_dw" value="?" />
+          <param name="cronExpression_hour" value="*" />
+          <param name="cronExpression_min" value="0" />
+          <param name="cronExpression_month" value="*" />
+          <param name="cronExpression_sec" value="0" />
+          <param name="cronExpression_year" value="*" />
+          <param name="dayOfWeek" value="Saturday" />
+          <param name="hour" value="2" />
+          <param name="minute" value="0" />
+          <param name="promoteWatchedBuild" value="true" />
+          <param name="revisionRule" value="lastFinished" />
+          <param name="revisionRuleBuildBranch" value="&lt;default&gt;" />
+          <param name="schedulingPolicy" value="weekly" />
+          <param name="timezone" value="Asia/Calcutta" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
+    <cleanup />
+  </settings>
+</build-type>
+

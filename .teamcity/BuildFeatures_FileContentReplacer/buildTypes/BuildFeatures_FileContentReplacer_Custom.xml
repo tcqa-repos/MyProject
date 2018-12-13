@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="bca2a619-78de-4dec-a2de-c149125a9839" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Custom</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="**\* =&gt;" />
+      <option name="buildNumberPattern" value="1.0.0.%build.counter%" />
+    </options>
+    <disabled-settings>
+      <setting-ref ref="BUILD_EXT_111" />
+      <setting-ref ref="BUILD_EXT_112" />
+    </disabled-settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_27" name="" type="Ant">
+        <parameters>
+          <param name="build-file"><![CDATA[<project name="Copy files" basedir=".">
+  <target name="default">
+   <copy todir="./replaced">
+    <fileset dir="."/>
+   </copy>
+  </target>
+</project>]]></param>
+          <param name="build-file-path" value="build.xml" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use-custom-build-file" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="FileContentReplacer" />
+      <vcs-entry-ref root-id="Dependencies_Calculator_SvnHttpsLocalhost7443svnCalculatorTrunk" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_111" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="custom" />
+          <param name="teamcity.file.content.replacer.file.encoding.custom" value="windows-1251" />
+          <param name="teamcity.file.content.replacer.pattern" value="йцукен" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.replacement" value="REPLACED" />
+          <param name="teamcity.file.content.replacer.wildcards" value="**/*.txt" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_112" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="autodetect" />
+          <param name="teamcity.file.content.replacer.file.encoding.custom" value="autodetect" />
+          <param name="teamcity.file.content.replacer.pattern" value="(^\s*\[\s*assembly\s*:\s*((System\s*\.)?\s*Reflection\s*\.)?\s*AssemblyVersion(Attribute)?\s*\(\s*@?\&quot;)(([0-9\*])+.?)+(\&quot;\s*\)\s*\])" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.replacement" value="$1\%build.number%$7" />
+          <param name="teamcity.file.content.replacer.wildcards" value="**/Properties/AssemblyInfo.cs" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_58" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="autodetect" />
+          <param name="teamcity.file.content.replacer.pattern" value="^path" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.replacement" value="mypath" />
+          <param name="teamcity.file.content.replacer.wildcards" value="**/*.*" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

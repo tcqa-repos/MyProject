@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="e745c905-16db-465c-b94b-7c7faf1ba1e3" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Teamcity Deployer Plugin</name>
+  <parameters />
+  <cleanup />
+</project>
+

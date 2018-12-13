@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="5ca9c58b-6fa7-4def-ae11-e416ff79d4be" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Swabra</name>
+  <description />
+  <settings ref="VersionControlSystems_SubVersion_TemplateWithSwabra">
+    <parameters />
+    <build-runners order="RUNNER_634, RUNNER_635" />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

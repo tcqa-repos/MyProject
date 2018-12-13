@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="90024e7e-8123-471f-86ae-f01dfea1f1ef" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Buidl with _**/**</name>
+  <description>TW-43336</description>
+  <settings>
+    <options>
+      <option name="artifactRules" value="fo**/** =&gt; foo.zip&#xA;foof*oo**/** =&gt; foofoo.zip" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_663" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[mkdir foo_foo
+echo foo >> foo_foo/foo.txt
+echo foo >> foo_foo/foo2.txt
+mkdir fo_foo
+echo foo >> fo_foo/foo.txt
+echo foo >> fo_foo/foo2.txt
+mkdir foofoo_foo
+echo foo >> foofoo_foo/foo.txt
+echo foo >> foofoo_foo/foo2.txt]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

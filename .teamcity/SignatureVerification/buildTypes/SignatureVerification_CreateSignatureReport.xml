@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="f1f3e071-538a-4999-8146-25224a65371f" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Create Signature Report</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="*.csv =&gt;" />
+    </options>
+    <parameters>
+      <param name="build.url" value="http://buildserver.labs.intellij.net/guestAuth/repository/download/TC_Hajipur91x_BuildDist/8779992:id/TeamCity-37288.tar.gz" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_664" name="" type="Ant">
+        <parameters>
+          <param name="build-file"><![CDATA[<project name="fetch-tc" default="download">
+<target name="download">
+<get src="%build.url%" dest="./TeamCity.tar.gz"/>
+</target>
+</project>]]></param>
+          <param name="build-file-path" value="build.xml" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use-custom-build-file" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_665" name="Unpacking" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[@echo on
+7z e TeamCity.tar.gz -aoa && 7z x TeamCity.tar -aoa
+call "Unpacking.bat" %teamcity.build.checkoutDir%]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_666" name="Check if signed" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[@setlocal enabledelayedexpansion
+@echo on
+call "SignatureCheck2.bat"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="SignatureVerification_HttpsGithubComJuliaReshMyProjectGit" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+  <issueTrackers>
+    <trackerConnection key="youtrack1" type="youtrack">
+      <param name="secure:password" value="zxxa41b9e2dd09eb9eb" />
+      <param name="name" value="YouTrack 6.0" />
+      <param name="host" value="http://tcqa-youtrack-6/" />
+      <param name="idPrefix" value="" />
+      <param name="autoSync" value="true" />
+      <param name="username" value="Umlaut" />
+    </trackerConnection>
+  </issueTrackers>
+</settings>
+
