@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="d176cdf2-0e10-4196-8f22-67a2a273c1fe" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>just folder</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners />
+    <vcs-settings>
+      <vcs-entry-ref root-id="HttpsGithubComTcqaReposCalculator">
+        <checkout-rule rule="+:jacoco =&gt; ." />
+        <checkout-rule rule="+:lib =&gt; lib" />
+        <checkout-rule rule="+:src =&gt; src" />
+        <checkout-rule rule="+:test =&gt; test" />
+      </vcs-entry-ref>
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

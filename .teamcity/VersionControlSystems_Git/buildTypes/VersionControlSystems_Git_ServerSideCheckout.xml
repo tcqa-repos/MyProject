@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="05d9a3b2-1691-43b1-a539-d9c82bc6c584" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Server-side checkout</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/* =&gt; artifacts.zip" />
+      <option name="checkoutMode" value="ON_SERVER" />
+      <option name="cleanBuild" value="true" />
+    </options>
+    <parameters>
+      <param name="teamcity.health.heavyPatches.minSize.mb" value="1" />
+    </parameters>
+    <build-runners />
+    <vcs-settings>
+      <vcs-entry-ref root-id="HttpsGithubComTcqaReposCalculator" />
+      <vcs-entry-ref root-id="HttpsGithubComJuliaReshMavenHW">
+        <checkout-rule rule="+:. =&gt; maven" />
+      </vcs-entry-ref>
+      <vcs-entry-ref root-id="HttpsGithubComGmannyPechkinGit">
+        <checkout-rule rule="+:. =&gt; pechikin" />
+      </vcs-entry-ref>
+      <vcs-entry-ref root-id="HttpsGithubComKnightOSKnightOS">
+        <checkout-rule rule="+:. =&gt; knightos" />
+      </vcs-entry-ref>
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="3883587d-8805-439c-8a7a-b36ad04d58fe" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="3883587d-8805-439c-8a7a-b36ad04d58fe" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Upload SSH key</name>
   <description />
   <settings>
     <options>
       <option name="artifactRules" value="**/* =&gt;" />
-      <option name="checkoutMode" value="ON_AGENT" />
-      <option name="cleanBuild" value="true" />
     </options>
     <disabled-settings>
       <setting-ref ref="RUNNER_631" />
@@ -69,7 +67,7 @@ gXSvxCOkj6eplnouPhb2s5/dSuCWlT3AEznKfhXWAJbmDUGrKw==
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="VersionControlSystems_SubVersion_Test1" />
+      <vcs-entry-ref root-id="HttpGitHostingLabsIntellijNetTeamcityQaToolsGitKeyed" />
     </vcs-settings>
     <requirements />
     <build-triggers>
@@ -80,6 +78,14 @@ gXSvxCOkj6eplnouPhb2s5/dSuCWlT3AEznKfhXWAJbmDUGrKw==
         </parameters>
       </build-trigger>
     </build-triggers>
+    <build-extensions>
+      <extension id="ssh-agent-build-feature" type="ssh-agent-build-feature">
+        <parameters>
+          <param name="secure:passphrase" value="credentialsJSON:667fa0b4-83c5-4c5e-a566-c034700f9202" />
+          <param name="teamcitySshKey" value="git-hosting-julia-reshetnikova" />
+        </parameters>
+      </extension>
+    </build-extensions>
     <cleanup />
   </settings>
 </build-type>

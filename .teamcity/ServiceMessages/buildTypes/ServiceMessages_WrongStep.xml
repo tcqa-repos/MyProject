@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="cfc07010-8a79-4ac4-ae8b-b73cb9473ce3" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Wrong step</name>
+  <description />
+  <settings>
+    <disabled-settings>
+      <setting-ref ref="RUNNER_1028" />
+      <setting-ref ref="RUNNER_123" />
+    </disabled-settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_1028" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[#echo "##teamcity[flowStarted flowId='1']"
+echo "##teamcity[testSuiteStarted name='MySuite' flowId='1']"
+echo "##teamcity[testStarted name='package_or_namespace.ClassName.TestName' flowId='1']"
+echo "##teamcity[testStarted name='package_or_namespace.ClassName.TestName2' flowId='1']"
+echo "##teamcity[testStdOut name='package_or_namespace.ClassName.TestName' out='child#7: process started|nchild#7: process exited with ret:201, elapsed time: 33ms' flowId='1']"
+echo "##teamcity[testFinished name='package_or_namespace.ClassName.TestName' flowId='1']"
+echo "##teamcity[testFinished name='package_or_namespace.ClassName.TestName2' flowId='1']"
+echo "##teamcity[testSuiteFinished name='MySuite' flowId='1']"
+#echo "##teamcity[flowFinished flowId='1']"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_123" name="New build step" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo "##teamcity[flowStarted flowId='2']"
+echo "##teamcity[testSuiteStarted name='MySuite2' flowId='2']"
+echo "##teamcity[testStarted name='package_or_namespace2.ClassName.TestName' flowId='2']"
+echo "##teamcity[testStarted name='package_or_namespace2.ClassName.TestName2' flowId='2']"
+echo "##teamcity[testFinished name='package_or_namespace2.ClassName.TestName' flowId='2']"
+#echo "##teamcity[testFinished name='package_or_namespace2.ClassName.TestName2' flowId='2']"
+#echo "##teamcity[testSuiteFinished name='MySuite2' flowId='2']"
+#echo "##teamcity[flowFinished flowId='2']"
+echo "##teamcity[testSuiteStarted name='MySuite' flowId='1']"
+echo "##teamcity[testStarted name='package_or_namespace.ClassName.TestName' flowId='1']"
+echo "##teamcity[testStarted name='package_or_namespace.ClassName.TestName2' flowId='1']"
+echo "##teamcity[testStdOut name='package_or_namespace.ClassName.TestName' out='child#7: process started|nchild#7: process exited with ret:201, elapsed time: 33ms' flowId='1']"
+echo "##teamcity[testFinished name='package_or_namespace.ClassName.TestName' flowId='1']"
+echo "##teamcity[testFinished name='package_or_namespace.ClassName.TestName2' flowId='1']"
+echo "##teamcity[testSuiteFinished name='MySuite' flowId='1']"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_124" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo "##teamcity[testSuiteStarted name='Assert' flowId='1']"
+echo "##teamcity[testStarted name='AssertionHook' flowId='1']"
+echo "##teamcity[testFinished name='AssertionHook' duration='0' flowId='1']"
+echo "##teamcity[testStarted name='AssertInTests' flowId='1']"
+echo "##teamcity[testFinished name='TeamChat' duration='1171' flowId='3']"
+echo "##teamcity[testStarted name='WhisperChat' flowId='3']"
+echo "##teamcity[testStarted name='SlotChain' flowId='2']"
+echo "##teamcity[testStdOut name='AssertInTests' out='child#7: process started|nchild#7: process exited with ret:201, elapsed time: 33ms' flowId='1']"
+echo "##teamcity[testFinished name='AssertInTests' duration='38' flowId='1']"
+echo "##teamcity[testSuiteFinished name='Assert' flowId='1']"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_125" name="New build step (1)" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo "##teamcity[testSuiteStarted name='AAA' flowId='2']"
+echo "##teamcity[testStarted name='AAA_test' flowId='2']"
+echo "##teamcity[testFinished name='AAA_test' duration='0' flowId='2']"
+echo "##teamcity[testSuiteFinished name='AAA' flowId='2']"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

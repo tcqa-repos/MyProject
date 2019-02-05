@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="IssueTrackersIntegration" uuid="0ad9c5d3-084a-4af0-a202-73c63e2c6ecd" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Bitbucket Cloud</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_53" type="IssueTracker">
+      <parameters>
+        <param name="authType" value="loginpassword" />
+        <param name="name" value="Bitbucket" />
+        <param name="pattern" value="#(\d+)" />
+        <param name="repository" value="https://bitbucket.org/tcqa-repos/myproject" />
+        <param name="secure:password" value="credentialsJSON:e0cdab31-ab7d-4d5b-bc1c-575fabe440e3" />
+        <param name="type" value="BitBucketIssues" />
+        <param name="username" value="teamcity.qa.server@gmail.com" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

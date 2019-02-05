@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="Experiments" uuid="05c304c1-6a09-46ff-9e1e-2ad3b04bfab6" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Signature verification</name>
+  <parameters>
+    <param name="password" value="credentialsJSON:159ac482-a598-4d50-a327-cd8736d5aa79" spec="password description='buildserver password' display='normal'" />
+    <param name="username" value="Julia.Reshetnikova" spec="text description='buildserver login name' display='normal'" />
+  </parameters>
+  <cleanup />
+</project>
+

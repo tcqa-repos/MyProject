@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="941a6581-70ae-48bc-9949-4562df153220" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Gradle Site Plugin</name>
+  <parameters>
+    <param name="teamcity.project.server_url" value="julia" />
+  </parameters>
+  <cleanup />
+</project>
+

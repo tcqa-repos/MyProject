@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="dad9f7dd-d327-44ce-901a-092471cf8583" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="dad9f7dd-d327-44ce-901a-092471cf8583" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Linux</name>
   <description />
   <settings ref="BuildFeatures_FileContentReplacer_UserDefinedReplacer_CustomCheckOutDirectory_Cu">
+    <disabled-settings>
+      <setting-ref ref="RQ_14" />
+    </disabled-settings>
     <parameters />
     <build-runners order="RUNNER_489" />
     <vcs-settings />
     <requirements>
-      <starts-with name="teamcity.agent.jvm.os.name" value="Linux" />
+      <starts-with id="RQ_78" name="teamcity.agent.jvm.os.name" value="Linux" />
     </requirements>
     <build-triggers />
     <cleanup />

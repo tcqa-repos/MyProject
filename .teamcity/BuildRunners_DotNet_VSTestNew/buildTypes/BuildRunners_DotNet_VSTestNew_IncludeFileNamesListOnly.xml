@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="137032cc-a517-4c68-8698-1b1edc0fda83" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Include file names list only</name>
+  <description />
+  <settings ref="BuildRunners_DotNet_VSTestNew_VSTestUsingTestNamesFilter">
+    <parameters>
+      <param name="add.cmd.parameters" value="" />
+      <param name="runconfig.file" value="" />
+      <param name="test.names" value="" />
+      <param name="testfiles.exclude.list" value="" />
+    </parameters>
+    <build-runners order="RUNNER_434, RUNNER_435, RUNNER_633" />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

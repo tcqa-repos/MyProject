@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="9a48d9af-5c00-491e-af3b-37762f43bbab" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Build</name>
+  <description />
+  <settings ref="TestInheritance_Template">
+    <options>
+      <option name="allowPersonalBuildTriggering" value="false" />
+      <option name="artifactRules" value="11111111111" />
+      <option name="checkoutDirectory" value="123" />
+      <option name="checkoutMode" value="ON_SERVER" />
+      <option name="cleanBuild" value="true" />
+      <option name="maximumNumberOfBuilds" value="6" />
+      <option name="shouldFailBuildOnAnyErrorMessage" value="true" />
+      <option name="showDependenciesChanges" value="true" />
+    </options>
+    <disabled-settings>
+      <setting-ref ref="RQ_134" />
+    </disabled-settings>
+    <parameters />
+    <build-runners order="RUNNER_162" />
+    <vcs-settings />
+    <requirements>
+      <does-not-equal id="RQ_134" name="powershell_x86" value="4.0" />
+    </requirements>
+    <build-triggers>
+      <build-trigger id="mavenSnapshotDependencyTrigger" type="mavenSnapshotDependencyTrigger">
+        <parameters>
+          <param name="skipIfRunning" value="true" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
+    <cleanup />
+  </settings>
+</build-type>
+

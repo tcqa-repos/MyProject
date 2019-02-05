@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="cfc6c022-d62d-499d-b6a2-e4cf7fa2947f" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Test Inheritance</name>
+  <parameters />
+  <cleanup />
+</project>
+

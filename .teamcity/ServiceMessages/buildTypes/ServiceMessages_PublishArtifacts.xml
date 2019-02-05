@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="959f39a2-2394-4cac-be0c-a2b884f9565f" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Publish Artifacts</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_220" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo 111 > file.txt
+echo "##teamcity[blockOpened name='My Block']"
+echo "##teamcity[publishArtifacts 'file.txt']"
+echo "##teamcity[blockClosed name='My Block']"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

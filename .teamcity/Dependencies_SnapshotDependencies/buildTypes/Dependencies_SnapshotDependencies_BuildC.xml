@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="a04e1bfc-c08e-4d06-a761-6d282c6b3d53" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="a04e1bfc-c08e-4d06-a761-6d282c6b3d53" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Build C</name>
   <description />
   <settings>
     <options>
+      <option name="checkoutMode" value="ON_SERVER" />
       <option name="showDependenciesChanges" value="true" />
     </options>
     <parameters />

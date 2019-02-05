@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="3ab69ab4-287f-4278-88ba-63ebaa8b8e1e" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Spaces in names</name>
+  <description />
+  <settings ref="BuildFeatures_FileContentReplacer_UserDefinedReplacer_SpacesInFileMasks_SpacesIn">
+    <parameters />
+    <build-runners order="RUNNER_29" />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

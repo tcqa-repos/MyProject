@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="6840a082-7604-4f4c-abd2-617a70a08443" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Build with dependency</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/*" />
+    </options>
+    <disabled-settings>
+      <setting-ref ref="TRIGGER_9" />
+    </disabled-settings>
+    <parameters />
+    <build-runners />
+    <vcs-settings />
+    <requirements />
+    <build-triggers>
+      <build-trigger id="TRIGGER_9" type="schedulingTrigger">
+        <parameters>
+          <param name="cronExpression_dm" value="*" />
+          <param name="cronExpression_dw" value="?" />
+          <param name="cronExpression_hour" value="*" />
+          <param name="cronExpression_min" value="*" />
+          <param name="cronExpression_month" value="*" />
+          <param name="cronExpression_sec" value="0" />
+          <param name="cronExpression_year" value="*" />
+          <param name="dayOfWeek" value="Sunday" />
+          <param name="enableQueueOptimization" value="true" />
+          <param name="hour" value="12" />
+          <param name="minute" value="0" />
+          <param name="promoteWatchedBuild" value="true" />
+          <param name="revisionRule" value="lastFinished" />
+          <param name="revisionRuleBuildBranch" value="&lt;default&gt;" />
+          <param name="revisionRuleDependsOn" value="BuildFeatures_FileContentReplacer_UserDefinedReplacer_FilesFromArtifactDepende_5" />
+          <param name="schedulingPolicy" value="cron" />
+          <param name="timezone" value="SERVER" />
+          <param name="triggerBuildIfWatchedBuildChanges" value="true" />
+        </parameters>
+      </build-trigger>
+      <build-trigger id="TRIGGER_10" type="buildDependencyTrigger">
+        <parameters>
+          <param name="branchFilter" value="+:&lt;default&gt;" />
+          <param name="dependsOn" value="BuildFeatures_FileContentReplacer_UserDefinedReplacer_FilesFromArtifactDepende_5" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
+    <artifact-dependencies>
+      <dependency id="ARTIFACT_DEPENDENCY_31" sourceBuildTypeId="BuildFeatures_FileContentReplacer_UserDefinedReplacer_FilesFromArtifactDepende_5" cleanDestination="true">
+        <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />
+        <artifact sourcePath="* =&gt; 1" />
+      </dependency>
+      <dependency id="ARTIFACT_DEPENDENCY_32" sourceBuildTypeId="BuildFeatures_FileContentReplacer_UserDefinedReplacer_FilesFromArtifactDepende_5" cleanDestination="true">
+        <revisionRule name="buildTag" revision="tag.tcbuildtag" />
+        <artifact sourcePath="* =&gt; 2" />
+      </dependency>
+    </artifact-dependencies>
+    <dependencies>
+      <depend-on sourceBuildTypeId="BuildFeatures_FileContentReplacer_UserDefinedReplacer_FilesFromArtifactDepende_5">
+        <options>
+          <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
+          <option name="take-started-build-with-same-revisions" value="true" />
+          <option name="take-successful-builds-only" value="true" />
+        </options>
+      </depend-on>
+    </dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+

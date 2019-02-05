@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="43f528ed-c662-4424-8325-9868adca33c1" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Build with **/smth</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="folder/subfolder=&gt;&#xA;**/subfolder=&gt;" />
+      <option name="buildNumberPattern" value="%build.counter%llllllll" />
+      <option name="cleanBuild" value="true" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_60" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[mkdir folder
+dir
+cd folder
+mkdir subfolder
+echo cd folder
+dir
+cd subfolder
+echo hello => file.txt]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

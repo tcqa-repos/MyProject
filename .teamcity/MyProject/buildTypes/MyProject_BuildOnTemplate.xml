@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="e4245610-b0b6-4ac8-aee7-b374b1d6c055" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Build on template</name>
+  <description />
+  <settings ref="MyProject_Template">
+    <parameters />
+    <build-runners order="RUNNER_154, RUNNER_155, RUNNER_157, RUNNER_158, RUNNER_160" />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

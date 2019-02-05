@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="84e995c2-68f5-43f8-a581-604f704a81d4" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Composite build 1</name>
+  <description />
+  <settings ref="SharedResources_CompositeBuilds_TemplateWithResource">
+    <options>
+      <option name="buildConfigurationType" value="COMPOSITE" />
+      <option name="showDependenciesChanges" value="true" />
+    </options>
+    <parameters>
+      <param name="a" value="q" />
+      <param name="param" value="%teamcity.locks.readLock.Resource_with_values%" />
+      <param name="reverse.dep.SharedResources_CompositeBuilds_Build1.param" value="%param%" />
+    </parameters>
+    <build-runners />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_105" type="JetBrains.SharedResources">
+        <parameters>
+          <param name="locks-param" value="Resource_with_values readLock Value1" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_106" type="JetBrains.SharedResources">
+        <parameters>
+          <param name="locks-param" value="Resource_with_quota writeLock" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_116" type="BuildFailureOnMetric">
+        <parameters>
+          <param name="anchorBuild" value="lastSuccessful" />
+          <param name="metricKey" value="BuildDurationNetTime" />
+          <param name="metricThreshold" value="1200" />
+          <param name="metricUnits" value="metricUnitsDefault" />
+          <param name="moreOrLess" value="more" />
+          <param name="stopBuildOnFailure" value="true" />
+          <param name="withBuildAnchor" value="false" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <dependencies>
+      <depend-on sourceBuildTypeId="SharedResources_CompositeBuilds_Build1">
+        <options>
+          <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
+        </options>
+      </depend-on>
+      <depend-on sourceBuildTypeId="SharedResources_CompositeBuilds_Build2">
+        <options>
+          <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
+        </options>
+      </depend-on>
+    </dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+

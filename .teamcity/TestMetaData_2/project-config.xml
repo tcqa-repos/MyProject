@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="06f745cc-2d7b-4798-9de2-efee76108f8a" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Test Meta-Data</name>
+  <parameters>
+    <param name="teamcity.build.serviceMessages.logOriginal" value="true" />
+  </parameters>
+  <project-extensions>
+    <extension id="PROJECT_EXT_6" type="project-graphs">
+      <parameters>
+        <param name="format" value="text" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Build Duration (all stages)",
+    "sourceBuildTypeId": "TestMetaData_2_id",
+    "key": "BuildDuration"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="New chart title" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="8821e56c-be2c-4267-b8e8-ffa891b90c88" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Issue Trackers Integration</name>
+  <parameters />
+  <cleanup />
+</project>
+

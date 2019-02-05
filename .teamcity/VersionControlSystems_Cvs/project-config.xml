@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="VersionControlSystems" uuid="cc523845-b3e1-4deb-b5eb-9b9a68f50095" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>CVS</name>
+  <parameters />
+  <cleanup />
+</project>
+

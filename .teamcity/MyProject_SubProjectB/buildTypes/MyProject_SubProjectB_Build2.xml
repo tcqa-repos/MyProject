@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="c2ca3394-6b2f-459f-af64-b829d1e7faf2" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Build2</name>
+  <description>MyProject Calculator</description>
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/* =&gt; artifacts.zip" />
+    </options>
+    <parameters />
+    <build-runners />
+    <vcs-settings>
+      <vcs-entry-ref root-id="MyProject_SubProjectB_HttpsGithubComTcqaReposMyProjectRefsHeadsMaster1" />
+      <vcs-entry-ref root-id="MyProject_HttpsGithubComTcqaReposCalculatorRefsHeadsMaster" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="c7254332-0870-4a0c-a683-a55296e3d04f" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Calculator</name>
+  <description />
+  <settings ref="PullRequestsPlugin_GitHubCloud_Calculator">
+    <parameters>
+      <param name="ProjectName" value="Calculator" />
+    </parameters>
+    <build-runners />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

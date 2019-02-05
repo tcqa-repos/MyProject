@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="f600e579-b353-49ea-af5c-1dacbce6bf1b" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>TW-58106 Stop a build without marking it "failed"</name>
+  <description />
+  <settings>
+    <options>
+      <option name="checkoutMode" value="ON_SERVER" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_241" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="curl -u &quot;%system.teamcity.auth.userId%:%system.teamcity.auth.password%&quot; --request POST &quot;http://tcqa-server-trunk:8111/app/rest/builds/id:%teamcity.build.id%&quot; --data &quot;&lt;buildCancelRequest comment='canceled from build' readdIntoQueue='false' /&gt;&quot; --header &quot;Content-Type: application/xml&quot;" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="HttpsGithubComJuliaReshMyProject" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

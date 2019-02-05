@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="Project1_3_SubProjectA" uuid="04ead8b4-dcaa-412a-be36-e3d0241325d9" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>rrr</name>
+  <parameters />
+  <cleanup />
+</project>
+

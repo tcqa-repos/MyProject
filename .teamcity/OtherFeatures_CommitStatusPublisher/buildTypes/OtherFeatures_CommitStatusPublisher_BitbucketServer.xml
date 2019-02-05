@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="5649b9ac-46a2-452c-83e5-fa491b93e34e" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Bitbucket Server</name>
+  <description />
+  <settings>
+    <parameters>
+      <param name="password" value="credentialsJSON:40b94f34-f663-41a1-b91b-e8bf5ef55e37" spec="password display='normal'" />
+      <param name="username" value="JuliaResh" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_105" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="exit 0" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="OtherFeatures_CommitStatusPublisher_HttpsJuliaReshBitbucketOrgJuliaReshMyproject" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_49" type="commit-status-publisher">
+        <parameters>
+          <param name="github_authentication_type" value="password" />
+          <param name="github_host" value="https://api.github.com" />
+          <param name="github_password" value="%password%" />
+          <param name="github_username" value="%username%" />
+          <param name="publisherId" value="githubStatusPublisher" />
+          <param name="vcsRootId" value="OtherFeatures_CommitStatusPublisher_HttpsJuliaReshBitbucketOrgJuliaReshMyproject" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

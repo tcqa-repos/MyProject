@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="00fc70e5-70fd-48d8-b2ee-437ef2d16ddf" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Maven Release</name>
+  <description />
+  <settings>
+    <options>
+      <option name="checkoutMode" value="ON_AGENT" />
+    </options>
+    <disabled-settings>
+      <setting-ref ref="RUNNER_779" />
+    </disabled-settings>
+    <parameters>
+      <param name="env.GIT_SSH_COMMAND" value="ssh -o StrictHostKeyChecking=no" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_779" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo "[user]" >> .gitconfig
+echo "name = TeamCity Server" >> .gitconfig
+echo "email = teamcity@company.com" >> .gitconfig]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_781" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="ssh-keyscan github.com &gt;&gt; ~/.ssh/known_hosts" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_780" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[git config user.name "John Doe"
+git config user.email john.doe@example.com]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_201" name="" type="Maven2">
+        <parameters>
+          <param name="goals" value="release:prepare" />
+          <param name="maven.path" value="%teamcity.tool.maven.DEFAULT%" />
+          <param name="pomLocation" value="pom.xml" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="userSettingsSelection" value="userSettingsSelection:default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_782" name="" type="Maven2">
+        <parameters>
+          <param name="goals" value="release:perform" />
+          <param name="maven.path" value="%teamcity.tool.maven.DEFAULT%" />
+          <param name="pomLocation" value="pom.xml" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="userSettingsSelection" value="settings.xml" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_293" name="" type="Duplicator">
+        <parameters>
+          <param name="duplicates.runner.bound" value="1" />
+          <param name="duplicates.runner.discard" value="0" />
+          <param name="duplicates.runner.include.tests" value="true" />
+          <param name="duplicates.runner.literal" value="true" />
+          <param name="duplicates.runner.method" value="true" />
+          <param name="duplicates.runner.type" value="true" />
+          <param name="duplicates.runner.visibility" value="true" />
+          <param name="idea.app.home" value="%teamcity.tool.intellij.DEFAULT%" />
+          <param name="iprInfoRunParam" value="&lt;iprInfo path-to-ipr=&quot;pom.xml&quot; /&gt;" />
+          <param name="jvmArgs" value="-Xmx1G -XX:ReservedCodeCacheSize=240m" />
+          <param name="target.jdk.home" value="%env.JDK_18%" />
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_294" name="" type="Duplicator">
+        <parameters>
+          <param name="duplicates.runner.bound" value="1" />
+          <param name="duplicates.runner.discard" value="0" />
+          <param name="duplicates.runner.include.tests" value="true" />
+          <param name="duplicates.runner.literal" value="true" />
+          <param name="duplicates.runner.method" value="true" />
+          <param name="duplicates.runner.type" value="true" />
+          <param name="duplicates.runner.visibility" value="true" />
+          <param name="idea.app.home" value="%teamcity.tool.intellij.DEFAULT%" />
+          <param name="iprInfoRunParam"><![CDATA[<iprInfo path-to-ipr="" should-load-iml="true" should-load-run-configurations="false" should-load-artifacts="false">
+  <Jdk name="1.7" is-used="true" type="JavaSDK" path-to-jdk="%env.JDK_17%">
+    <Pattern value="jre/lib/*.jar" />
+    <Pattern value="jre/lib/ext/jfxrt.jar" />
+    <ExternalAnnotationPattern value="%teamcity.tool.idea%/lib/jdkAnnotations.jar" />
+  </Jdk>
+  <PathVariable name="MAVEN_REPOSITORY" value="" />
+</iprInfo>]]></param>
+          <param name="jvmArgs" value="-Xmx1G -XX:ReservedCodeCacheSize=240m" />
+          <param name="target.jdk.home" value="%env.JDK_18%" />
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="BuildRunners_Maven_SshGithubComTcqaReposMavenHW" />
+    </vcs-settings>
+    <requirements>
+      <exists id="RQ_4" name="env.TEAMCITY_GIT_PATH" />
+    </requirements>
+    <build-triggers />
+    <build-extensions>
+      <extension id="ssh-agent-build-feature" type="ssh-agent-build-feature">
+        <parameters>
+          <param name="teamcitySshKey" value="private openssh.key" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

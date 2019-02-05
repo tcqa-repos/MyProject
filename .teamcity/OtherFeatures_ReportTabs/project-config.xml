@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="OtherFeatures" uuid="7f5a78b5-7ca7-4da9-a4e1-7e90915f4b55" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Report Tabs</name>
+  <parameters>
+    <param name="folder" value="IdeaCoverage" />
+  </parameters>
+  <project-extensions>
+    <extension id="PROJECT_EXT_12" type="ReportTab">
+      <parameters>
+        <param name="buildTypeId" value="OtherFeatures_ReportTabs_SubProjectA_Test" />
+        <param name="revisionRuleName" value="lastSuccessful" />
+        <param name="revisionRuleRevision" value="latest.lastSuccessful" />
+        <param name="startPage" value="IdeaCoverage.zip!/index.html" />
+        <param name="title" value="Project Tab 1" />
+        <param name="type" value="ProjectReportTab" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_13" type="ReportTab">
+      <parameters>
+        <param name="buildTypeId" value="OtherFeatures_ReportTabs_SubProjectB_Test2" />
+        <param name="revisionRuleName" value="lastSuccessful" />
+        <param name="revisionRuleRevision" value="latest.lastSuccessful" />
+        <param name="startPage" value="IdeaCoverage2.zip!/index.html" />
+        <param name="title" value="Project Tab 2" />
+        <param name="type" value="ProjectReportTab" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_14" type="ReportTab">
+      <parameters>
+        <param name="startPage" value="%folder%.zip!index.html" />
+        <param name="title" value="Build Tab" />
+        <param name="type" value="BuildReportTab" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_15" type="ReportTab">
+      <parameters>
+        <param name="startPage" value="IdeaCoverage/index.html" />
+        <param name="title" value="Build Static" />
+        <param name="type" value="BuildReportTab" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_16" type="ReportTab">
+      <parameters>
+        <param name="startPage" value="IdeaCoverage-%build.number%\index.html" />
+        <param name="title" value="Build Number" />
+        <param name="type" value="BuildReportTab" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_58" type="ReportTab">
+      <parameters>
+        <param name="buildTypeId" value="OtherFeatures_ReportTabs_Test" />
+        <param name="revisionRuleName" value="lastSuccessful" />
+        <param name="revisionRuleRevision" value="latest.lastSuccessful" />
+        <param name="startPage" value="index.html" />
+        <param name="title" value="aaaaa" />
+        <param name="type" value="ProjectReportTab" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_59" type="ReportTab">
+      <parameters>
+        <param name="buildTypeId" value="OtherFeatures_ReportTabs_Test3" />
+        <param name="revisionRuleName" value="lastSuccessful" />
+        <param name="revisionRuleRevision" value="latest.lastSuccessful" />
+        <param name="startPage" value="%folder%.zip!index.html" />
+        <param name="title" value="Project Tab" />
+        <param name="type" value="ProjectReportTab" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

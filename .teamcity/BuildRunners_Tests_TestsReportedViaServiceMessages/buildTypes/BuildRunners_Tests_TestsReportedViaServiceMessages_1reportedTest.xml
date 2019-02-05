@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="72e7e304-2192-4064-96a4-0b1747009019" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>1 reported test</name>
+  <description>TW-40303 Tests duration work incorrecrtly</description>
+  <settings>
+    <options>
+      <option name="checkoutMode" value="ON_SERVER" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_558" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo ##teamcity[testStarted flowId='YTest2' name='AntispamTools2.Deduce_Fast2.DeduceAllWsX2' captureStandardOutput='false']
+echo ##teamcity[testFinished flowId='YTest2' name='AntispamTools2.Deduce_Fast2.DeduceAllWsX2' duration='158.135507']]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

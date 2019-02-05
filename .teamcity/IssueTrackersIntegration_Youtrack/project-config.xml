@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="IssueTrackersIntegration" uuid="b403bd42-9ac9-43b8-89b9-66818d562ccf" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Youtrack</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_38" type="IssueTracker">
+      <parameters>
+        <param name="autoSync" value="true" />
+        <param name="host" value="http://youtrack.jetbrains.com" />
+        <param name="idPrefix" value="" />
+        <param name="name" value="YouTrack" />
+        <param name="secure:password" value="credentialsJSON:f7bd73b2-fd05-4c7c-9aef-446b335fd67c" />
+        <param name="type" value="youtrack" />
+        <param name="username" value="JuliaResh" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_50" type="IssueTracker">
+      <parameters>
+        <param name="autoSync" value="true" />
+        <param name="host" value="https://tcqa-youtrack-6:8443/" />
+        <param name="idPrefix" value="" />
+        <param name="name" value="YT 6" />
+        <param name="secure:password" value="credentialsJSON:7a94a796-ad61-4fb6-a98d-dfc9b6a4e34e" />
+        <param name="type" value="youtrack" />
+        <param name="username" value="admin" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

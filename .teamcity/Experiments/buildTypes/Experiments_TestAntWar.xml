@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="8676d1ec-7429-41a8-873f-1d65f6369de6" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>test ant war</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="TeamCity.war =&gt;" />
+    </options>
+    <parameters>
+      <param name="number" value="222" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_64" name="" type="Ant">
+        <parameters>
+          <param name="build-file"><![CDATA[<project name="Delete vmware plugin" basedir="." default="delete">
+<target name="delete">
+<mkdir dir="temp"/>
+<unzip src="TeamCity-%number%.war" dest="temp/" /> 
+<zip destfile="TeamCity.war">
+<zipfileset dir="temp" excludes="**/WEB-INF/plugins/cloud-vmware.zip"/>
+	</zip>
+<delete dir="temp"/>
+  </target>
+</project>]]></param>
+          <param name="build-file-path" value="build.xml" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use-custom-build-file" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <artifact-dependencies>
+      <dependency id="ARTIFACT_DEPENDENCY_18" sourceBuildTypeId="Experiments_TestWebSockets_GetTeamCity" cleanDestination="false">
+        <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
+        <artifact sourcePath="TeamCity-%number%.war" />
+      </dependency>
+    </artifact-dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+

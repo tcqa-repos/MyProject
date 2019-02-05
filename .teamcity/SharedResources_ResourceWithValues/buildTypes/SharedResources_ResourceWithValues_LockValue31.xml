@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="e008c282-392f-40ea-9390-fc1ada8bed93" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="e008c282-392f-40ea-9390-fc1ada8bed93" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Lock Value3 1</name>
   <description />
   <settings>
+    <options>
+      <option name="checkoutMode" value="ON_SERVER" />
+    </options>
     <parameters />
     <build-runners>
-      <runner id="RUNNER_640" name="" type="simpleRunner">
+      <runner id="RUNNER_640" name="" type="Ant">
         <parameters>
-          <param name="script.content"><![CDATA[ping 1.1.1.1
-ping 1.1.1.1
-ping 1.1.1.1
-ping 1.1.1.1
-ping 1.1.1.1
-ping 1.1.1.1]]></param>
+          <param name="build-file"><![CDATA[<project name="test" default="sleep">
+<target name="sleep">
+<sleep seconds="60"/>
+</target>
+</project>]]></param>
+          <param name="build-file-path" value="build.xml" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
           <param name="teamcity.step.mode" value="default" />
-          <param name="use.custom.script" value="true" />
+          <param name="use-custom-build-file" value="true" />
         </parameters>
       </runner>
     </build-runners>

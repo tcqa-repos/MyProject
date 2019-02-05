@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="b3b0a81a-a830-4b11-9b48-7ef15dd7d8dc" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Run Simple Build Test 1543272931665</name>
+  <parameters />
+  <cleanup />
+</project>
+

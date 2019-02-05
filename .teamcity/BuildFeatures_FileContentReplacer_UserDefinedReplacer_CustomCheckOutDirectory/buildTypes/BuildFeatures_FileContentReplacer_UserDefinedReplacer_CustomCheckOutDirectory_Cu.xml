@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="5b9c62e4-09ce-4f54-95f1-4ad3b9f2e5ee" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="5b9c62e4-09ce-4f54-95f1-4ad3b9f2e5ee" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Custom checkout directory</name>
   <settings>
     <options>
       <option name="checkoutDirectory" value="Моя Директория" />
+      <option name="checkoutMode" value="ON_SERVER" />
     </options>
     <parameters />
     <build-runners>
@@ -19,7 +20,7 @@
       <vcs-entry-ref root-id="FileContentReplacer" />
     </vcs-settings>
     <requirements>
-      <starts-with name="teamcity.agent.jvm.os.name" value="Windows" />
+      <starts-with id="RQ_14" name="teamcity.agent.jvm.os.name" value="Windows" />
     </requirements>
     <build-triggers />
     <build-extensions>

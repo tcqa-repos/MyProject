@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="8d12f75c-1645-412f-ba5e-6db888a1d877" type="tfs" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>TFS 2017 https</name>
+  <param name="secure:tfs-password" value="credentialsJSON:c7b805df-ae13-444d-837b-b3bd3c33b3f5" />
+  <param name="tfs-root" value="$/project_without_spaces" />
+  <param name="tfs-url" value="https://tcqa-tfs2017.labs.intellij.net:446/tfs/DefaultCollection" />
+  <param name="tfs-username" value="jetbrains" />
+</vcs-root>
+

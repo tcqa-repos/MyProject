@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="CustomCharts" uuid="117029bc-aa83-4d90-a901-53c1c6c9010d" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Test Permissions</name>
+  <parameters />
+  <project-extensions>
+    <extension id="proj_customGraph1" type="project-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Build Duration (all stages)",
+    "sourceBuildTypeId": "CustomCharts_TestPermissions_SubProjectA_BuildA",
+    "key": "BuildDuration"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="Chart with data from BuildA" />
+      </parameters>
+    </extension>
+    <extension id="proj_customGraph2" type="project-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Build Duration (all stages)",
+    "sourceBuildTypeId": "CustomCharts_TestPermissions_SubProjectB_BuildB",
+    "key": "BuildDuration"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="Chart with data from BuildB" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

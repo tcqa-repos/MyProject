@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="IssueTrackersIntegration" uuid="4b0c4a58-673b-4805-8cfa-e6505e24ac2d" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>GitHub</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_19" type="IssueTracker">
+      <parameters>
+        <param name="authType" value="loginpassword" />
+        <param name="host" value="https://github.com/JuliaResh/IssueTrackersIntegration" />
+        <param name="key" value="GithubIssues1" />
+        <param name="name" value="JuliaResh/IssueTrackersIntegration" />
+        <param name="pattern" value="#(\d+)" />
+        <param name="repository" value="https://github.com/JuliaResh/IssueTrackersIntegration" />
+        <param name="secure:accessToken" value="" />
+        <param name="secure:password" value="credentialsJSON:8ac8d560-958a-469c-b135-60c854aad132" />
+        <param name="type" value="GithubIssues" />
+        <param name="username" value="tcqa-repos" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

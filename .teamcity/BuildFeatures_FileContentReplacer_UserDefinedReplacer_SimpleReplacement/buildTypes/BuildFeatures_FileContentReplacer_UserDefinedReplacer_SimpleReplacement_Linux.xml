@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="4e780478-a870-430b-83fb-654fa7e5ecb9" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="4e780478-a870-430b-83fb-654fa7e5ecb9" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Linux</name>
   <description />
   <settings ref="BuildFeatures_FileContentReplacer_UserDefinedReplacer_SimpleReplacement_SimpleRe">
+    <disabled-settings>
+      <setting-ref ref="RQ_26" />
+    </disabled-settings>
     <parameters />
     <build-runners order="RUNNER_611" />
     <vcs-settings />
     <requirements>
-      <starts-with name="teamcity.agent.jvm.os.name" value="Linux" />
+      <starts-with id="RQ_33" name="teamcity.agent.jvm.os.name" value="Linux" />
     </requirements>
     <build-triggers />
     <cleanup />

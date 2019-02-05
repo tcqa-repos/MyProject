@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="IssueTrackersIntegration" uuid="d998452c-25ed-4813-b29e-a552900af28a" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>GitHub Enterprise</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_1" type="OAuthProvider">
+      <parameters>
+        <param name="clientId" value="946fb57ba9708d2a498f" />
+        <param name="displayName" value="GitHub Enterprise" />
+        <param name="gitHubUrl" value="http://teamcity-github-enterprise.labs.intellij.net/" />
+        <param name="providerType" value="GHE" />
+        <param name="secure:clientSecret" value="credentialsJSON:e5643aed-34bd-40ca-9686-1095d203dc21" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

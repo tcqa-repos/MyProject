@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="fe49ab11-0ca7-4821-99df-4d226eb03875" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>TW-56859 Error adding build problem, build problem ignored</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_243" name="" type="Issues_Tw56859eeeeeeeeeeeeeeeeeeeeeeeeErrorAddingBuildProblemBuildProblemIgnored">
+        <parameters>
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_245" name="" type="Issues_Tw56859TttttttasdfghjkldfasdfghErrorAddingBuildProblemBuildProblemIgnored">
+        <parameters>
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_242" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="exit 1" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

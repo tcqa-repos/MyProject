@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="7bfcf36a-0caa-4886-934f-d050a231c9b3" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>https://github.com/Julia-Alexandrova/executing-gradle-builds-on-teamcity-1</name>
+  <parameters />
+  <cleanup />
+</project>
+

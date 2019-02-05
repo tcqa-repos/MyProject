@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="58bae488-d3b9-4bdf-98a7-77c64cfb2f9d" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="58bae488-d3b9-4bdf-98a7-77c64cfb2f9d" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Build A</name>
   <description />
   <settings>
+    <options>
+      <option name="checkoutMode" value="ON_SERVER" />
+    </options>
+    <disabled-settings>
+      <setting-ref ref="TRIGGER_21" />
+    </disabled-settings>
     <parameters />
     <build-runners>
-      <runner id="RUNNER_71" name="" type="simpleRunner">
+      <runner id="RUNNER_71" name="" type="SleepNSeconds">
         <parameters>
-          <param name="script.content"><![CDATA[ping 1.1.1.2
-exit 0]]></param>
           <param name="teamcity.step.mode" value="default" />
-          <param name="use.custom.script" value="true" />
+          <param name="timeout-in-seconds" value="30" />
         </parameters>
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="Dependencies_SnapshotDependencies_HttpsGithubComJuliaReshMyProjectGit" />
+      <vcs-entry-ref root-id="HttpsGithubComJuliaReshMyProject1git" />
     </vcs-settings>
     <requirements />
     <build-triggers>
@@ -29,6 +33,7 @@ exit 0]]></param>
           <param name="cronExpression_sec" value="0" />
           <param name="cronExpression_year" value="*" />
           <param name="dayOfWeek" value="Sunday" />
+          <param name="enableQueueOptimization" value="true" />
           <param name="hour" value="16" />
           <param name="minute" value="10" />
           <param name="schedulingPolicy" value="daily" />

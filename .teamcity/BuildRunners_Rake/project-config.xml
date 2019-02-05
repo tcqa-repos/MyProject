@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="BuildRunners" uuid="d296c40f-aec2-46f5-8a45-64bcd3b6f958" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Rake</name>
+  <parameters />
+  <cleanup />
+</project>
+

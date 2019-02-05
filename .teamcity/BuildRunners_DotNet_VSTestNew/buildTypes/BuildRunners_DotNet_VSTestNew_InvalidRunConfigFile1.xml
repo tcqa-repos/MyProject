@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="70cf0cd9-8474-4f6f-ac11-efe96f3569aa" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Invalid RunConfig file (1)</name>
+  <description />
+  <settings>
+    <options>
+      <option name="checkoutMode" value="ON_SERVER" />
+      <option name="executionTimeoutMin" value="5" />
+      <option name="shouldFailBuildIfTestsFailed" value="false" />
+      <option name="shouldFailBuildOnBadExitCode" value="false" />
+    </options>
+    <disabled-settings>
+      <setting-ref ref="BUILD_EXT_157" />
+      <setting-ref ref="BUILD_EXT_158" />
+      <setting-ref ref="BUILD_EXT_159" />
+      <setting-ref ref="RUNNER_440" />
+      <setting-ref ref="RUNNER_612" />
+    </disabled-settings>
+    <parameters>
+      <param name="add.cmd.parameters" value="" />
+      <param name="checkout.rules" value="+:MyMSTest/MSTest =&gt; ." />
+      <param name="fail.message" value="Build did not fail when VSTest failed" />
+      <param name="runconfig.file" value="abracadabra" />
+      <param name="solution.path" value="MSTest.sln" />
+      <param name="test.names" value="" />
+      <param name="testfiles.exclude.list" value="" />
+      <param name="testfiles.include.list"><![CDATA[**/bin/**/*.dll
+**/bin/**/*.exe]]></param>
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_438" name="" type="VS.Solution">
+        <parameters>
+          <param name="build-file-path" value="%solution.path%" />
+          <param name="msbuild.prop.Configuration" value="Release" />
+          <param name="msbuild_version" value="12.0" />
+          <param name="run-platform" value="x86" />
+          <param name="targets" value="Rebuild" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="toolsVersion" value="12.0" />
+          <param name="vs.version" value="vs2013" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_439" name="" type="VisualStudioTest">
+        <parameters>
+          <param name="dotNetCoverage.NCover.HTMLReport.File.Sort" value="0" />
+          <param name="dotNetCoverage.NCover.HTMLReport.File.Type" value="1" />
+          <param name="dotNetCoverage.NCover.Reg" value="selected" />
+          <param name="dotNetCoverage.NCover.platformBitness" value="x86" />
+          <param name="dotNetCoverage.NCover.platformVersion" value="v2.0" />
+          <param name="dotNetCoverage.NCover3.Reg" value="selected" />
+          <param name="dotNetCoverage.NCover3.args" value="//ias .*" />
+          <param name="dotNetCoverage.NCover3.platformBitness" value="x86" />
+          <param name="dotNetCoverage.NCover3.platformVersion" value="v2.0" />
+          <param name="dotNetCoverage.NCover3.reporter.executable.args" value="//or FullCoverageReport:Html:{teamcity.report.path}" />
+          <param name="dotNetCoverage.PartCover.Reg" value="selected" />
+          <param name="dotNetCoverage.PartCover.includes" value="[*]*" />
+          <param name="dotNetCoverage.PartCover.platformBitness" value="x86" />
+          <param name="dotNetCoverage.PartCover.platformVersion" value="v2.0" />
+          <param name="dotNetTestRunner.Type" value="GenericProcess" />
+          <param name="mstest_enable" value="checked" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="vstest_cmdline" value="%add.cmd.parameters%" />
+          <param name="vstest_detect_team_city_logger" value="true" />
+          <param name="vstest_engine" value="VSTest" />
+          <param name="vstest_exclude" value="%testfiles.exclude.list%" />
+          <param name="vstest_framework" value="default" />
+          <param name="vstest_include" value="%testfiles.include.list%" />
+          <param name="vstest_platform" value="x86" />
+          <param name="vstest_runner_path" value="%teamcity.dotnet.vstest.12.0%" />
+          <param name="vstest_runsettings" value="%runconfig.file%" />
+          <param name="vstest_test_names" value="%test.names%" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_440" name="Fail build if build status is successful" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo ##teamcity[buildProblem description='%fail.message%']
+echo ##teamcity[setParameter name='test.failed' value='true']]]></param>
+          <param name="teamcity.step.mode" value="execute_if_success" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_612" name="Mark build as successful if was failing before previous step" type="jetbrains_powershell">
+        <parameters>
+          <param name="jetbrains_powershell_bitness" value="x86" />
+          <param name="jetbrains_powershell_edition" value="Desktop" />
+          <param name="jetbrains_powershell_execution" value="PS1" />
+          <param name="jetbrains_powershell_script_code"><![CDATA[if (($buildStatus -eq "FAILURE") -and (%test.failed% -ne "true"))  {
+    Write-Output "##teamcity[buildStatus status='SUCCESS']"
+}]]></param>
+          <param name="jetbrains_powershell_script_mode" value="CODE" />
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="MSTest">
+        <checkout-rule rule="%checkout.rules%" />
+      </vcs-entry-ref>
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_157" type="BuildFailureOnMetric">
+        <parameters>
+          <param name="anchorBuild" value="lastSuccessful" />
+          <param name="metricKey" value="buildFailedTestCount" />
+          <param name="metricThreshold" value="3" />
+          <param name="metricUnits" value="metricUnitsDefault" />
+          <param name="moreOrLess" value="different" />
+          <param name="withBuildAnchor" value="false" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_158" type="BuildFailureOnMetric">
+        <parameters>
+          <param name="anchorBuild" value="lastSuccessful" />
+          <param name="metricKey" value="buildIgnoredTestCount" />
+          <param name="metricThreshold" value="3" />
+          <param name="metricUnits" value="metricUnitsDefault" />
+          <param name="moreOrLess" value="different" />
+          <param name="withBuildAnchor" value="false" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_159" type="BuildFailureOnMetric">
+        <parameters>
+          <param name="anchorBuild" value="lastSuccessful" />
+          <param name="metricKey" value="buildPassedTestCount" />
+          <param name="metricThreshold" value="4" />
+          <param name="metricUnits" value="metricUnitsDefault" />
+          <param name="moreOrLess" value="different" />
+          <param name="withBuildAnchor" value="false" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

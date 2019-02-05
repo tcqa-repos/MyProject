@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="d8d2ecb5-6dfe-4189-9c8d-e40bd1744460" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Template</name>
+  <settings>
+    <parameters />
+    <build-runners />
+    <vcs-settings>
+      <vcs-entry-ref root-id="MyProject_SubProjectA_HttpsGithubComTcqaReposMyProjectRefsHeadsMaster" />
+      <vcs-entry-ref root-id="MyProject_HttpsGithubComTcqaReposCalculatorRefsHeadsMaster" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</template>
+

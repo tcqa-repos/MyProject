@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="055499d6-476d-4661-9d0e-c06ea354b455" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>TW-54472 Add Build Feature error</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_117" type="VcsLabeling">
+        <parameters>
+          <param name="labelingPattern" value="build-%system.build.number%" />
+          <param name="successfulOnly" value="true" />
+        </parameters>
+      </extension>
+      <extension id="swabra" type="swabra">
+        <parameters>
+          <param name="swabra.enabled" value="swabra.before.build" />
+          <param name="swabra.rules" value=":*" />
+          <param name="swabra.strict" value="true" />
+        </parameters>
+      </extension>
+      <extension id="jetbrains.agent.free.space" type="jetbrains.agent.free.space">
+        <parameters />
+      </extension>
+      <extension id="BUILD_EXT_119" type="JetBrains.SharedResources">
+        <parameters />
+      </extension>
+      <extension id="BUILD_EXT_120" type="AutoMergeFeature">
+        <parameters>
+          <param name="teamcity.automerge.buildStatusCondition" value="successful" />
+          <param name="teamcity.automerge.dstBranch" value="&lt;default&gt;" />
+          <param name="teamcity.automerge.message" value="Merge branch '%teamcity.build.branch%'" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_121" type="jb.nuget.auth">
+        <parameters>
+          <param name="secure:nuget.auth.password" value="credentialsJSON:5a580b7b-a8a1-4252-b175-aaa41079a651" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_122" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="US-ASCII" />
+          <param name="teamcity.file.content.replacer.file.encoding.custom" value="US-ASCII" />
+          <param name="teamcity.file.content.replacer.pattern" value="111" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.regexMode" value="REGEX" />
+          <param name="teamcity.file.content.replacer.replacement" value="1111" />
+        </parameters>
+      </extension>
+      <extension id="ruby.env.configurator" type="ruby.env.configurator">
+        <parameters>
+          <param name="ui.ruby.configurator.fail.build.if.interpreter.not.found" value="true" />
+          <param name="ui.ruby.configurator.rvm.gemset.create.if.non.exists" value="true" />
+          <param name="ui.ruby.configurator.rvm.rvmrc.path" value=".rvmrc" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

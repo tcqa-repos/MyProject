@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="Issues" uuid="df45faa5-65ac-4afb-9152-cdbe755fe89a" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>TW-54626 Rerunning a composite build doesn't restart failed deps</name>
+  <parameters />
+  <cleanup />
+</project>
+

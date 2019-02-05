@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="SharedResources_ProjectWithResource" uuid="42d2fd96-3cd7-45b6-a0f9-ac60bb5aaa02" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>SubProject with resource</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_46" type="JetBrains.SharedResources">
+      <parameters>
+        <param name="enabled" value="true" />
+        <param name="id" value="PROJECT_EXT_46" />
+        <param name="name" value="Resource_with_quota" />
+        <param name="quota" value="-1" />
+        <param name="type" value="quoted" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

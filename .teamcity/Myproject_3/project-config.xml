@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="0e2915ee-8e24-4ae9-b160-84dfaf9d788b" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Myproject</name>
+  <parameters>
+    <param name="param" value="value" spec="text display='prompt' validationMode='any'" />
+  </parameters>
+  <cleanup />
+</project>
+

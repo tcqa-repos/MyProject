@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="d6af11ea-ff38-468e-bad8-42a236c41574" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Build3</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners />
+    <vcs-settings>
+      <vcs-entry-ref root-id="MyProject_HttpsGithubComTcqaReposCalculatorRefsHeadsMaster">
+        <checkout-rule rule="rules1 =&gt; Claculator" />
+      </vcs-entry-ref>
+      <vcs-entry-ref root-id="MyProject_HttpsGithubComTcqaReposDotNetSamplesRefsHeadsMaster">
+        <checkout-rule rule="rules2 =&gt; 1" />
+      </vcs-entry-ref>
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

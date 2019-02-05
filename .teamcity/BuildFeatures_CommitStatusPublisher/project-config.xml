@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="BuildFeatures" uuid="5d2130ee-ffb6-4f18-9928-14df1fc467ea" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Commit Status Publisher</name>
+  <parameters />
+  <cleanup />
+</project>
+

@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="563ad68a-9b22-47a9-b2b0-1886f045b62f" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
-  <name>Build with '/'</name>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="e491e5ec-4635-49a1-b30a-acf9b0deae91" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Build with _**/**</name>
   <description />
   <settings>
     <options>
-      <option name="artifactRules" value="test/pack =&gt; artifacts.zip" />
+      <option name="artifactRules" value="foo_**/** =&gt; foo.zip&#xA;foo_**/foo2** =&gt; foo2.zip" />
     </options>
     <parameters />
-    <build-runners />
-    <vcs-settings>
-      <vcs-entry-ref root-id="DirtyConfigurations_FeatureBranches_HttpsGithubComJuliaReshCalculator" />
-    </vcs-settings>
+    <build-runners>
+      <runner id="RUNNER_159" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[mkdir foo_foo
+echo foo >> foo_foo/foo.txt
+echo foo >> foo_foo/foo2.txt
+mkdir fo_foo
+echo foo >> fo_foo/foo.txt
+echo foo >> fo_foo/foo2.txt
+mkdir foofoo_foo
+echo foo >> foofoo_foo/foo.txt
+echo foo >> foofoo_foo/foo2.txt]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
     <requirements />
     <build-triggers />
     <cleanup />

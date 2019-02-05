@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="e6030d86-afdd-48e8-bdf9-fc8eb70236d7" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Windows</name>
+  <description />
+  <settings ref="BuildFeatures_FileContentReplacer_UserDefinedReplacer_SeveralBuildSteps_SeveralB">
+    <disabled-settings>
+      <setting-ref ref="RQ_32" />
+    </disabled-settings>
+    <parameters />
+    <build-runners order="RUNNER_67, RUNNER_468" />
+    <vcs-settings />
+    <requirements>
+      <contains id="RQ_92" name="teamcity.agent.jvm.os.name" value="Windows" />
+    </requirements>
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

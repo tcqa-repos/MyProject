@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="3f4a281b-6b5d-47f1-b4a3-951733c50c75" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Build</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/* =&gt;" />
+      <option name="buildNumberPattern" value="%build.counter%$9" />
+    </options>
+    <disabled-settings>
+      <setting-ref ref="BUILD_EXT_28" />
+      <setting-ref ref="BUILD_EXT_32" />
+      <setting-ref ref="BUILD_EXT_33" />
+    </disabled-settings>
+    <parameters>
+      <param name="replacement" value="aaa$56" />
+      <param name="replacement2" value="\fgh\" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_63" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo Hi
+type Properties\AssemblyInfo.cs]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_70" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo hi" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="FileContentReplacer" />
+      <vcs-entry-ref root-id="HttpsGithubComJuliaReshSlnWithNugetDep">
+        <checkout-rule rule="+:ClassLibrary1 =&gt; Solution/ClassLibrary1" />
+        <checkout-rule rule="+:WindowsFormsApplication1 =&gt; Solution/WindowsFormsApplication1" />
+      </vcs-entry-ref>
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_28" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="autodetect" />
+          <param name="teamcity.file.content.replacer.file.encoding.custom" value="autodetect" />
+          <param name="teamcity.file.content.replacer.pattern" value="aa" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.replacement" value="%replacement%" />
+          <param name="teamcity.file.content.replacer.wildcards" value="**" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_32" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="autodetect" />
+          <param name="teamcity.file.content.replacer.file.encoding.custom" value="autodetect" />
+          <param name="teamcity.file.content.replacer.pattern" value="line" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.replacement" value="%replacement2%" />
+          <param name="teamcity.file.content.replacer.wildcards" value="file*.txt" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_33" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.file.encoding" value="autodetect" />
+          <param name="teamcity.file.content.replacer.file.encoding.custom" value="autodetect" />
+          <param name="teamcity.file.content.replacer.pattern" value="((.)((a)(.))((.)(.)(.)(.))(.)(.))" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.replacement" value="[begin]group7=$70 and group 10=$10 while group 1=$1[end]" />
+          <param name="teamcity.file.content.replacer.wildcards"><![CDATA[**\*.*
+-:.git]]></param>
+        </parameters>
+      </extension>
+      <extension id="JetBrains.AssemblyInfo" type="JetBrains.AssemblyInfo">
+        <parameters>
+          <param name="assembly-format" value="1.0.0.%system.build.number%" />
+          <param name="patch-global-assembly-info" value="true" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

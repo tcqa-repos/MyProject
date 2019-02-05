@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="BuildRunners_DotNet_VSTest" uuid="fc0aa298-012d-4b7e-a40b-2e50b9679e5a" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Exclude Assemblies</name>
+  <parameters />
+  <cleanup />
+</project>
+

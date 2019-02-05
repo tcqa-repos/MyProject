@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="39a3d58d-2666-454e-aa52-4c728acea280" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>FTP Deployer (1)</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_392" name="" type="ftp-deploy-runner">
+        <parameters>
+          <param name="jetbrains.buildServer.deployer.ftp.authMethod" value="USER_PWD" />
+          <param name="jetbrains.buildServer.deployer.ftp.ftpMode" value="PASSIVE" />
+          <param name="jetbrains.buildServer.deployer.ftp.securityMode" value="0" />
+          <param name="jetbrains.buildServer.deployer.ftp.transferMethod" value="AUTO" />
+          <param name="jetbrains.buildServer.deployer.sourcePath" value="**/* =&gt;" />
+          <param name="jetbrains.buildServer.deployer.targetUrl" value="172.20.160.115" />
+          <param name="jetbrains.buildServer.deployer.username" value="julia" />
+          <param name="secure:jetbrains.buildServer.deployer.password" value="credentialsJSON:aebcf35f-d928-40d0-9ff2-29df992214e2" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <artifact-dependencies>
+      <dependency id="ARTIFACT_DEPENDENCY_21" sourceBuildTypeId="Experiments_TestWebSockets_GetTeamCity" cleanDestination="false">
+        <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
+        <artifact sourcePath="TeamCity-1111.war&#xD;&#xA;TeamCity-222.war&#xD;&#xA;TeamCity.tar.gz&#xD;&#xA;TeamCity.war" />
+      </dependency>
+    </artifact-dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="ProjectsFromGitHub" uuid="900b837a-5b05-4a23-bb79-9fce41e7ec7d" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Teamcity Aws Codedeploy Plugin</name>
+  <parameters />
+  <cleanup />
+</project>
+

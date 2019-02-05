@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="5eb822bc-ef17-4f06-99e0-30dea1aae698" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Sleep step</name>
+  <description />
+  <settings>
+    <options>
+      <option name="checkoutMode" value="ON_SERVER" />
+    </options>
+    <parameters>
+      <param name="timeout-in-seconds" value="" spec="text display='prompt' validationMode='any'" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_223" name="" type="Ant">
+        <parameters>
+          <param name="build-file"><![CDATA[<project name="test" default="sleep">
+<target name="sleep">
+<sleep seconds="%timeout-in-seconds%"/>
+</target>
+</project>]]></param>
+          <param name="build-file-path" value="build.xml" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use-custom-build-file" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

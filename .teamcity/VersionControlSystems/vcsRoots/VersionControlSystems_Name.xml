@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="46c6082b-15e1-4cd2-b0d4-3382693e4655" type="jetbrains.git" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="46c6082b-15e1-4cd2-b0d4-3382693e4655" type="jetbrains.git" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>name</name>
   <param name="agentCleanFilesPolicy" value="ALL_UNTRACKED" />
   <param name="agentCleanPolicy" value="ON_BRANCH_CHANGE" />
   <param name="authMethod" value="TEAMCITY_SSH_KEY" />
   <param name="branch" value="refs/heads/master" />
   <param name="ignoreKnownHosts" value="true" />
-  <param name="secure:passphrase" value="zxxbfa52f3b7e6dae120432761094c482dc" />
+  <param name="secure:passphrase" value="credentialsJSON:48720103-f33e-4927-ae99-4ba967c2f085" />
   <param name="submoduleCheckout" value="CHECKOUT" />
   <param name="teamcitySshKey" value="RSA Private Key OpenSSH" />
   <param name="url" value="https://github.com/JuliaResh/myproject" />

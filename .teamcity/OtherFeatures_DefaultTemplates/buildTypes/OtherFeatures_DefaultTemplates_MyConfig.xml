@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="b1ca83e0-deb1-4237-b2e8-7f84973faf8e" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>My config</name>
+  <description />
+  <settings>
+    <options>
+      <option name="buildConfigurationType" value="REGULAR" />
+      <option name="enableHangingBuildsDetection" value="false" />
+    </options>
+    <parameters>
+      <param name="aaa" value="aaa" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_328" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo Some text &gt; readme.txt" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements>
+      <exists id="RQ_7" name="hey" />
+    </requirements>
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

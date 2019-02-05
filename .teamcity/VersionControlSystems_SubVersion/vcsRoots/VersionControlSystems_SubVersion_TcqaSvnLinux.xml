@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="0b448376-0ca2-4ec3-8d98-35e2e79e424f" type="svn" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>TCQA SVN Linux</name>
+  <param name="externals-mode" value="externals-none" />
+  <param name="labelingMessage" value="Labeled automatically by TeamCity" />
+  <param name="labelingPatterns" value="trunk=&gt;tags" />
+  <param name="ssh-port" value="22" />
+  <param name="svn-config-directory" value="C:\Users\Julia.Reshetnikova\AppData\Roaming\Subversion" />
+  <param name="svn-use-default-config-directory" value="true" />
+  <param name="teamcitySshKey" value="RSA Private Key OpenSSH no pass" />
+  <param name="url" value="svn+ssh://jetbrains@tcqa-subversion/repo" />
+  <param name="user" value="jetbrains" />
+  <param name="working-copy-format" value="1.8" />
+</vcs-root>
+

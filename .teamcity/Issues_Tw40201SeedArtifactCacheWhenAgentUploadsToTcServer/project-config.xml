@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="Issues" uuid="f5828441-51ea-4be6-9166-ac813ed5fc0a" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>TW-40201 Seed Artifact Cache when Agent Uploads to TC Server</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_43" type="buildtype-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="format" value="duration" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Artifact Dependencies Resolving Time",
+    "key": "buildStageDuration:dependenciesResolving"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="Artifact Resolving time" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_49" type="buildtype-graphs">
+      <parameters>
+        <param name="format" value="text" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "artifactResolving:averageSpeed:HTTP transport",
+    "key": "artifactResolving:averageSpeed:HTTP transport"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="Artifact Download Speed" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

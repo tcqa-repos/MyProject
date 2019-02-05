@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="928d6c63-d7e8-4b53-9ea9-07ca9ea03adf" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="39604847-c929-47d1-9212-f62e7857a0d4" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Issues</name>
   <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_47" type="IssueTracker">
+      <parameters>
+        <param name="autoSync" value="true" />
+        <param name="host" value="http://youtrack.jetbrains.com" />
+        <param name="idPrefix" value="OC CPP CLJ CRKA DBE DCVR DMRY DMU DOTP DTRC EDU GO HAXE JPS IDEA IJSDK IDEABKL IJCP JRE ALL JF OT KT MPS MJP NP NTR WI PROF PY RSRP RSCPP RSPL RIDER BND RDOC RG RUBY SCL TW UP VIM WEB XD JT YTM" />
+        <param name="name" value="JB YT" />
+        <param name="secure:password" value="credentialsJSON:2da3f435-a39c-451a-8fff-aef2d04d236e" />
+        <param name="type" value="youtrack" />
+        <param name="username" value="Julia.Reshetnikova" />
+      </parameters>
+    </extension>
+  </project-extensions>
   <cleanup />
 </project>
 

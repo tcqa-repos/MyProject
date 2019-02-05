@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="5a646b00-22a4-4fb7-9f61-e678b73fac86" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Build B</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners />
+    <vcs-settings />
+    <requirements>
+      <equals id="RQ_24" name="teamcity.agent.jvm.os.name" value="Linux" />
+      <does-not-contain id="RQ_29" name="system.agent.name" value="JuliaR" />
+    </requirements>
+    <build-triggers />
+    <dependencies>
+      <depend-on sourceBuildTypeId="TestProject_Build" />
+    </dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+

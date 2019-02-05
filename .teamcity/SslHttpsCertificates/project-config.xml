@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="abd269a7-b18b-40d8-8e96-520b0a08ac43" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>SSL / HTTPS Certificates</name>
+  <parameters />
+  <cleanup />
+</project>
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="1e593d62-4b51-4934-a151-d112de79b1d0" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>build</name>
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_210" name="t1" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo hi" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_212" name="" type="_placeholder_">
+        <parameters />
+      </runner>
+      <runner id="RUNNER_211" name="t2" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo hi" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</template>
+

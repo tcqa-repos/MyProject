@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="ae1a962c-c77b-4808-b8e5-c6f117326e8b" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Julia Reshetnikova</name>
+  <default-template ref="JuliaReshetnikova_Build" />
+  <parameters />
+  <cleanup />
+</project>
+

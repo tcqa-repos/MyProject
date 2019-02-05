@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="f601467f-96d9-45a7-a107-88d89046b4ea" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>VSTest2</name>
+  <description />
+  <settings ref="BuildRunners_DotNet_VSTestNew_VSTestUsingTestNamesFilter">
+    <parameters>
+      <param name="add.cmd.parameters" value="" />
+      <param name="runconfig.file" value="" />
+      <param name="test.names" value="" />
+      <param name="testfiles.exclude.list" value="**/obj/**" />
+      <param name="testfiles.include.list"><![CDATA[**/*.dll
+**/*.exe]]></param>
+    </parameters>
+    <build-runners order="RUNNER_434, RUNNER_435, RUNNER_633, RUNNER_625">
+      <runner id="RUNNER_625" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo Hi!
+exit 0]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="bf65b431-2057-4759-9635-39b603d52a36" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>TW-56764 PowerShell formatted table is incorrect in Console View</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_251" name="" type="jetbrains_powershell">
+        <parameters>
+          <param name="jetbrains_powershell_execution" value="PS1" />
+          <param name="jetbrains_powershell_noprofile" value="true" />
+          <param name="jetbrains_powershell_script_code"><![CDATA[$list = @()
+$list += new-object PSObject -property @{
+Name = "Very Long Name 1";
+Duration = "00:10:21.774"
+}
+
+$list += new-object PSObject -property @{
+Name = "Long Name 2";
+Duration = "10:10:21.774"
+}
+
+$list += new-object PSObject -property @{
+Name = "Name 3";
+Duration = "10:10:21.774"
+}
+
+$list += new-object PSObject -property @{
+Name = "Total:";
+Duration = "20:10:21.774"
+}
+
+$list | format-table -autoSize -property Name,Duration | out-string -stream | where-object { $_ }]]></param>
+          <param name="jetbrains_powershell_script_mode" value="CODE" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

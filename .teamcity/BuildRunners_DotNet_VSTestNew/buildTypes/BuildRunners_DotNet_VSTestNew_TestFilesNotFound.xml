@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="00b90c2f-b8b7-424d-b0be-1d01e4e6637b" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Test files not found</name>
+  <description />
+  <settings ref="BuildRunners_DotNet_VSTestNew_VSTestShouldFail">
+    <parameters>
+      <param name="add.cmd.parameters" value="" />
+      <param name="runconfig.file" value="" />
+      <param name="test.names" value="" />
+      <param name="testfiles.exclude.list" value="" />
+      <param name="testfiles.include.list" value="**/foo/*.*" />
+    </parameters>
+    <build-runners order="RUNNER_438, RUNNER_439, RUNNER_440, RUNNER_612" />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

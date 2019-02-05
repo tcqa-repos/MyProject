@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="8cd4a564-e90f-47be-90db-e61c11f7fe0d" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="8cd4a564-e90f-47be-90db-e61c11f7fe0d" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Build A</name>
   <description>with artifacts</description>
   <settings>
     <options>
       <option name="artifactRules" value="fileA.txt =&gt;" />
+      <option name="checkoutMode" value="ON_SERVER" />
     </options>
     <parameters />
     <build-runners />
     <vcs-settings>
-      <vcs-entry-ref root-id="Dependencies_ArtifactDependencie_HttpsGithubComJuliaReshMyProject_2" />
+      <vcs-entry-ref root-id="HttpsGithubComJuliaReshMyProject" />
     </vcs-settings>
     <requirements />
     <build-triggers />

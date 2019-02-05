@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="VersionControlSystems_TeamFoundationServer" uuid="3c353dbd-2431-4efd-a475-b17a5ed7fba5" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="VersionControlSystems_TeamFoundationServer" uuid="d67309e4-e45a-4b0e-bc02-d86bc592eab4" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>TFS 2015</name>
   <parameters />
   <cleanup />

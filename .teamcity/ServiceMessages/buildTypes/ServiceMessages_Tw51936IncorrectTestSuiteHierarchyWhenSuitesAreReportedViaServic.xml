@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="3002d0b5-3168-425f-bc08-65fffe92f92d" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>TW-51936 Incorrect test suite hierarchy when suites are reported via services me</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_304" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo "##teamcity[flowStarted flowId='suite']"
+echo "##teamcity[testSuiteStarted name='MySuite' flowId='suite']"
+echo "##teamcity[flowStarted flowId='nestedsuite' parent='suite']"
+echo "##teamcity[testSuiteStarted name='NestedSuite' flowId='nestedsuite']"
+echo "##teamcity[flowStarted flowId='test1' parent='nestedsuite']"
+echo "##teamcity[flowStarted flowId='test2' parent='nestedsuite']"
+echo "##teamcity[testStarted name='package_or_namespace.ClassName.TestName' flowId='test1']"
+echo "##teamcity[testStarted name='package_or_namespace.ClassName.TestName2' flowId='test2']"
+echo "##teamcity[testFinished name='package_or_namespace.ClassName.TestName' flowId='test1']"
+echo "##teamcity[testFinished name='package_or_namespace.ClassName.TestName2' flowId='test2']"
+echo "##teamcity[flowFinished flowId='test1']"
+echo "##teamcity[flowFinished flowId='test2']"
+echo "##teamcity[testSuiteFinished name='NestedSuite' flowId='nestedsuite']"
+echo "##teamcity[flowFinished flowId='nestedsuite']"
+echo "##teamcity[testSuiteFinished name='MySuite' flowId='suite']"
+echo "##teamcity[flowFinished flowId='suite']"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

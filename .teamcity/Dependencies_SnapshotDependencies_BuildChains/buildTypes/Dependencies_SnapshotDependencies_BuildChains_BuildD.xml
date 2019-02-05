@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="02da6aec-b557-4b65-84c5-fbdb5a1204fb" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="02da6aec-b557-4b65-84c5-fbdb5a1204fb" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Build D</name>
   <description />
   <settings>
-    <parameters />
+    <options>
+      <option name="checkoutMode" value="ON_SERVER" />
+    </options>
+    <parameters>
+      <param name="reverse.dep.Dependencies_SnapshotDependencies_BuildChains_BuildB.param" value="true" />
+    </parameters>
     <build-runners>
       <runner id="RUNNER_563" name="" type="Ant">
         <parameters>
@@ -29,7 +34,6 @@
       <depend-on sourceBuildTypeId="Dependencies_SnapshotDependencies_BuildChains_BuildB">
         <options>
           <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
-          <option name="take-started-build-with-same-revisions" value="true" />
         </options>
       </depend-on>
     </dependencies>

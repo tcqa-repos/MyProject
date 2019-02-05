@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="afae38f7-4fe6-449c-bcd8-98cb5fa476e5" type="tfs" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Simple Calculator</name>
+  <param name="secure:tfs-password" value="credentialsJSON:37358a26-254a-43fc-9f09-b0d3d4d3996a" />
+  <param name="tfs-root" value="$/SimpleCalculator" />
+  <param name="tfs-url" value="http://tcqa-tfs2015:8080/tfs/DefaultCollection" />
+  <param name="tfs-username" value="jetbrains" />
+</vcs-root>
+

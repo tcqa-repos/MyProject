@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="BuildFeatures_CommitStatusPublisher" uuid="54fb7a31-1491-4f5d-a807-4f8482c88d74" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Bitbucket Server</name>
+  <parameters />
+  <cleanup />
+</project>
+

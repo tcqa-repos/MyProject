@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="BuildRunners" uuid="273032ef-b4d3-4d58-a0cc-a0c7944f4e65" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>dotNet</name>
+  <parameters />
+  <cleanup />
+</project>
+

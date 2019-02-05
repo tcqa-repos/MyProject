@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="f7b4dcd3-1470-4be6-9cb2-5c49d4356686" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Gradle</name>
+  <parameters>
+    <param name="teamcity.project.server_url" value="http://julia:8111/julia" />
+  </parameters>
+  <project-extensions>
+    <extension id="repository-nuget-default" type="PackageRepository">
+      <parameters>
+        <param name="name" value="default" />
+        <param name="type" value="nuget" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

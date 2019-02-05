@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="b1841e4f-f739-4f33-81a9-3c42cc092616" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Build</name>
+  <description />
+  <settings>
+    <options>
+      <option name="checkoutMode" value="ON_SERVER" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_186" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo "##teamcity[testStarted name='suite.test1']"
+echo "##teamcity[testFailed name='suite.test1']"
+echo "##teamcity[testFinished name='suite.test1']"
+echo "##teamcity[testStarted name='suite.test2']"
+echo "##teamcity[testFailed name='suite.test2']"
+echo "##teamcity[testFinished name='suite.test2']"
+echo "##teamcity[testStarted name='suite.test3']"
+echo "##teamcity[testFailed name='suite.test3']"
+echo "##teamcity[testFinished name='suite.test3']"
+echo "##teamcity[testStarted name='suite.test4']"
+echo "##teamcity[testFinished name='suite.test4']"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_204" name="" type="SleepNSeconds">
+        <parameters>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="timeout-in-seconds" value="30" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="IssueTrackersIntegration_IssueTrackersIntegration" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

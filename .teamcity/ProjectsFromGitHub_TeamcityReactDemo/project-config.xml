@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="ProjectsFromGitHub" uuid="34c0a591-8beb-485e-89fd-a534eb52bfd8" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Teamcity React Demo</name>
+  <parameters />
+  <cleanup />
+</project>
+

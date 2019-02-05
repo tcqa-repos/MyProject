@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="42a43855-ec62-4493-a838-2f27cfb754d7" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="42a43855-ec62-4493-a838-2f27cfb754d7" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Experiments</name>
   <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_4" type="OAuthProvider">
+      <parameters>
+        <param name="clientId" value="2a2554d395cab602ac9c" />
+        <param name="displayName" value="GitHub.com2" />
+        <param name="gitHubUrl" value="https://github.com/" />
+        <param name="providerType" value="GitHub" />
+        <param name="secure:clientSecret" value="credentialsJSON:39ad2e39-5d79-4e3b-b9fe-5e9d2b23d6e1" />
+      </parameters>
+    </extension>
+  </project-extensions>
   <cleanup />
 </project>
 

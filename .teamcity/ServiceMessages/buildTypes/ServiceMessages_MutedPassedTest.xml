@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="31b8a9f6-8c4a-4db6-9ad1-156d2f0ef485" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Muted passed test</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_129" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo "##teamcity[testStarted name='package_or_namespace.ClassName.TestName' flowId='test1']"
+echo "##teamcity[testStarted name='package_or_namespace.ClassName.TestName2' flowId='test2']"
+echo "##teamcity[testFinished name='package_or_namespace.ClassName.TestName' flowId='test1']"
+echo "##teamcity[testFinished name='package_or_namespace.ClassName.TestName2' flowId='test2']"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="9099e6c4-dd3f-4ba2-bf65-3e532c897c9e" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Custom Checkout Directory</name>
+  <description />
+  <settings ref="BuildRunners_DotNet_MSTest_MSTest">
+    <options>
+      <option name="checkoutDirectory" value="%my.path%\mycheckoutdir" />
+      <option name="checkoutMode" value="ON_AGENT" />
+    </options>
+    <parameters>
+      <param name="my.path" value="C:\temp" />
+    </parameters>
+    <build-runners order="RUNNER_26, RUNNER_27" />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

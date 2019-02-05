@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="bca2a619-78de-4dec-a2de-c149125a9839" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="bca2a619-78de-4dec-a2de-c149125a9839" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Custom</name>
   <description />
   <settings>
     <options>
       <option name="artifactRules" value="**\* =&gt;" />
       <option name="buildNumberPattern" value="1.0.0.%build.counter%" />
+      <option name="checkoutMode" value="ON_SERVER" />
     </options>
     <disabled-settings>
       <setting-ref ref="BUILD_EXT_111" />
@@ -34,7 +35,7 @@
     </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="FileContentReplacer" />
-      <vcs-entry-ref root-id="Dependencies_Calculator_SvnHttpsLocalhost7443svnCalculatorTrunk" />
+      <vcs-entry-ref root-id="SvnHttpsUnit5397443svnCalculatorTrunk" />
     </vcs-settings>
     <requirements />
     <build-triggers />

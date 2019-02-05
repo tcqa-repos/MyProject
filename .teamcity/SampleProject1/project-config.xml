@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="f0b452f8-e86b-4841-95f2-9b8becd3ee81" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Sample Project (1)</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_25" type="versionedSettings">
+      <parameters />
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

@@ -1,3 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<settings />
+<settings>
+  <tools>
+    <default-versions>
+      <tool-version tool-type="jetbrains.resharper-clt" id="jetbrains.resharper-clt.2016.2.20160623.172854-eap5" />
+      <tool-version tool-type="handleTool" id="SysinternalsHandle" />
+      <tool-version tool-type="maven" id="maven3_3" />
+      <tool-version tool-type="psexecTool" id="psexecTool.Latest" />
+      <tool-version tool-type="JetBrains.dotCover.CommandLineTools" id="JetBrains.dotCover.CommandLineTools.bundled" />
+      <tool-version tool-type="intellij" id="intellij.ideaIU-teamcity-2017.2.6" />
+      <tool-version tool-type="NuGet.CommandLine" id="NuGet.CommandLine.3.5.0-beta2" />
+    </default-versions>
+  </tools>
+</settings>
 

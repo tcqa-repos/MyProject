@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="c453437a-159f-4bd5-a2aa-e34a5e4bf0ba" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Container Deployer</name>
+  <description />
+  <settings>
+    <disabled-settings>
+      <setting-ref ref="ARTIFACT_DEPENDENCY_16" />
+    </disabled-settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_44" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo hello &gt;&gt; my.war" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_260" name="" type="cargo-deploy-runner">
+        <parameters>
+          <param name="jetbrains.buildServer.deployer.container.type" value="tomcat8x" />
+          <param name="jetbrains.buildServer.deployer.sourcePath" value="my.war" />
+          <param name="jetbrains.buildServer.deployer.targetUrl" value="unit-539:8080" />
+          <param name="jetbrains.buildServer.deployer.username" value="jetbrains" />
+          <param name="secure:jetbrains.buildServer.deployer.password" value="credentialsJSON:37358a26-254a-43fc-9f09-b0d3d4d3996a" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <artifact-dependencies>
+      <dependency id="ARTIFACT_DEPENDENCY_16" sourceBuildTypeId="Experiments_TestWebSockets_GetTeamCity" cleanDestination="false">
+        <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
+        <artifact sourcePath="TeamCity.war" />
+      </dependency>
+    </artifact-dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+

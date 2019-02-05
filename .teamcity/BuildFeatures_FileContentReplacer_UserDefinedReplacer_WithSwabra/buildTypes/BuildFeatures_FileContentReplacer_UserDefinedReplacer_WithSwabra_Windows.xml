@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="e1efad6c-b662-468e-a6c2-56823076d0b0" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="e1efad6c-b662-468e-a6c2-56823076d0b0" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Windows</name>
   <description />
   <settings ref="BuildFeatures_FileContentReplacer_UserDefinedReplacer_WithSwabra_FileContentRepl">

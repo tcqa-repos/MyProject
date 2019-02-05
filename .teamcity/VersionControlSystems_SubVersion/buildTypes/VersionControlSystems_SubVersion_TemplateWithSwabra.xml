@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="fc1a7af2-d8c1-45bf-89d6-d61d4c366af8" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="fc1a7af2-d8c1-45bf-89d6-d61d4c366af8" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Template with Swabra</name>
   <settings>
     <options>
@@ -31,7 +31,7 @@ exit 0]]></param>
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="VersionControlSystems_SubVersion_Test1" />
+      <vcs-entry-ref root-id="VersionControlSystems_SubVersion_TcqaSvnLinux" />
     </vcs-settings>
     <requirements />
     <build-triggers />

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="16f1b555-f5f6-4347-a6cc-a54fea16642f" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="16f1b555-f5f6-4347-a6cc-a54fea16642f" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Test clone vm</name>
   <description />
   <settings>
     <options>
       <option name="artifactRules" value="server-logs =&gt; server-logs.zip&#xA;agent-logs =&gt; agent-logs.zip" />
+      <option name="checkoutMode" value="ON_SERVER" />
     </options>
     <parameters>
       <param name="system.dist.build.number" value="11111" />
@@ -13,7 +14,7 @@
       <param name="system.vm.ip" value="" />
       <param name="system.vm.source" value="TCQA CentOS 7" spec="select data_2='TCQA CentOS 7 Trunk' data_1='TCQA WinSrv2012R2 Trunk' display='normal'" />
       <param name="system.vm.target" value="TCQA Trunk" />
-      <param name="system.vsphere.password" value="zxx00c49a190712b5de775d03cbe80d301b" spec="password display='normal'" />
+      <param name="system.vsphere.password" value="credentialsJSON:4e20da37-355b-4f49-a475-eb90201a6528" spec="password display='normal'" />
       <param name="system.vsphere.user" value="Julia.Reshetnikova@LABS" />
     </parameters>
     <build-runners>

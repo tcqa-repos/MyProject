@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="b0c3d506-51ee-41d6-bc65-a59079528003" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Build</name>
+  <description />
+  <settings>
+    <parameters>
+      <param name="aaa" value="" spec="text display='normal' validationMode='any'" />
+      <param name="multi-select" value="value1,value2" spec="select data_6='value6' data_5='value5' display='normal' multiple='true' data_2='value2' data_1='value1' data_4='value4' data_3='value3'" />
+      <param name="param" value="" spec="checkbox display='normal' checkedValue='true'" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_205" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo %multi-select%" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

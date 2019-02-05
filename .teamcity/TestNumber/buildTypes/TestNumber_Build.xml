@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="18f23bd3-a7e1-4d49-9304-efaa42d101c3" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Build</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_168" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo "##teamcity[testStarted name='com.pack.JavaClassForCheckingJ5.testIgnored()']"
+echo "##teamcity[testIgnored name='com.pack.JavaClassForCheckingJ5.testIgnored()']"
+echo "##teamcity[testFinished name='com.pack.JavaClassForCheckingJ5.testIgnored()']"
+
+echo "##teamcity[testStarted name='com.pack.JavaClassForCheckingJ2.testSuccess()']"
+echo "##teamcity[testFinished name='com.pack.JavaClassForCheckingJ2.testSuccess()' duration='516']"
+
+echo "##teamcity[testStarted name='com.pack.JavaClassForCheckingJ3.testSuccess']"
+echo "##teamcity[testFinished name='com.pack.JavaClassForCheckingJ3.testSuccess' duration='502']"
+
+echo "##teamcity[testStarted name='com.pack.JavaClassForCheckingJ4.testIgnored']"
+echo "##teamcity[testIgnored name='com.pack.JavaClassForCheckingJ4.testIgnored']"
+echo "##teamcity[testFinished name='com.pack.JavaClassForCheckingJ4.testIgnored']"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="c30743fc-73c3-4010-ab85-eeea02ce538e" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Test install agent</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="server-logs =&gt; server-logs.zip&#xA;agent-logs =&gt; agent-logs.zip" />
+      <option name="checkoutMode" value="ON_SERVER" />
+    </options>
+    <parameters>
+      <param name="system.ssh.password" value="jetbrains" />
+      <param name="system.ssh.username" value="jetbrains" />
+      <param name="system.target.server" value="" spec="text validationMode='not_empty' display='prompt'" />
+      <param name="system.vm.ip" value="" />
+      <param name="system.vm.source" value="TCQA CentOS 7" spec="select data_2='TCQA CentOS 7' data_1='TCQA WinSrv2012R2' display='prompt' data_3='TCQA WinSrv2008R2'" />
+      <param name="system.vm.target" value="TCQA Trunk" />
+      <param name="system.vsphere.password" value="credentialsJSON:4e20da37-355b-4f49-a475-eb90201a6528" spec="password display='normal'" />
+      <param name="system.vsphere.user" value="Julia.Reshetnikova@LABS" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_29" name="" type="Ant">
+        <parameters>
+          <param name="build-file-path" value="build.xml" />
+          <param name="target" value="recreate-vm" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_30" name="" type="Ant">
+        <parameters>
+          <param name="build-file-path" value="build.xml" />
+          <param name="runnerArgs" value="-lib %teamcity.tool.ant-net-tasks%" />
+          <param name="target" value="install-build-agent" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Experiments_HttpGitHostingLabsIntellijNetTeamcityQaToolsGit">
+        <checkout-rule rule="+:clone-vm =&gt; ." />
+      </vcs-entry-ref>
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

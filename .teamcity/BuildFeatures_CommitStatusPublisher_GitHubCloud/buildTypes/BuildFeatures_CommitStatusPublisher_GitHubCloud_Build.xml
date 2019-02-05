@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="e7a906c3-56ac-4bdd-ae57-357f9d5af152" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Build</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners />
+    <vcs-settings>
+      <vcs-entry-ref root-id="BuildFeatures_CommitStatusPublisher_GitHubCloud_HttpsGithubComTcqaReposMyProject" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_118" type="commit-status-publisher">
+        <parameters>
+          <param name="github_authentication_type" value="password" />
+          <param name="github_host" value="https://api.github.com" />
+          <param name="github_username" value="tcqa-repos" />
+          <param name="publisherId" value="githubStatusPublisher" />
+          <param name="secure:github_password" value="credentialsJSON:8ac8d560-958a-469c-b135-60c854aad132" />
+          <param name="vcsRootId" value="BuildFeatures_CommitStatusPublisher_GitHubCloud_HttpsGithubComTcqaReposMyProject" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

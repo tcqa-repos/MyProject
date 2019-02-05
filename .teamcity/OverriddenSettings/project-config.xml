@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="7b4f0dcf-ef44-4aa5-b454-d2df9323f9ad" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Overridden Settings</name>
+  <description>Test settings inherited from templates</description>
+  <parameters />
+  <cleanup />
+</project>
+

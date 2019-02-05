@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="BuildFeatures" uuid="4867bec4-870f-4c99-a953-f8b74e42ac7a" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="BuildFeatures" uuid="4867bec4-870f-4c99-a953-f8b74e42ac7a" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>AssemblyInfo Patcher</name>
   <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_2" type="IssueTracker">
+      <parameters>
+        <param name="authType" value="accesstoken" />
+        <param name="name" value="tcqa-repos/Calculator" />
+        <param name="pattern" value="#(\d+)" />
+        <param name="repository" value="https://github.com/tcqa-repos/Calculator" />
+        <param name="secure:accessToken" value="credentialsJSON:f8d898f2-98f0-4387-a31f-6315f07d01d1" />
+        <param name="secure:password" value="" />
+        <param name="type" value="GithubIssues" />
+        <param name="username" value="" />
+      </parameters>
+    </extension>
+  </project-extensions>
   <cleanup />
 </project>
 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="98a2eadb-948e-49d7-afef-05d16b8fee29" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>With [] in name</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="file.ext =&gt; Published [SomeText]/" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_325" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo hi &gt;&gt; file.ext" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

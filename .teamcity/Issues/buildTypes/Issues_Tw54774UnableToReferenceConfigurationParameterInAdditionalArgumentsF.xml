@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="796d1a22-6e54-44ef-a960-86e85da5d7b2" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>TW-54774 Unable to reference configuration parameter in "Additional arguments" f</name>
+  <description />
+  <settings>
+    <parameters>
+      <param name="param" value="%param2%" />
+      <param name="param2" value="/foo" />
+      <param name="value" value="foo" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_180" name="" type="simpleRunner">
+        <parameters>
+          <param name="plugin.docker.imageId" value="library/ubuntu" />
+          <param name="plugin.docker.run.parameters" value="-e VAR=%value% --volume=%param%:/aaa/bbb" />
+          <param name="script.content" value="echo $VAR" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

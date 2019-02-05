@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="a976ce43-cc1a-490f-bfb7-704474418768" type="tfs" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Visual Studio Online</name>
+  <param name="secure:tfs-password" value="credentialsJSON:207c4807-65db-45a6-84c1-dede3b163bb5" />
+  <param name="tfs-root" value="$/My First Project/Simple Calculator1" />
+  <param name="tfs-url" value="https://tcqa.visualstudio.com/defaultcollection/" />
+  <param name="tfs-username" value="##LIVE##\teamcity.qa.server@gmail.com" />
+</vcs-root>
+

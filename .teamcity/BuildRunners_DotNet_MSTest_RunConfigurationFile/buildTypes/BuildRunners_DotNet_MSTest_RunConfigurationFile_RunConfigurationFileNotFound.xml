@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="31613112-0c87-4678-8660-55acee9d9a43" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Run configuration file not found</name>
+  <description />
+  <settings ref="BuildRunners_DotNet_MSTest_MSTest">
+    <disabled-settings>
+      <setting-ref ref="BUILD_EXT_1" />
+      <setting-ref ref="BUILD_EXT_2" />
+      <setting-ref ref="BUILD_EXT_3" />
+    </disabled-settings>
+    <parameters>
+      <param name="build.failed" value="undefined" />
+      <param name="runconfig.file" value="not.found" />
+    </parameters>
+    <build-runners order="RUNNER_26, RUNNER_27, RUNNER_33, RUNNER_32">
+      <runner id="RUNNER_33" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo ##teamcity[buildProblem description='%fail.message%']
+echo ##teamcity[setParameter name='test.failed' value='true']]]></param>
+          <param name="teamcity.step.mode" value="execute_if_success" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_32" name="" type="jetbrains_powershell">
+        <parameters>
+          <param name="jetbrains_powershell_bitness" value="x86" />
+          <param name="jetbrains_powershell_edition" value="Desktop" />
+          <param name="jetbrains_powershell_execution" value="PS1" />
+          <param name="jetbrains_powershell_script_code"><![CDATA[if (($buildStatus -eq "FAILURE") -and (%test.failed% -ne "true"))  {
+    Write-Output "##teamcity[buildStatus status='SUCCESS']"
+}]]></param>
+          <param name="jetbrains_powershell_script_mode" value="CODE" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_10" type="BuildFailureOnMessage">
+        <parameters>
+          <param name="buildFailureOnMessage.conditionType" value="contains" />
+          <param name="buildFailureOnMessage.messagePattern" value="Process exited with code 1" />
+          <param name="buildFailureOnMessage.reverse" value="true" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

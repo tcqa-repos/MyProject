@@ -1,35 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="6b6a3a86-2e5a-42fd-b788-c7be82775bec" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="ff75c372-b608-4e58-9062-05bdbc8f9c7c" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>&lt;Root project&gt;</name>
   <description>Contains all other projects</description>
   <parameters />
   <project-extensions>
-    <extension id="PROJECT_EXT_1" type="ReportTab">
+    <extension id="PROJECT_EXT_27" type="OAuthProvider">
       <parameters>
-        <param name="startPage" value="coverage.zip!index.html" />
-        <param name="title" value="Code Coverage" />
-        <param name="type" value="BuildReportTab" />
+        <param name="clientId" value="PDSBqyuu45qN5tbfZ5" />
+        <param name="displayName" value="Bitbucket Cloud" />
+        <param name="providerType" value="BitBucketCloud" />
+        <param name="secure:clientSecret" value="credentialsJSON:40d7d1b3-ba27-4413-acf5-a650f51f3c5c" />
       </parameters>
     </extension>
-    <extension id="PROJECT_EXT_2" type="ReportTab">
+    <extension id="PROJECT_EXT_31" type="OAuthProvider">
       <parameters>
-        <param name="startPage" value="javadoc.zip!index.html" />
-        <param name="title" value="JavaDoc" />
-        <param name="type" value="BuildReportTab" />
+        <param name="displayName" value="Visual Studio Team Services" />
+        <param name="providerType" value="tfs" />
+        <param name="secure:accessToken" value="credentialsJSON:12225255-0be2-40a3-8f18-3978bb745b1b" />
+        <param name="serverUrl" value="https://tcqa.visualstudio.com/" />
+        <param name="type" value="token" />
       </parameters>
     </extension>
-    <extension id="PROJECT_EXT_3" type="versionedSettings">
+    <extension id="PROJECT_EXT_34" type="OAuthProvider">
       <parameters>
-        <param name="buildSettings" value="PREFER_VCS" />
+        <param name="clientId" value="8bf9d7e8f499592a3101" />
+        <param name="defaultTokenScope" value="public_repo,repo,repo:status,write:repo_hook" />
+        <param name="displayName" value="GitHub.com" />
+        <param name="gitHubUrl" value="https://github.com/" />
+        <param name="providerType" value="GitHub" />
+        <param name="secure:clientSecret" value="credentialsJSON:22f8bd32-e7aa-4711-a8af-b2f0d1ed914a" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_36" type="CloudIntegration">
+      <parameters>
+        <param name="AllowOverride" value="false" />
+        <param name="SubprojectsEnabled" value="true" />
         <param name="enabled" value="true" />
-        <param name="rootId" value="HttpsGithubComTcqaReposMyProject" />
-        <param name="showChanges" value="true" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_48" type="CloudImage">
+      <parameters>
+        <param name="$datacenterId" value="datacenter-21" />
+        <param name="agent_pool_id" value="0" />
+        <param name="behaviour" value="FRESH_CLONE" />
+        <param name="folder" value="group-v702536" />
+        <param name="maxInstances" value="2" />
+        <param name="nickname" value="tcqa-trunk-powershell" />
+        <param name="pool" value="resgroup-792601" />
+        <param name="profileId" value="vmw-9" />
+        <param name="snapshot" value="s2" />
+        <param name="source-id" value="tcqa-trunk-powershell" />
+        <param name="sourceVmName" value="TCQA Ubuntu Server 16.04 + PowerShell" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_51" type="versionedSettings">
+      <parameters>
+        <param name="buildSettings" value="ALWAYS_USE_CURRENT" />
+        <param name="credentialsStorageType" value="credentialsJSON" />
+        <param name="enabled" value="true" />
+        <param name="rootId" value="HttpsGithubComJuliaReshMyProject_2" />
+        <param name="showChanges" value="false" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_52" type="CloudImage">
+      <parameters>
+        <param name="$datacenterId" value="datacenter-21" />
+        <param name="agent_pool_id" value="0" />
+        <param name="behaviour" value="FRESH_CLONE" />
+        <param name="folder" value="group-v702536" />
+        <param name="maxInstances" value="2" />
+        <param name="pool" value="resgroup-792601" />
+        <param name="profileId" value="vmw-10" />
+        <param name="snapshot" value="s1" />
+        <param name="source-id" value="TC Windows 10 + Docker" />
+        <param name="sourceVmName" value="TC Windows 10 + Docker" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_57" type="OAuthProvider">
+      <parameters>
+        <param name="clientId" value="599b2718239d5b9cb756" />
+        <param name="displayName" value="GitHub Enterprise" />
+        <param name="gitHubUrl" value="https://172.20.189.130/" />
+        <param name="providerType" value="GHE" />
+        <param name="secure:clientSecret" value="credentialsJSON:95a7c28a-8d47-49c2-8d8c-486d99324c8c" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_65" type="CloudImage">
+      <parameters>
+        <param name="$datacenterId" value="datacenter-21" />
+        <param name="agent_pool_id" value="0" />
+        <param name="behaviour" value="FRESH_CLONE" />
+        <param name="folder" value="group-v702536" />
+        <param name="maxInstances" value="5" />
+        <param name="nickname" value="tcqa-2018-2" />
+        <param name="pool" value="resgroup-792601" />
+        <param name="profileId" value="vmw-1" />
+        <param name="snapshot" value="s1" />
+        <param name="source-id" value="tcqa-2018-2" />
+        <param name="sourceVmName" value="TC Ubuntu Server 14.04 + BuildAgent Dist" />
+      </parameters>
+    </extension>
+    <extension id="https-certificates" type="https-certificates-type">
+      <parameters>
+        <param name="allowSync" value="true" />
+      </parameters>
+    </extension>
+    <extension id="repository-nuget-default" type="PackageRepository">
+      <parameters>
+        <param name="indexPackages" value="false" />
+        <param name="name" value="default" />
+        <param name="type" value="nuget" />
+      </parameters>
+    </extension>
+    <extension id="vmw-1" type="CloudProfile">
+      <parameters>
+        <param name="agentPushPreset" value="" />
+        <param name="cloud-code" value="vmw" />
+        <param name="description" value="" />
+        <param name="enabled" value="true" />
+        <param name="helperFieldId" value="folder" />
+        <param name="helperFieldValue" value="group-v702536" />
+        <param name="image" value="TC Ubuntu Server 14.04 + BuildAgent Dist" />
+        <param name="name" value="VMware" />
+        <param name="next-hour" value="" />
+        <param name="profileId" value="vmw-1" />
+        <param name="profileServerUrl" value="" />
+        <param name="secure:vmware_password" value="credentialsJSON:87309160-d8df-4231-a7a6-33261352d0a0" />
+        <param name="system.cloud.profile_id" value="vmw-1" />
+        <param name="terminate-idle-time" value="30" />
+        <param name="total-work-time" value="" />
+        <param name="vmware_profile_instance_limit" value="10" />
+        <param name="vmware_server_url" value="https://vcenter-srv.labs.intellij.net/sdk" />
+        <param name="vmware_username" value="LABS\vm-TeamCity-link-cl" />
+      </parameters>
+    </extension>
+    <extension id="vmw-10" type="CloudProfile">
+      <parameters>
+        <param name="_image" value="" />
+        <param name="agentPushPreset" value="" />
+        <param name="cloud-code" value="vmw" />
+        <param name="description" value="" />
+        <param name="enabled" value="true" />
+        <param name="helperFieldId" value="" />
+        <param name="helperFieldValue" value="" />
+        <param name="image" value="" />
+        <param name="name" value="Vmware docker windows" />
+        <param name="next-hour" value="" />
+        <param name="profileId" value="vmw-10" />
+        <param name="profileServerUrl" value="" />
+        <param name="secure:vmware_password" value="credentialsJSON:2da3f435-a39c-451a-8fff-aef2d04d236e" />
+        <param name="system.cloud.profile_id" value="vmw-10" />
+        <param name="terminate-idle-time" value="36000" />
+        <param name="total-work-time" value="" />
+        <param name="vmware_profile_instance_limit" value="" />
+        <param name="vmware_server_url" value="https://vcenter-srv/sdk" />
+        <param name="vmware_username" value="LABS\Julia.Reshetnikova" />
+      </parameters>
+    </extension>
+    <extension id="vmw-9" type="CloudProfile">
+      <parameters>
+        <param name="agentPushPreset" value="1464786783892" />
+        <param name="cloud-code" value="vmw" />
+        <param name="description" value="" />
+        <param name="enabled" value="false" />
+        <param name="helperFieldId" value="folder" />
+        <param name="helperFieldValue" value="group-v702536" />
+        <param name="image" value="TCQA Ubuntu Server 16.04 + PowerShell" />
+        <param name="name" value="VMWare with agent install" />
+        <param name="next-hour" value="" />
+        <param name="profileId" value="vmw-9" />
+        <param name="profileServerUrl" value="" />
+        <param name="secure:vmware_password" value="credentialsJSON:2da3f435-a39c-451a-8fff-aef2d04d236e" />
+        <param name="system.cloud.profile_id" value="vmw-9" />
+        <param name="terminate-idle-time" value="30" />
+        <param name="total-work-time" value="" />
+        <param name="vmware_profile_instance_limit" value="5" />
+        <param name="vmware_server_url" value="https://vcenter-srv.labs.intellij.net/sdk" />
+        <param name="vmware_username" value="LABS\Julia.Reshetnikova" />
       </parameters>
     </extension>
   </project-extensions>
   <cleanup>
     <options>
-      <option name="preventDependenciesArtifactsFromCleanup" value="false" />
+      <option name="preventDependenciesArtifactsFromCleanup" value="true" />
     </options>
   </cleanup>
 </project>

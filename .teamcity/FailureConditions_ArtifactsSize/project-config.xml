@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="FailureConditions" uuid="5a27a279-c5da-44b1-bfae-d042e92600ef" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Artifacts Size</name>
+  <parameters />
+  <cleanup />
+</project>
+

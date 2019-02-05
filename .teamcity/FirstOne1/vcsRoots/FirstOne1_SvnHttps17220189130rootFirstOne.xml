@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="9c4d6a7e-f49a-4e32-93c8-1f23a96d3f18" type="svn" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>svn: https://172.20.189.130/root/FirstOne</name>
+  <param name="externals-mode" value="externals-none" />
+  <param name="labelingMessage" value="Labeled automatically by TeamCity" />
+  <param name="labelingPatterns" value="trunk=&gt;tags" />
+  <param name="secure:svn-password" value="credentialsJSON:ba022d2d-b209-460d-aff6-cb59497d0c09" />
+  <param name="svn-config-directory" value="C:\Users\jetbrains\AppData\Roaming\Subversion" />
+  <param name="svn-use-default-config-directory" value="true" />
+  <param name="teamcity:vcsResourceDiscovery:versionedSettingsRoot" value="false" />
+  <param name="url" value="https://172.20.189.130/root/FirstOne" />
+  <param name="user" value="root" />
+  <param name="working-copy-format" value="1.8" />
+</vcs-root>
+

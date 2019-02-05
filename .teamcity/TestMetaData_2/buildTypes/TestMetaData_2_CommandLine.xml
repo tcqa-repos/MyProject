@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="e04dd008-f0d7-4d5f-a36d-613cf2103aa7" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Command Line</name>
+  <description />
+  <settings>
+    <disabled-settings>
+      <setting-ref ref="RUNNER_209" />
+    </disabled-settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_209" name="" type="simpleRunner">
+        <parameters>
+          <param name="command.executable" value="passedTest.cmd" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_222" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo "##teamcity[testSuiteStarted name='My Suite']"
+echo "##teamcity[testStarted name='passedTest']"
+echo "##teamcity[publishArtifacts 'data/screenshot1.png => data']"
+echo "##teamcity[publishArtifacts 'data/purr.gif => data']"
+echo "##teamcity[testMetadata testName='passedTest' type='image' key='a screenshot' value='data/screenshot1.png']"
+echo "##teamcity[testMetadata testName='passedTest' type='image' key='a gif' value='data/purr.gif']"
+echo "##teamcity[testFinished name='passedTest']"
+echo "##teamcity[testStarted name='passedTest2']"
+echo "##teamcity[testMetadata type='image' value='data/screenshot1.png']"
+echo "##teamcity[testMetadata type='image' value='data/purr.gif']"
+echo "##teamcity[testFinished name='passedTest2']"
+echo "##teamcity[testStarted name='passedTest3']"
+echo "##teamcity[testMetadata type='image' name='screenshot' value='data/screenshot1.png']"
+echo "##teamcity[testMetadata type='image' name='cat' value='data/purr.gif']"
+echo "##teamcity[testFinished name='passedTest3']"
+echo "##teamcity[testStarted name='failedTest']"
+echo "##teamcity[testMetadata value='only value']"
+echo "##teamcity[testMetadata name='some name' value='some value']"
+echo "##teamcity[testMetadata name='number without type' value='100500']"
+echo "##teamcity[testMetadata type='number' name='number 2' value='%build.number%']"
+echo "##teamcity[testMetadata name='какая-то метрика' type='number' value='%build.number%']"
+echo "##teamcity[testMetadata type='number' value='%build.counter%']"
+echo "##teamcity[testFailed name='failedTest']"
+echo "##teamcity[testSuiteFinished name='My Suite']"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="TestMetaData_2_HttpsGithubComTcqaReposTestMetaDataRefsHeadsMaster" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

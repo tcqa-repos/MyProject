@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="OtherFeatures_ReportTabs" uuid="07440950-f294-484e-bcec-33841787ec27" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>SubProjectB</name>
+  <parameters />
+  <cleanup />
+</project>
+

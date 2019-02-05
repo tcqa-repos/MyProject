@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="13aa04b4-d27c-4b78-99ca-50d2e1d4356c" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Run configuration file specified</name>
+  <description />
+  <settings ref="BuildRunners_DotNet_MSTest_MSTest">
+    <parameters>
+      <param name="runconfig.file" value="my.testrunconfig" />
+    </parameters>
+    <build-runners order="RUNNER_26, RUNNER_27" />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

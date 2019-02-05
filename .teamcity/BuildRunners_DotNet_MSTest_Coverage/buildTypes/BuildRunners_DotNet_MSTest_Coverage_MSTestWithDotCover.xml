@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="40392cfc-487a-4781-bc6d-dcdb31ae86f7" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>MSTest with dotCover</name>
+  <description />
+  <settings ref="BuildRunners_DotNet_MSTest_MSTestWithCoverage">
+    <parameters>
+      <param name="assemblies.include.list" value="**/bin/**/*.dll" />
+      <param name="coverage.assemblies" value="**/*.dll" />
+      <param name="results.file" value="" />
+      <param name="test.names" value=" TestMethod" />
+    </parameters>
+    <build-runners order="RUNNER_34, RUNNER_35" />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

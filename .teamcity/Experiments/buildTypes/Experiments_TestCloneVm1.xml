@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="b0bfb352-8cea-4368-93f6-3be74719a7fe" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Test clone vm (1)</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="server-logs =&gt; server-logs.zip&#xA;agent-logs =&gt; agent-logs.zip" />
+      <option name="checkoutMode" value="ON_SERVER" />
+    </options>
+    <parameters>
+      <param name="system.dist.build.number" value="11111" />
+      <param name="system.source" value="TCQA CentOS 7" spec="select data_2='TCQA CentOS 7 Trunk' data_1='TCQA WinSrv2012R2 Trunk' display='normal'" />
+      <param name="system.ssh.password" value="jetbrains" />
+      <param name="system.ssh.username" value="jetbrains" />
+      <param name="system.target" value="TCAUTO Server %teamcity.build.triggeredBy.username% %system.tc.release.number%" />
+      <param name="system.tc.release.number" value="" spec="select data_10='8.1' data_02='9.1' data_01='9.1.1' display='prompt' data_08='9.0' data_07='9.0.1' data_09='8.1.5' data_04='9.0.4' data_03='9.0.5' data_06='9.0.2' data_05='9.0.3'" />
+      <param name="system.vm.ip" value="" />
+      <param name="system.vsphere.password" value="credentialsJSON:159ac482-a598-4d50-a327-cd8736d5aa79" spec="password display='normal'" />
+      <param name="system.vsphere.user" value="Julia.Reshetnikova@LABS" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_23" name="" type="Ant">
+        <parameters>
+          <param name="build-file-path" value="build.xml" />
+          <param name="target" value="get-teamcity" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_18" name="" type="Ant">
+        <parameters>
+          <param name="build-file-path" value="build.xml" />
+          <param name="target" value="recreate-vm" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_20" name="" type="Ant">
+        <parameters>
+          <param name="build-file-path" value="build.xml" />
+          <param name="target" value="setup-teamcity" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_21" name="" type="Ant">
+        <parameters>
+          <param name="build-file-path" value="build.xml" />
+          <param name="target" value="copy-logs" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_22" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo ##teamcity[buildStatus text='{build.status.text} server url: http://%system.vm.ip%:8111/']" />
+          <param name="teamcity.step.mode" value="execute_if_success" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Experiments_HttpGitHostingLabsIntellijNetTeamcityQaToolsGit">
+        <checkout-rule rule="+:clone-vm =&gt; ." />
+      </vcs-entry-ref>
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

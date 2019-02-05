@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="IssueTrackersIntegration" uuid="d4474335-2ead-467b-9153-cae56c948d5b" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>JIRA</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_20" type="IssueTracker">
+      <parameters>
+        <param name="host" value="http://tcqa-issue-trackers:8080/" />
+        <param name="idPrefix" value="JTCI SLMR60" />
+        <param name="key" value="jira1" />
+        <param name="name" value="JIRA" />
+        <param name="secure:password" value="credentialsJSON:7a94a796-ad61-4fb6-a98d-dfc9b6a4e34e" />
+        <param name="type" value="jira" />
+        <param name="username" value="admin" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_21" type="IssueTracker">
+      <parameters>
+        <param name="host" value="https://teamcity-qa.atlassian.net/" />
+        <param name="idPrefix" value="MP" />
+        <param name="key" value="jira2" />
+        <param name="name" value="JIRA Cloud" />
+        <param name="secure:password" value="credentialsJSON:e0cdab31-ab7d-4d5b-bc1c-575fabe440e3" />
+        <param name="type" value="jira" />
+        <param name="username" value="admin" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_33" type="IssueTracker">
+      <parameters>
+        <param name="autoSync" value="true" />
+        <param name="host" value="https://tcqa-jira.labs.intellij.net:8443" />
+        <param name="idPrefix" value="DEV NP PROJ SP TEST" />
+        <param name="name" value="Intra JIRA" />
+        <param name="secure:password" value="credentialsJSON:37358a26-254a-43fc-9f09-b0d3d4d3996a" />
+        <param name="type" value="jira" />
+        <param name="username" value="jetbrains" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

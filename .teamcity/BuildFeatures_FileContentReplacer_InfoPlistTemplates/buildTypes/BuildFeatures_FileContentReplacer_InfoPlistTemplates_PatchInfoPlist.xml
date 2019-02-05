@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="d05256ea-a53a-497d-9ea6-2cd1fe101a92" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="d05256ea-a53a-497d-9ea6-2cd1fe101a92" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Patch Info.plist</name>
   <description />
   <settings>
     <options>
       <option name="artifactRules" value="**/* =&gt;" />
+      <option name="checkoutMode" value="ON_SERVER" />
     </options>
     <parameters />
     <build-runners>
@@ -25,7 +26,7 @@
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="DirtyConfigurations_XCode_HttpsJuliaReshBitbucketOrgJuliaReshSimplebindingsadopt" />
+      <vcs-entry-ref root-id="XCodeSampleSimpleBindingsAdoption" />
     </vcs-settings>
     <requirements />
     <build-triggers />

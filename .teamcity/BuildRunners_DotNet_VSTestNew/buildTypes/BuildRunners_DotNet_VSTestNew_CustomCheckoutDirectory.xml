@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="1b0f9026-65f3-46ff-9d65-30f2e36e4bef" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Custom Checkout Directory</name>
+  <description />
+  <settings ref="BuildRunners_DotNet_VSTestNew_VSTestUsingTestNamesFilter">
+    <options>
+      <option name="checkoutDirectory" value="%teamcity.agent.home.dir%\mycheckoutdir" />
+    </options>
+    <parameters>
+      <param name="add.cmd.parameters" value="" />
+      <param name="runconfig.file" value="" />
+      <param name="test.names" value="" />
+      <param name="testfiles.exclude.list" value="" />
+    </parameters>
+    <build-runners order="RUNNER_434, RUNNER_435, RUNNER_633" />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

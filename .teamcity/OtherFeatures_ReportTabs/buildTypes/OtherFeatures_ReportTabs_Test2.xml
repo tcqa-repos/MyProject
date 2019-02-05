@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="a7d35c23-7946-4802-b060-04993d93bdd5" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Test2</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="IdeaCoverage =&gt; %folder%.zip" />
+    </options>
+    <parameters>
+      <param name="folder" value="IdeaCoverage2" />
+    </parameters>
+    <build-runners />
+    <vcs-settings>
+      <vcs-entry-ref root-id="OtherFeatures_ReportTabs_HttpsGithubComTcqaReposReports" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

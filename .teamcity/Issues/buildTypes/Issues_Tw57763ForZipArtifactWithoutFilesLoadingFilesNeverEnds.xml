@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="d4132ba9-75a5-465f-b6d8-ff1dc44f194d" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>TW-57763 For zip artifact without files 'Loading files...' never ends</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="diff.zip" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_208" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[mkdir folder
+cd folder
+mkdir folder]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Issues_HttpsGithubComTcqaReposCalculatorRefsHeadsMaster" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

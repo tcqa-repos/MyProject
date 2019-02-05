@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="fd32f324-fca1-4e3a-87ab-9620d6049113" type="jetbrains.git" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>https://github.com/JuliaResh/FileContentReplacer#master (3)</name>
+  <param name="url" value="https://github.com/JuliaResh/FileContentReplacer" />
+</vcs-root>
+

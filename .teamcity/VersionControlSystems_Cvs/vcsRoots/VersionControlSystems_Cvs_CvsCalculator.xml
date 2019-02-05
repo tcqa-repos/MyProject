@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="339fddb9-77d4-4dfc-b5de-b77eccc21e78" type="cvs" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>CVS Calculator</name>
+  <param name="cvs-quiet-period" value="3" />
+  <param name="cvs-root" value=":pserver:jetbrains@tcqa-cvs:2401/usr/local/cvsroot" />
+  <param name="cvs-tag-mode" value="HEAD" />
+  <param name="local-server-command" value="server" />
+  <param name="module-name" value="Calculator" />
+  <param name="secure:cvs-password" value="credentialsJSON:37358a26-254a-43fc-9f09-b0d3d4d3996a" />
+  <param name="ssh-port" value="22" />
+  <param name="ssh-use-ppk" value="false" />
+</vcs-root>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="SharedResources" uuid="ea83bd49-0f7c-4bc8-90d7-3353df8e4cf6" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Composite Builds</name>
+  <parameters />
+  <cleanup />
+</project>
+

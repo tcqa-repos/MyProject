@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="17e0fc59-c380-41fc-bd07-1bf0187d6a0c" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="17e0fc59-c380-41fc-bd07-1bf0187d6a0c" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Build B</name>
   <description />
   <settings>
     <options>
+      <option name="checkoutMode" value="ON_SERVER" />
       <option name="showDependenciesChanges" value="true" />
     </options>
     <parameters />
     <build-runners>
-      <runner id="RUNNER_72" name="" type="simpleRunner">
+      <runner id="RUNNER_72" name="" type="SleepNSeconds">
         <parameters>
-          <param name="script.content"><![CDATA[ping 1.1.1.1
-exit 0]]></param>
           <param name="teamcity.step.mode" value="default" />
-          <param name="use.custom.script" value="true" />
+          <param name="timeout-in-seconds" value="2" />
         </parameters>
       </runner>
     </build-runners>
     <vcs-settings>
-      <vcs-entry-ref root-id="Dependencies_SnapshotDependencies_HttpsGithubComJuliaReshMyProjectGit_2" />
+      <vcs-entry-ref root-id="HttpsGithubComJuliaReshMyProjectGit" />
     </vcs-settings>
-    <requirements />
+    <requirements>
+      <equals id="RQ_5" name="teamcity.agent.name" value="%dep.Dependencies_SnapshotDependencies_BuildA.teamcity.agent.name%" />
+    </requirements>
     <build-triggers />
     <dependencies>
       <depend-on sourceBuildTypeId="Dependencies_SnapshotDependencies_BuildA" />

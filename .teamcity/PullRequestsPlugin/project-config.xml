@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="01f70b23-23fa-46c7-a94e-1a401f5af3f8" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Pull Requests Plugin</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_61" type="IssueTracker">
+      <parameters>
+        <param name="authType" value="loginpassword" />
+        <param name="name" value="GHE" />
+        <param name="pattern" value="#(\d+)" />
+        <param name="repository" value="https://ghe.labs.intellij.net/teamcity-admin/TC-Private-Repo.git" />
+        <param name="secure:accessToken" value="" />
+        <param name="secure:password" value="credentialsJSON:1d9322b5-227e-4d44-9db3-5e124845df16" />
+        <param name="type" value="GithubIssues" />
+        <param name="username" value="teamcity-admin" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="452b0cc4-09c1-4d44-ae80-2a2f5e755675" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>File matched by several patterns</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="other_folder/**/*&#xA;**/file.txt" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_325" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[mkdir folder
+echo "foo" >> folder/file.txt
+mkdir artifacts
+cd artifacts
+mkdir folder
+echo "foo" >> folder/file.txt]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

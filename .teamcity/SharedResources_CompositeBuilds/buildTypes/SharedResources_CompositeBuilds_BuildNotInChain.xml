@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="1590e98f-0b29-468e-9770-681550a32322" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Build not in chain</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_119" name="" type="SleepNSeconds">
+        <parameters>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="timeout-in-seconds" value="180" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_107" type="JetBrains.SharedResources">
+        <parameters>
+          <param name="locks-param" value="Resource_with_values readLock Value1" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

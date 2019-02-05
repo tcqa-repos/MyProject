@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="3b955500-64b8-461a-839d-1c37ee0223df" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Build Solution</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="failures\bin\Debug =&gt; failures\bin\Debug&#xA;money\bin\Debug =&gt; money\bin\Debug&#xA;packages =&gt; packages&#xA;syntax\bin\Debug =&gt; syntax\bin\Debug&#xA;*.*=&gt;" />
+      <option name="checkoutMode" value="ON_SERVER" />
+    </options>
+    <parameters>
+      <param name="teamcity.dotCover.sourceBase" value="%teamcity.build.checkoutDir%" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_564" name="" type="VS.Solution">
+        <parameters>
+          <param name="build-file-path" value="CSharp.sln" />
+          <param name="msbuild.prop.Configuration" value="Debug" />
+          <param name="msbuild_version" value="12.0" />
+          <param name="run-platform" value="x86" />
+          <param name="targets" value="Rebuild" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="toolsVersion" value="12.0" />
+          <param name="vs.version" value="vs2013" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="HttpsUnit5397443svnSvnTrunkNUnitSamplesCsharp" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="eb92d7a4-0d6c-4370-9bfe-2befbc33316c" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Custom Charts</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_3" type="buildtype-graphs">
+      <parameters>
+        <param name="format" value="percentBy1" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Key1",
+    "key": "Key1"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="new chart 100" />
+      </parameters>
+    </extension>
+    <extension id="bt_customGraph1" type="buildtype-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueTypes",
+    "pattern": "Key*",
+    "color": "Key*",
+    "title": "Some title {1} qqq"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="My Chart" />
+      </parameters>
+    </extension>
+    <extension id="bt_customGraph2" type="buildtype-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueTypes",
+    "pattern": "Key* and *",
+    "color": "Key* and *",
+    "title": "Title {1} aaaa {3}"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="My Chart 2" />
+      </parameters>
+    </extension>
+    <extension id="bt_customGraph3" type="buildtype-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="format" value="text" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Key 10",
+    "key": "Key10"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="New custom chart 2" />
+      </parameters>
+    </extension>
+    <extension id="bt_customGraph4" type="buildtype-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="format" value="text" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "BuildTestStatus",
+    "key": "BuildTestStatus"
+  },
+  {
+    "type": "valueType",
+    "title": "MyAwesomeKey42",
+    "key": "MyAwesomeKey42"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="Chart title2" />
+      </parameters>
+    </extension>
+    <extension id="bt_customGraph5" type="buildtype-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Time Spent in Queue",
+    "key": "TimeSpentInQueue"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="BC chart in Custom Charts project" />
+      </parameters>
+    </extension>
+    <extension id="bt_customGraph6" type="buildtype-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "MyAwesomeKey42",
+    "key": "MyAwesomeKey42"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="Another BC chart in Custom Charts" />
+      </parameters>
+    </extension>
+    <extension id="proj_customGraph1" type="project-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Build Duration (all stages)",
+    "sourceBuildTypeId": "CustomCharts_SubProjectA_BuildA",
+    "key": "BuildDuration"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="New chart title" />
+      </parameters>
+    </extension>
+    <extension id="proj_customGraph2" type="project-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Build Duration (all stages)",
+    "sourceBuildTypeId": "CustomCharts_SubProjectA_BuildA",
+    "key": "BuildDuration"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="My Chart" />
+      </parameters>
+    </extension>
+    <extension id="proj_customGraph3" type="project-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueTypes",
+    "pattern": "Key* and *",
+    "title": "Title {1} aaa {2}",
+    "sourceBuildTypeId": "CustomCharts_ReportCustomStatistics1"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="My Chart 2" />
+      </parameters>
+    </extension>
+    <extension id="proj_customGraph4" type="project-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Build Duration (excluding Checkout Time)",
+    "sourceBuildTypeId": "CustomCharts_ReportCustomStatistics2",
+    "key": "BuildDurationNetTime"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="Chart 22" />
+      </parameters>
+    </extension>
+    <extension id="proj_customGraph5" type="project-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "MyAwesomeKey42",
+    "sourceBuildTypeId": "CustomCharts_ReportCustomStatistics2",
+    "key": "MyAwesomeKey42"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="Chart 33" />
+      </parameters>
+    </extension>
+    <extension id="proj_customGraph6" type="project-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "MyNewAwesomeKey42",
+    "sourceBuildTypeId": "CustomCharts_ReportCustomStatistics2",
+    "key": "MyNewAwesomeKey42"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="123qwe" />
+      </parameters>
+    </extension>
+    <extension id="proj_customGraph7" type="project-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "MyNewAwesomeKey42",
+    "sourceBuildTypeId": "CustomCharts_ReportCustomStatistics2",
+    "key": "MyNewAwesomeKey42"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="Test Chart" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

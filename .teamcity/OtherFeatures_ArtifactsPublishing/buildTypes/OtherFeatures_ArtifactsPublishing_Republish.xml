@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="5948113a-4d62-42a5-842f-a12c1c3aa75f" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Republish</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners order="RUNNER_326, RUNNER_325">
+      <runner id="RUNNER_326" name="create file" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo nothing &gt; nothing.txt" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <artifact-dependencies>
+      <dependency id="ARTIFACT_DEPENDENCY_60" sourceBuildTypeId="OtherFeatures_ArtifactsPublishing_With" cleanDestination="true">
+        <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
+        <artifact sourcePath="* =&gt; from_dep" />
+      </dependency>
+      <dependency id="ARTIFACT_DEPENDENCY_64" sourceBuildTypeId="OtherFeatures_ArtifactsPublishing_With" cleanDestination="false">
+        <revisionRule name="buildNumber" revision="8" />
+        <artifact sourcePath="* =&gt; num_8" />
+      </dependency>
+    </artifact-dependencies>
+    <dependencies>
+      <depend-on sourceBuildTypeId="OtherFeatures_ArtifactsPublishing_With">
+        <options>
+          <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
+        </options>
+      </depend-on>
+    </dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+

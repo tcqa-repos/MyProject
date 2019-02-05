@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="f730eed5-5b07-4376-9a7e-0209eb646cf5" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="f730eed5-5b07-4376-9a7e-0209eb646cf5" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Search in files retrieved via artifact dependency</name>
   <settings>
+    <options>
+      <option name="checkoutMode" value="ON_SERVER" />
+    </options>
     <parameters />
     <build-runners>
       <runner id="RUNNER_556" name="" type="simpleRunner">
@@ -14,7 +17,7 @@
     </build-runners>
     <vcs-settings />
     <requirements>
-      <starts-with name="teamcity.agent.jvm.os.name" value="Windows" />
+      <starts-with id="RQ_62" name="teamcity.agent.jvm.os.name" value="Windows" />
     </requirements>
     <build-triggers />
     <build-extensions>
@@ -29,7 +32,7 @@
       </extension>
     </build-extensions>
     <artifact-dependencies>
-      <dependency sourceBuildTypeId="BuildFeatures_FileContentReplacer_UserDefinedReplacer_FilesFromArtifactDepende_2" cleanDestination="false">
+      <dependency id="ARTIFACT_DEPENDENCY_9" sourceBuildTypeId="BuildFeatures_FileContentReplacer_UserDefinedReplacer_FilesFromArtifactDepende_5" cleanDestination="false">
         <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
         <artifact sourcePath="artifacts.zip!* =&gt;" />
       </dependency>

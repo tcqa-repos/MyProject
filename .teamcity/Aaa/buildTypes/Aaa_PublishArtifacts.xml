@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="9eaf9a5b-bb63-4744-80e1-72c9ca180fe9" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>publish artifacts</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/* =&gt; art.zip" />
+      <option name="cleanBuild" value="true" />
+      <option name="showDependenciesChanges" value="true" />
+    </options>
+    <disabled-settings>
+      <setting-ref ref="RUNNER_825" />
+      <setting-ref ref="RUNNER_826" />
+    </disabled-settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_825" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo "111" >> file.txt
+echo ##teamcity[publishArtifacts '%teamcity.build.checkoutDir%/file.txt']]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_826" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[wget %teamcity.serverUrl%/guestAuth/repository/download/%system.teamcity.buildType.id%/%teamcity.build.id%:id/file.txt
+powershell -Command "Invoke-WebRequest %teamcity.serverUrl%/guestAuth/repository/download/%system.teamcity.buildType.id%/%teamcity.build.id%:id/file.txt -OutFile file2.txt"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

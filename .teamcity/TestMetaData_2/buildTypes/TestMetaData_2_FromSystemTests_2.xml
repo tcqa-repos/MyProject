@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="13ab76f0-bb49-4960-9bd3-80bc9473b645" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>From system tests (1)</name>
+  <description />
+  <settings>
+    <disabled-settings>
+      <setting-ref ref="RUNNER_252" />
+    </disabled-settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_248" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo "##teamcity[testStarted name='jetbrains.buildServer.smokeTests.CheckLogs.scanFileForExceptions|[0|](server: teamcity-server.log)']"
+echo "##teamcity[testMetadata type='artifact' value='server-logs.zip!teamcity-server.log']"
+echo "##teamcity[testStdOut tc:tags='tc:parseServiceMessagesInside' name='jetbrains.buildServer.smokeTests.CheckLogs.scanFileForExceptions|[0|](server: teamcity-server.log)' out='##teamcity|[testMetadata type=|'artifact|' value=|'server-logs.zip!teamcity-server.log|'|]|nINFO  - j.b.s.CheckLogs - Looking into /opt/buildAgent/work/ac656cb44f0a7de7/smoke-tests/temp/TeamCity Home/logs/teamcity-server.log']"
+echo "##teamcity[testFinished name='jetbrains.buildServer.smokeTests.CheckLogs.scanFileForExceptions|[0|](server: teamcity-server.log)' duration='221']"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_252" name="New build step" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo "##teamcity[flowStarted flowId='%%teamcity%%--1958964279-25581501'"
+echo "##teamcity[testStarted name='jetbrains.buildServer.smokeTests.CheckLogs.scanFileForExceptions|[0|](server: teamcity-server.log)' flowId='%%teamcity%%--1958964279-25581501']"
+echo "##teamcity[testMetadata type='artifact' name='test' value='server-logs.zip!teamcity-server.log']"
+echo "##teamcity[testStdOut tc:tags='tc:parseServiceMessagesInside' name='jetbrains.buildServer.smokeTests.CheckLogs.scanFileForExceptions|[0|](server: teamcity-server.log)' out='##teamcity|[testMetadata type=|'artifact|' name=|'test|' value=|'server-logs.zip!teamcity-server.log|'|]|nINFO  - j.b.s.CheckLogs - Looking into /opt/buildAgent/work/ac656cb44f0a7de7/smoke-tests/temp/TeamCity Home/logs/teamcity-server.log' flowId='%%teamcity%%--1958964279-25581501']"
+echo "##teamcity[testFinished name='jetbrains.buildServer.smokeTests.CheckLogs.scanFileForExceptions|[0|](server: teamcity-server.log)' duration='221' flowId='%%teamcity%%--1958964279-25581501']"
+echo "##teamcity[flowFinished flowId='%%teamcity%%--1958964279-25581501']"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

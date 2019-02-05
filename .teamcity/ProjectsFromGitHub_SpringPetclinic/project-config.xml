@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="ProjectsFromGitHub" uuid="eb7cca62-8789-41af-a09c-4c205e6a5283" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Spring Petclinic</name>
+  <parameters />
+  <cleanup />
+</project>
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="IssueTrackersIntegration" uuid="825c5e39-61ad-4d7d-87a5-23accf2109e8" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Bugzilla</name>
+  <parameters />
+  <cleanup />
+  <subprojectsOrder order="IssueTrackersIntegration_Bugzilla_Bugzilla501noCreds,IssueTrackersIntegration_Bugzilla_Bugzilla501" />
+</project>
+

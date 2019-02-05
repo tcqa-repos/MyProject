@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="b97c592b-9fbb-432a-9d24-da96e9ae2ca3" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>build 2</name>
+  <description />
+  <settings>
+    <options>
+      <option name="checkoutMode" value="ON_SERVER" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_571" name="Xcode 4.6.3" type="Xcode">
+        <parameters>
+          <param name="arch" value="default" />
+          <param name="buildActions" value="clean build" />
+          <param name="configuration" value="Debug" />
+          <param name="customBuildOutputDir" value="build" />
+          <param name="platform" value="macosx" />
+          <param name="project" value="SimpleBindingsAdoption.xcworkspace" />
+          <param name="scheme" value="Scheme with spaces" />
+          <param name="sdk" value="default" />
+          <param name="target" value="SimpleBindingsAdoption_01" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="xcode" value="4" />
+          <param name="xcodePath" value="/Applications/Xcode_4_6_3.app/Contents/Developer" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_572" name="xcode 5.1.1" type="Xcode">
+        <parameters>
+          <param name="arch" value="default" />
+          <param name="buildActions" value="clean build" />
+          <param name="configuration" value="###default###" />
+          <param name="customBuildOutputDir" value="build" />
+          <param name="platform" value="macosx" />
+          <param name="project" value="SimpleBindingsAdoption.xcworkspace" />
+          <param name="scheme" value="Scheme with spaces" />
+          <param name="sdk" value="default" />
+          <param name="target" value="SimpleBindingsAdoption_02" />
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+          <param name="xcode" value="4" />
+          <param name="xcodePath" value="/Applications/Xcode_5_1_1.app/Contents/Developer" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_580" name="xcode 6.0.1" type="Xcode">
+        <parameters>
+          <param name="arch" value="default" />
+          <param name="buildActions" value="clean build" />
+          <param name="configuration" value="###default###" />
+          <param name="customBuildOutputDir" value="build" />
+          <param name="platform" value="macosx" />
+          <param name="project" value="SimpleBindingsAdoption.xcworkspace" />
+          <param name="scheme" value="Scheme" />
+          <param name="sdk" value="default" />
+          <param name="target" value="SimpleBindingsAdoption_02" />
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+          <param name="xcode" value="4" />
+          <param name="xcodePath" value="/Applications/Xcode_6_0_1.app/Contents/Developer" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_524" name="xcode 6.0.1 (1)" type="Xcode">
+        <parameters>
+          <param name="arch" value="default" />
+          <param name="buildActions" value="clean build" />
+          <param name="configuration" value="###default###" />
+          <param name="customBuildOutputDir" value="build" />
+          <param name="platform" value="macosx" />
+          <param name="project" value="SimpleBindingsAdoption.xcworkspace" />
+          <param name="scheme" value="Scheme with spaces" />
+          <param name="sdk" value="default" />
+          <param name="target" value="SimpleBindingsAdoption_02" />
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+          <param name="xcode" value="4" />
+          <param name="xcodePath" value="/Applications/Xcode_6_0_1.app/Contents/Developer" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_573" name="Xcode 6.2" type="Xcode">
+        <parameters>
+          <param name="arch" value="default" />
+          <param name="buildActions" value="clean build" />
+          <param name="configuration" value="###default###" />
+          <param name="customBuildOutputDir" value="build" />
+          <param name="platform" value="macosx" />
+          <param name="project" value="SimpleBindingsAdoption.xcworkspace" />
+          <param name="scheme" value="Scheme with spaces" />
+          <param name="sdk" value="default" />
+          <param name="target" value="###default###" />
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+          <param name="xcode" value="4" />
+          <param name="xcodePath" value="/Applications/Xcode_6_2.app/Contents/Developer" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="BuildRunners_XCode_XCodeSampleSimpleBindingsAdoption" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

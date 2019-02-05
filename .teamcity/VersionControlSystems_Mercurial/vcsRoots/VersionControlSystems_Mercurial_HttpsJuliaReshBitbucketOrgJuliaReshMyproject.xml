@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="7e5094e6-ee1e-4035-b3c7-f7de4d83144b" type="mercurial" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>https://JuliaResh@bitbucket.org/JuliaResh/myproject</name>
+  <param name="branchName" value="default" />
+  <param name="hgCommandPath" value="hg" />
+  <param name="repositoryPath" value="https://JuliaResh@bitbucket.org/JuliaResh/myproject" />
+  <param name="secure:password" value="credentialsJSON:40b94f34-f663-41a1-b91b-e8bf5ef55e37" />
+  <param name="uncompressedTransfer" value="true" />
+  <param name="username" value="JuliaResh" />
+</vcs-root>
+

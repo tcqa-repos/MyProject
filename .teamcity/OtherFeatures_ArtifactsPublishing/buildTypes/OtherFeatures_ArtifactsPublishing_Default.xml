@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="ad94e295-97ed-4396-a4b6-4d5cb25b0c07" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Default</name>
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/* =&gt; folder_new" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_325" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo Hi" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</template>
+

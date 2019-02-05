@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="6d762de5-1fa2-4da3-b2b4-b0338f1f4f4a" type="svn" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>https://unit-539:7443/svn/SVN/trunk/apache-maven-3.3.1/</name>
+  <param name="externals-mode" value="externals-none" />
+  <param name="labelingMessage" value="Labeled automatically by TeamCity" />
+  <param name="labelingPatterns" value="trunk=&gt;tags" />
+  <param name="secure:svn-password" value="credentialsJSON:aebcf35f-d928-40d0-9ff2-29df992214e2" />
+  <param name="svn-config-directory" value="C:\Users\Julia.Reshetnikova\AppData\Roaming\Subversion" />
+  <param name="svn-use-default-config-directory" value="true" />
+  <param name="url" value="https://unit-539:7443/svn/SVN/trunk/apache-maven-3.3.1/" />
+  <param name="user" value="Julia" />
+  <param name="working-copy-format" value="1.7" />
+</vcs-root>
+

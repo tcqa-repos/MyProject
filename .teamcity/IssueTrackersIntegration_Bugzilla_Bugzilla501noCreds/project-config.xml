@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="IssueTrackersIntegration_Bugzilla" uuid="23e6ac20-d221-4325-9580-deea46cf781e" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Bugzilla 5.0.1 (no creds)</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_18" type="IssueTracker">
+      <parameters>
+        <param name="host" value="http://tcqa-bugzilla-50:80/" />
+        <param name="key" value="bugzilla1" />
+        <param name="name" value="Bugzilla 5.0.1 (creds)" />
+        <param name="pattern" value="#(\d+)" />
+        <param name="secure:password" value="" />
+        <param name="type" value="bugzilla" />
+        <param name="username" value="" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

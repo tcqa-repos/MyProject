@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="BuildRunners" uuid="5be2741d-35b5-4826-9a49-78767343c158" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>IntelliJ IDEA</name>
+  <parameters />
+  <cleanup />
+</project>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="IssueTrackersIntegration" uuid="93998aaa-ea7b-44e6-a3e3-b0e1956a1247" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Team Foundation Work Items</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_56" type="IssueTracker">
+      <parameters>
+        <param name="host" value="https://tcqa.visualstudio.com/My%20First%20Project" />
+        <param name="name" value="VSTS" />
+        <param name="pattern" value="#(\d+)" />
+        <param name="secure:password" value="credentialsJSON:12225255-0be2-40a3-8f18-3978bb745b1b" />
+        <param name="type" value="tfs" />
+        <param name="username" value="" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

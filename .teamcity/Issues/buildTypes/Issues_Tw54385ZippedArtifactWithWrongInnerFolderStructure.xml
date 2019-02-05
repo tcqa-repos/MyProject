@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="3c189b6a-df79-40fb-8e66-2b32a65531cb" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>TW-54385 Zipped artifact with wrong inner folder structure</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="C:/Windows/../test =&gt; aaa.zip" />
+    </options>
+    <parameters />
+    <build-runners />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="de0b021a-e697-4202-9c03-673628347d21" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Exec task</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_290" name="" type="Ant">
+        <parameters>
+          <param name="build-file"><![CDATA[<project name="test-exec">
+<target name="test">
+<exec executable="cmd">
+    <arg value="/c"/>
+    <arg value="dir"/>
+</exec>
+</target>
+<target name="test2">
+<exec executable="cmd">
+    <arg value="/c"/>
+    <arg value="ANSI codes/singles.bat"/>
+</exec>
+</target>
+</project>]]></param>
+          <param name="build-file-path" value="build.xml" />
+          <param name="target" value="test test2" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use-custom-build-file" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="MyProject" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

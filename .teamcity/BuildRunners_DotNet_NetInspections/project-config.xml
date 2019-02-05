@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="BuildRunners_DotNet" uuid="a4a89c5e-bbe1-4958-8992-95f8562599a6" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>.Net Inspections</name>
+  <parameters />
+  <cleanup />
+</project>
+

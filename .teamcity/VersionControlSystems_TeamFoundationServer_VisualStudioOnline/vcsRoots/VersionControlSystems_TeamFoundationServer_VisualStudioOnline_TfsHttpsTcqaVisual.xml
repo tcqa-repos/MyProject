@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="27e653a5-6a4c-409c-bc57-781f0fe720d7" type="tfs" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>tfs: https://tcqa.visualstudio.com/DefaultCollection/ $/My First Project</name>
+  <param name="secure:tfs-password" value="credentialsJSON:12225255-0be2-40a3-8f18-3978bb745b1b" />
+  <param name="tfs-root" value="$/My First Project" />
+  <param name="tfs-url" value="https://tcqa.visualstudio.com/DefaultCollection" />
+</vcs-root>
+

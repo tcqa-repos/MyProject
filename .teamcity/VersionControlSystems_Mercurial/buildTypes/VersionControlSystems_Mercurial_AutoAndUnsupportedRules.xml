@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="2f4bc94c-8dda-4dcb-acd5-651dd83685ae" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Auto and unsupported rules</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/*=&gt;" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_169" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="dir" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="VersionControlSystems_Mercurial_HttpsJuliaReshBitbucketOrgJuliaReshSubrepo3">
+        <checkout-rule rule="+:.idea =&gt; ." />
+        <checkout-rule rule="+:src =&gt; src" />
+      </vcs-entry-ref>
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

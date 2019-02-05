@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="ea5734e7-dd88-4c0f-bee9-00623734f725" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>JUnit5</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_57" name="" type="gradle-runner">
+        <parameters>
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+          <param name="ui.gradleRUnner.gradle.build.file" value="junit5-gradle-consumer/build.gradle" />
+          <param name="ui.gradleRunner.gradle.tasks.names" value="clean build" />
+          <param name="ui.gradleRunner.gradle.wrapper.path" value="junit5-gradle-consumer" />
+          <param name="ui.gradleRunner.gradle.wrapper.useWrapper" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_107" name="" type="gradle-runner">
+        <parameters>
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+          <param name="ui.gradleRUnner.gradle.build.file" value="junit5-java9-engine/build.gradle" />
+          <param name="ui.gradleRunner.gradle.tasks.names" value="clean build" />
+          <param name="ui.gradleRunner.gradle.wrapper.path" value="junit5-java9-engine" />
+          <param name="ui.gradleRunner.gradle.wrapper.useWrapper" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_108" name="" type="gradle-runner">
+        <parameters>
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+          <param name="ui.gradleRUnner.gradle.build.file" value="junit5-mockito-extension/build.gradle" />
+          <param name="ui.gradleRunner.gradle.tasks.names" value="clean build" />
+          <param name="ui.gradleRunner.gradle.wrapper.path" value="junit5-mockito-extension" />
+          <param name="ui.gradleRunner.gradle.wrapper.useWrapper" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_109" name="" type="gradle-runner">
+        <parameters>
+          <param name="teamcity.step.mode" value="execute_if_failed" />
+          <param name="ui.gradleRUnner.gradle.build.file" value="junit5-vanilla-gradle/build.gradle" />
+          <param name="ui.gradleRunner.gradle.tasks.names" value="clean build" />
+          <param name="ui.gradleRunner.gradle.wrapper.path" value="junit5-vanilla-gradle" />
+          <param name="ui.gradleRunner.gradle.wrapper.useWrapper" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="BuildRunners_Gradle_HttpsGithubComJunitTeamJunit5samples" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

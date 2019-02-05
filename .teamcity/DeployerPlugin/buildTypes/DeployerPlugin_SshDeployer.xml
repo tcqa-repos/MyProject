@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="271c1d39-825c-460a-9bc8-4812ac8659f0" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>SSH Deployer</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/* =&gt; artifacts.zip" />
+    </options>
+    <disabled-settings>
+      <setting-ref ref="ssh-agent-build-feature" />
+    </disabled-settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_236" name="" type="ssh-deploy-runner">
+        <parameters>
+          <param name="jetbrains.buildServer.deployer.sourcePath" value="artifacts.zip" />
+          <param name="jetbrains.buildServer.deployer.ssh.transport" value="jetbrains.buildServer.deployer.ssh.transport.sftp" />
+          <param name="jetbrains.buildServer.deployer.targetUrl" value="tcqa-subversion" />
+          <param name="jetbrains.buildServer.deployer.username" value="jetbrains" />
+          <param name="jetbrains.buildServer.sshexec.authMethod" value="UPLOADED_KEY" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="teamcitySshKey" value="RSA Private Key OpenSSH no pass" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="HttpsGithubComJuliaAlexandrovaJavaSample" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="ssh-agent-build-feature" type="ssh-agent-build-feature">
+        <parameters>
+          <param name="teamcitySshKey" value="RSA Private Key OpenSSH no pass" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

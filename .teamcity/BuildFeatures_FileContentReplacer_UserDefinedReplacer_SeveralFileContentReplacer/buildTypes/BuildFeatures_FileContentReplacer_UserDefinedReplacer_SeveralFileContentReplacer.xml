@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="739c23a1-c67c-46e8-b248-1e36cca9f4e9" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="739c23a1-c67c-46e8-b248-1e36cca9f4e9" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Several replacements in the same file</name>
   <settings>
+    <options>
+      <option name="checkoutMode" value="ON_SERVER" />
+    </options>
     <parameters />
     <build-runners>
       <runner id="RUNNER_476" name="" type="simpleRunner">
@@ -16,7 +19,7 @@
       <vcs-entry-ref root-id="FileContentReplacer" />
     </vcs-settings>
     <requirements>
-      <contains name="teamcity.agent.jvm.os.name" value="Windows" />
+      <contains id="RQ_17" name="teamcity.agent.jvm.os.name" value="Windows" />
     </requirements>
     <build-triggers />
     <build-extensions>

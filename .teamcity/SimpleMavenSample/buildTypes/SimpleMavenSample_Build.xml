@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="08ef3b0e-ec58-412f-aad1-263deccef0f3" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="3e916810-c3a1-419f-a465-673e7c8e785e" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Build</name>
   <description />
   <settings>
     <parameters />
     <build-runners>
-      <runner id="RUNNER_684" name="" type="Maven2">
+      <runner id="RUNNER_279" name="" type="Maven2">
         <parameters>
           <param name="goals" value="clean test" />
-          <param name="mavenSelection" value="mavenSelection:default" />
+          <param name="maven.path" value="%teamcity.tool.maven.DEFAULT%" />
           <param name="pomLocation" value="ch-simple/pom.xml" />
+          <param name="runnerArgs" value="-Dmaven.test.failure.ignore=true" />
           <param name="teamcity.step.mode" value="default" />
           <param name="userSettingsSelection" value="userSettingsSelection:default" />
         </parameters>
@@ -19,7 +20,15 @@
       <vcs-entry-ref root-id="SimpleMavenSample_HttpsGithubComJuliaReshSimpleMavenSampleRefsHeadsMaster" />
     </vcs-settings>
     <requirements />
-    <build-triggers />
+    <build-triggers>
+      <build-trigger id="vcsTrigger" type="vcsTrigger">
+        <parameters>
+          <param name="branchFilter" value="+:*" />
+          <param name="enableQueueOptimization" value="true" />
+          <param name="quietPeriodMode" value="DO_NOT_USE" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
     <cleanup />
   </settings>
 </build-type>

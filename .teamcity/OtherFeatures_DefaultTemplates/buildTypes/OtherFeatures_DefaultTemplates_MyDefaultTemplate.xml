@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="fcbd771e-0c97-4864-a691-eeaa325f61fd" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>My default template</name>
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/* =&gt; newfolder" />
+      <option name="buildConfigurationType" value="COMPOSITE" />
+      <option name="buildNumberPattern" value="%build.counter%_1" />
+      <option name="showDependenciesChanges" value="true" />
+    </options>
+    <parameters>
+      <param name="bbb" value="bbb" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_329" name="more echo" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo Hello from Default Template!" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</template>
+

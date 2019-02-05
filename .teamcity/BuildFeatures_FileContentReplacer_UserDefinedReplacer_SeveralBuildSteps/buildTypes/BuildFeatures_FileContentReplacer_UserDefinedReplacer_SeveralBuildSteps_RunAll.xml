@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="1500ee50-155e-476e-af5f-512dab9dd38e" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="1500ee50-155e-476e-af5f-512dab9dd38e" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>_Run All_</name>
   <description />
   <settings>
+    <options>
+      <option name="checkoutMode" value="ON_SERVER" />
+    </options>
     <parameters />
     <build-runners />
     <vcs-settings />
@@ -19,7 +22,7 @@
           <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
         </options>
       </depend-on>
-      <depend-on sourceBuildTypeId="BuildFeatures_FileContentReplacer_UserDefinedReplacer_Windows_SeveralBuildSteps">
+      <depend-on sourceBuildTypeId="BuildFeatures_FileContentReplacer_UserDefinedReplacer_SeveralBuildSteps_Windows">
         <options>
           <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
         </options>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="dbd075d9-7165-403f-b519-bc7537e9cb28" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>OOO on agent</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="C:\folder\..\folder2 =&gt; folder2&#xA;C:\folder\..\folder =&gt; folder&#xA;C:\folder2 =&gt; folder22" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_181" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[mkdir C:\folder2
+echo 1 >> C:\folder2\file.txt
+mkdir C:\folder
+echo 1 >> C:\folder\file.txt]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

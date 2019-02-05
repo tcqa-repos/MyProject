@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="f374d3e5-4e32-4566-bdbc-5e559dcd08f6" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Assembly include list only VS2013</name>
+  <description />
+  <settings ref="BuildRunners_DotNet_MSTest_MSTest">
+    <parameters>
+      <param name="assemblies.include.list" value="**/bin/**/*ests.dll" />
+      <param name="tests" value="" />
+    </parameters>
+    <build-runners order="RUNNER_26, RUNNER_27" />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

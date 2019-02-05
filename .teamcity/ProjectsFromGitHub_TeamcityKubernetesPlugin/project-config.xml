@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="ProjectsFromGitHub" uuid="2322e039-730b-4ed7-8cb9-996c2f4a692d" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Teamcity Kubernetes Plugin</name>
+  <parameters />
+  <cleanup />
+</project>
+

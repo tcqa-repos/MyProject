@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="ProjectsFromGitHub" uuid="e6107d42-53b7-4e53-8c16-caba230c6988" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Teamcity Achievements</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_42" type="ReportTab">
+      <parameters>
+        <param name="startPage" value="surefire-reports.zip!/emailable-report.html" />
+        <param name="title" value="Test reports" />
+        <param name="type" value="BuildReportTab" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

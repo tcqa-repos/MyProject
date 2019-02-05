@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="BuildRunners_DotNet" uuid="a9d09782-eccc-4035-b497-5e13ba83de99" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>MSTest</name>
+  <parameters>
+    <param name="assemblies.exclude.list" value="" />
+    <param name="assemblies.include.list" value="**/bin/**/*.dll" />
+    <param name="checkout.rules" value="+:MyMSTest/MSTest =&gt; ." />
+    <param name="cmd.parameters" value="" />
+    <param name="coverage.assemblies" value="" />
+    <param name="coverage.attribute" value="" />
+    <param name="metadata.file" value="" />
+    <param name="metadata.testlist" value="" />
+    <param name="results.file" value="" />
+    <param name="runconfig.file" value="" />
+    <param name="solution.path" value="MSTest.sln" />
+    <param name="test.names" value="" />
+  </parameters>
+  <cleanup />
+</project>
+

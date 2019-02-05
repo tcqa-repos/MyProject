@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="6357e0b1-df7e-476d-bdbd-1f845807cd04" type="jetbrains.git" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>null#master (1)</name>
+  <param name="usernameStyle" value="USERID" />
+</vcs-root>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="OtherFeatures_ArtifactsPublishing" uuid="8c7a77af-4110-40f7-bd28-08902da2a2ad" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Exclude Rules</name>
+  <parameters />
+  <cleanup />
+</project>
+

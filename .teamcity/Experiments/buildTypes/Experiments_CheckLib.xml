@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="df56e8cc-9985-4183-bcba-d8b789aac4c5" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="df56e8cc-9985-4183-bcba-d8b789aac4c5" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Check lib</name>
   <description />
   <settings>
     <options>
       <option name="artifactRules" value="server-logs =&gt; server-logs.zip&#xA;agent-logs =&gt; agent-logs.zip" />
+      <option name="checkoutMode" value="ON_SERVER" />
     </options>
     <parameters>
       <param name="system.dist.build.number" value="11111" />
@@ -14,7 +15,7 @@
       <param name="system.target" value="TCAUTO Server %teamcity.build.triggeredBy.username% %system.tc.release.number%" />
       <param name="system.tc.release.number" value="" spec="select data_10='8.1' data_02='9.1' data_01='9.1.1' display='prompt' data_08='9.0' data_07='9.0.1' data_09='8.1.5' data_04='9.0.4' data_03='9.0.5' data_06='9.0.2' data_05='9.0.3'" />
       <param name="system.vm.ip" value="" />
-      <param name="system.vsphere.password" value="zxxafe5eaec6fb54a04775d03cbe80d301b" spec="password display='normal'" />
+      <param name="system.vsphere.password" value="credentialsJSON:159ac482-a598-4d50-a327-cd8736d5aa79" spec="password display='normal'" />
       <param name="system.vsphere.user" value="Julia.Reshetnikova@LABS" />
     </parameters>
     <build-runners>

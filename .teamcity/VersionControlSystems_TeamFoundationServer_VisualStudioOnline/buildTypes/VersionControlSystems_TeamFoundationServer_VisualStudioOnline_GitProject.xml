@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="290c67dd-3510-421f-a303-48e0d7abe9c5" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Git Project</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners />
+    <vcs-settings>
+      <vcs-entry-ref root-id="VersionControlSystems_TeamFoundationServer_VisualStudioOnline_HttpsTcqaVisualstu" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers>
+      <build-trigger id="vcsTrigger" type="vcsTrigger">
+        <parameters>
+          <param name="branchFilter" value="+:*" />
+          <param name="enableQueueOptimization" value="true" />
+          <param name="quietPeriodMode" value="DO_NOT_USE" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
+    <build-extensions>
+      <extension id="BUILD_EXT_74" type="commit-status-publisher">
+        <parameters>
+          <param name="publish.pull.requests" value="true" />
+          <param name="publisherId" value="tfs" />
+          <param name="secure:accessToken" value="credentialsJSON:12225255-0be2-40a3-8f18-3978bb745b1b" />
+          <param name="tfsAuthType" value="token" />
+          <param name="vcsRootId" value="VersionControlSystems_TeamFoundationServer_VisualStudioOnline_HttpsTcqaVisualstu" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

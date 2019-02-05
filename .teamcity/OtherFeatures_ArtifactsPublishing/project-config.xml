@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="OtherFeatures" uuid="6bf25234-0d4b-43c0-85ed-f0139ac76a9e" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="OtherFeatures" uuid="4b11d482-2462-44fa-aeba-ab01a9327926" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>Artifacts Publishing</name>
+  <default-template ref="OtherFeatures_ArtifactsPublishing_Default" />
   <parameters />
   <cleanup />
 </project>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="43a4e95f-b893-4fcf-9e84-11efe0e84756" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Invalid run configuration file</name>
+  <description>File has unexpected content</description>
+  <settings ref="BuildRunners_DotNet_MSTest_MSTest">
+    <parameters>
+      <param name="runconfig.file" value="MSTest.sln" />
+    </parameters>
+    <build-runners order="RUNNER_26, RUNNER_27" />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

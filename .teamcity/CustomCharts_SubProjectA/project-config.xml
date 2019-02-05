@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="CustomCharts" uuid="363b2231-45f6-4855-9158-c08e15812262" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>SubProjectA</name>
+  <parameters />
+  <project-extensions>
+    <extension id="proj_customGraph1" type="project-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Build Duration (all stages)",
+    "sourceBuildTypeId": "CustomCharts_SubProjectA_SubProjectAA_BuildAA",
+    "key": "BuildDuration"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="Chart title 1111111" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

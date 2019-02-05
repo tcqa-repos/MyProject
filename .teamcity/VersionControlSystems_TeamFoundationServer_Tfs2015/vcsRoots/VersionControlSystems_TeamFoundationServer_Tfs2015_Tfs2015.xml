@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="5185cd09-09ae-4c37-ab16-0e1ce00a6ab6" type="tfs" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="2d1feebf-a43c-4879-b0ce-e4dac22fdaa3" type="tfs" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
   <name>TFS-2015</name>
-  <param name="secure:tfs-password" value="zxx40e55c340cc60870afe724486117c369" />
-  <param name="tfs-root" value="$/Sample Solutions" />
+  <param name="secure:tfs-password" value="credentialsJSON:37358a26-254a-43fc-9f09-b0d3d4d3996a" />
+  <param name="tfs-root" value="$/BigRepo" />
   <param name="tfs-url" value="http://tcqa-tfs2015:8080/tfs/DefaultCollection" />
   <param name="tfs-username" value="jetbrains" />
 </vcs-root>

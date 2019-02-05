@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="BuildRunners_DotNet" uuid="ae9e19c0-2715-414c-bbd7-3a762af7ce31" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Visual Studio Solution</name>
+  <parameters />
+  <cleanup />
+</project>
+

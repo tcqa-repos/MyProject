@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="Experiments" uuid="03437899-053a-4b43-8f88-2f2cc82c4964" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Server Push Tests</name>
+  <parameters />
+  <project-extensions>
+    <extension id="bt_customGraph1" type="buildtype-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="format" value="duration" />
+        <param name="hideFilters" value="" />
+        <param name="properties.axis.y.includeZero" value="true" />
+        <param name="properties.axis.y.max" value="" />
+        <param name="properties.axis.y.min" value="" />
+        <param name="properties.axis.y.type" value="logarithmic" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Build Duration (all stages)",
+    "key": "BuildDuration"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="New chart title" />
+      </parameters>
+    </extension>
+    <extension id="proj_customGraph1" type="project-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="format" value="size" />
+        <param name="hideFilters" value="" />
+        <param name="properties.axis.y.includeZero" value="true" />
+        <param name="properties.axis.y.max" value="" />
+        <param name="properties.axis.y.min" value="" />
+        <param name="properties.axis.y.type" value="logarithmic" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Build Duration (all stages)",
+    "sourceBuildTypeId": "Experiments_ServerPushTests_Tests",
+    "key": "BuildDuration"
+  },
+  {
+    "type": "valueType",
+    "title": "Build Artifacts Publishing Time",
+    "sourceBuildTypeId": "Experiments_ServerPushTests_Tests",
+    "key": "BuildArtifactsPublishingTime"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="Фыва" />
+      </parameters>
+    </extension>
+    <extension id="proj_customGraph2" type="project-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="format" value="integer" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Build Duration (all stages)",
+    "sourceBuildTypeId": "Experiments_ServerPushTests_Tests",
+    "key": "BuildDuration"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="New chart title 6" />
+      </parameters>
+    </extension>
+    <extension id="proj_customGraph3" type="project-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Build Duration (excluding Checkout Time)",
+    "sourceBuildTypeId": "Experiments_ServerPushTests_Tests",
+    "key": "BuildDurationNetTime"
+  },
+  {
+    "type": "valueType",
+    "title": "buildStageDuration:buildStepRUNNER_465",
+    "sourceBuildTypeId": "Experiments_ServerPushTests_Tests",
+    "key": "buildStageDuration:buildStepRUNNER_465"
+  },
+  {
+    "type": "valueType",
+    "title": "buildStageDuration:buildFinishing",
+    "sourceBuildTypeId": "Experiments_ServerPushTests_Tests",
+    "key": "buildStageDuration:buildFinishing"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="New chart title" />
+      </parameters>
+    </extension>
+    <extension id="proj_customGraph4" type="project-graphs">
+      <parameters>
+        <param name="defaultFilters" value="" />
+        <param name="format" value="percent" />
+        <param name="hideFilters" value="" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "buildStageDuration:buildFinishing",
+    "sourceBuildTypeId": "Experiments_ServerPushTests_Tests",
+    "key": "buildStageDuration:buildFinishing"
+  },
+  {
+    "type": "valueType",
+    "title": "buildStageDuration:buildStepRUNNER_465",
+    "sourceBuildTypeId": "Experiments_ServerPushTests_Tests",
+    "key": "buildStageDuration:buildStepRUNNER_465"
+  },
+  {
+    "type": "valueType",
+    "title": "buildStageDuration:buildStepRUNNER_466",
+    "sourceBuildTypeId": "Experiments_ServerPushTests_Tests",
+    "key": "buildStageDuration:buildStepRUNNER_466"
+  },
+  {
+    "type": "valueType",
+    "title": "Build Duration (excluding Checkout Time)",
+    "sourceBuildTypeId": "Experiments_ServerPushTests_Tests",
+    "key": "BuildDurationNetTime"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="New chart title" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

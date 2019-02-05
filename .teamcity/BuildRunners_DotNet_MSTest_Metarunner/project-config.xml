@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="BuildRunners_DotNet_MSTest" uuid="422739fa-29ec-4cb8-9836-40e8570c2d9d" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Metarunner</name>
+  <parameters />
+  <cleanup />
+</project>
+
