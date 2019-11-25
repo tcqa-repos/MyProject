@@ -1,6 +1,6 @@
 aqwertyuio
 asdfghjk
-asdfghjk
+asdfghjk.zxcvbnm,./
 asdfghjkl
 123456aaaasdfghjkla
 sdfghjkasdfghjklhjl;aaaaaaaa
